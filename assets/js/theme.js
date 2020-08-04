@@ -90,33 +90,7 @@
         }
     });
 
-    /*--------------------------------------------------------
-    / 4. Quote Service Slider 
-    /----------------------------------------------------------*/
-    if($(".quote-serive-slider").length > 0){
-       $('.quote-serive-slider').owlCarousel({
-            loop: true,
-            margin: 10,
-            responsiveClass: true,
-            dots: false,
-            smartSpeed: 700,
-            center: false,
-            nav: true,
-            navText: ['<i class="icofont-arrow-left"></i>', '<i class="icofont-arrow-right"></i>'],
-            items: 3,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                700: {
-                    items: 2
-                },
-                1023: {
-                    items: 3
-                }
-            }
-        });
-    }
+  
 
     /*--------------------------------------------------------
     / 5. Form Slider Range
@@ -153,24 +127,7 @@
         controls: true
     });
 
-    /*--------------------------------------------------------
-    / 7. Testimonial Slider 
-    /----------------------------------------------------------*/
-    if($(".testimonial-slider").length > 0){
-       $('.testimonial-slider').owlCarousel({
-            loop: true,
-            margin: 10,
-            responsiveClass: true,
-            dots: false,
-            smartSpeed: 700,
-            center: false,
-            animateIn: 'fadeIn',
-            animateOut: 'fadeOut',
-            nav: true,
-            navText: ['<i class="icofont-arrow-left"></i>', '<i class="icofont-arrow-right"></i>'],
-            items: 1
-        });
-    }
+   
 
     /*--------------------------------------------------------
     / 8. Back To Top
@@ -194,47 +151,8 @@
 
     
 
-    /*--------------------------------------------------------
-    / 11. Testimonial Slider 02
-    /----------------------------------------------------------*/
-    if($(".testimonial-slider-two").length > 0){
-       $('.testimonial-slider-two').owlCarousel({
-            loop: false,
-            margin: 0,
-            responsiveClass: true,
-            smartSpeed: 700,
-            center: false,
-            autoplay: true,
-            nav: false,
-            dots: true,
-            items: 1
-        });
-    }
 
-    /*--------------------------------------------------------
-    / 12. Testimonial Slider 03
-    /----------------------------------------------------------*/
-    if($(".testimonial-slider-three").length > 0){
-       $('.testimonial-slider-three').owlCarousel({
-            loop: false,
-            margin: 30,
-            responsiveClass: true,
-            smartSpeed: 700,
-            center: false,
-            autoplay: true,
-            nav: false,
-            dots: true,
-            items: 2,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                992: {
-                    items: 2
-                }
-            }
-        });
-    }
+   
 
     /*--------------------------------------------------------
     / 13. Accordian Custom 
@@ -324,31 +242,6 @@
         });
     }
 
-    /*--------------------------------------------------------
-    / 17. Testimonial Slider 04
-    /----------------------------------------------------------*/
-    if($(".testimonial-slider-four").length > 0){
-       $('.testimonial-slider-four').owlCarousel({
-            loop: false,
-            margin: 90,
-            responsiveClass: true,
-            smartSpeed: 700,
-            center: false,
-            autoplay: true,
-            nav: true,
-            navText: ['<i class="icofont-arrow-left"></i>', '<i class="icofont-arrow-right"></i>'],
-            dots: false,
-            items: 2,
-            responsive: {
-                0: {
-                    margin: 0,
-                    items: 1
-                },
-                992: {
-                    items: 2
-                }
-            }
-        });
-    }
+   
 
 })(jQuery);

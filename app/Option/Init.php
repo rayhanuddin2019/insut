@@ -25,18 +25,20 @@ if( !class_exists( 'CSF' ) ) {
  require_once INSUT_THEME_DIR . '/app/Option/Settings/Social.php';
  require_once INSUT_THEME_DIR . '/app/Option/Settings/Footer.php';
  require_once INSUT_THEME_DIR . '/app/Option/Settings/Custom-css.php';
- require_once INSUT_THEME_DIR . '/app/Option/Settings/Faq.php';
+ //require_once INSUT_THEME_DIR . '/app/Option/Settings/Faq.php';
+ require_once INSUT_THEME_DIR . '/app/Option/Settings/Service.php';
  require_once INSUT_THEME_DIR . '/app/Option/Settings/Portfolio.php';
  require_once INSUT_THEME_DIR . '/app/Option/Settings/BackUp.php';
 
  
  /* Post Meta */
  require_once INSUT_THEME_DIR . '/app/Option/Posts/Post.php';
+ require_once INSUT_THEME_DIR . '/app/Option/Posts/Quomodo-service.php';
  require_once INSUT_THEME_DIR . '/app/Option/Posts/Page.php';
 
   /* Taxonomy Meta */
   //Category
-  require_once INSUT_THEME_DIR . '/app/Option/Taxonomy/Category.php';
+ // require_once INSUT_THEME_DIR . '/app/Option/Taxonomy/Category.php';
 
   /* User */
   require_once INSUT_THEME_DIR . '/app/Option/User.php';

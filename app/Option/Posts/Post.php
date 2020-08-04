@@ -23,8 +23,8 @@ if( class_exists( 'CSF' ) ) {
           'type'    => 'icon',
           'title'   => esc_html__( 'Icon', 'insut' ),
           'desc'    => esc_html__( 'Set the Thumb icon ', 'insut' ),
-          
         ),
+ 
          
       )
     ) );

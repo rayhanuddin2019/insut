@@ -14,15 +14,9 @@
                   array(
                     'id'    => 'tab_menu',
                     'type'  => 'text',
-                    'title' => esc_html__( 'Menu Name', 'insut' ),
+                    'title' => esc_html__( 'Group Name', 'insut' ),
                   ),
-                  array(
-                    'id'    => 'tab_menu_slug',
-                    'type'  => 'text',
-                    'title' => esc_html__( 'Menu Slug', 'insut' ),
-                    'help' => esc_html__( 'Write down Slug with hypen and lowwecase latter', 'insut' ),
-                    
-                  ),
+                 
                
                   array(
                     'id'        => 'faq_question_list',

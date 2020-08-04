@@ -674,7 +674,8 @@
     margin-right: 25px;
     padding-right: 18px;
 }
-.icon-box-01:after{
+
+.icon-box-shape:after{
     position: absolute;
     right: 0;
     top: 7px;
@@ -685,6 +686,7 @@
     background: linear-gradient(0deg, rgba(0,169,252,1) 0%, rgba(8,85,253,1) 100%);
     border-radius: 5px;
 }
+
 .icon-box-01:last-child{
     padding-right: 0;
     margin-right: 0;
@@ -1120,11 +1122,14 @@
     color: #fff;
     margin: 0 0 16px;
 }
-.tab-content-box p.last-item{
+.tab-content-box span{
     font-weight: 500;
     font-style: italic;
     color: #4faa28;
     margin-bottom: 36px;
+    margin-top: 25px;
+    display: block;
+}
 }
 /*----- Client Logo -----*/
 .clinet-logo{
@@ -4224,6 +4229,9 @@ footer .widget ul li a:hover{
     padding-right: 50px;
     padding-top: 18px;
 }
+ .ab-ht-content .no-shape:after, .ab-ht-content .no-shape:before{
+   display: none; 
+ }
 .ab-ht-content .sec-title{
     margin-bottom: 37px;
 }

@@ -76,9 +76,10 @@ if(!function_exists('insut_option')){
 // return the specific value from metabox
 // ----------------------------------------------------------------------------------------
 if(!function_exists('insut_meta_option')){
-   function insut_meta_option( $postid, $key, $default_value = '', $parent_key = 'insut_post_options' ) {
+   function insut_meta_option( $postid, $key, $default_value = '', $parent_key = '' ) {
       
-      $post_key = $parent_key;
+      $post_key = 'insut_post_options';  
+     
       // page meta
       if(is_singular( 'page' )){
          $post_key = 'insut_page_options';
@@ -88,10 +89,15 @@ if(!function_exists('insut_meta_option')){
          $post_key = 'insut_post_options';
       }
       // custom post meta
-
-
+      if(is_singular('quomodo-service')){
+         $post_key = 'insut_service_options';
+      }
+      
+      if( $parent_key !='' ){
+        $post_key = $parent_key;
+      }
       if( class_exists( 'CSF' ) ){
-         $options = get_post_meta( get_the_ID(), $post_key, true );
+         $options = get_post_meta( $postid , $post_key, true );
          return ( isset( $options[$key] ) ) ? $options[$key] : $default_value; 
          
       }
