@@ -194,10 +194,9 @@
                   'title'   => esc_html__( 'Footer Style', 'insut' ),
                   'desc'    => esc_html__( 'Select the Footer style which you want to show on your website.', 'insut' ),
                   'options' => array(
-                      'style1'       => INSUT_IMG. '/admin/footer/footer-1.png',
-                      'style2'       => INSUT_IMG. '/admin/footer/footer-2.png',
-                      'style3'       => INSUT_IMG. '/admin/footer/footer-3.png',
-                      'copyright'    => INSUT_IMG. '/admin/footer/copyright.png',
+                           
+                    'style1'       => INSUT_IMG. '/admin/footer/style1.png',
+                    'style2'       => INSUT_IMG. '/admin/footer/style2.png',
                     
                   ),
                   'default' => 'style1',

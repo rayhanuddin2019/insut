@@ -17,7 +17,9 @@
       
         $flag = $flag_image['url'];
     }
-   
+    if($insut_logo_url == ''){
+        $insut_logo_url = $logo;
+    }
     $header_contact_phone       = insut_option('header_contact_phone','1');
     $header_contact_phone_label = insut_option('header_contact_phone_label');
     $header_contact_phone_value = insut_option('header_contact_phone_value');

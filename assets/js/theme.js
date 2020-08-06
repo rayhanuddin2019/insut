@@ -191,29 +191,7 @@
             }
         });
     }
-    /*--------------------------------------------------------
-    / 15. Case Suffle
-    /----------------------------------------------------------*/
-    $(window).on('load', function () {
-        if ($(".shafull-container").length > 0)
-        {
-            var $grid = $('.shafull-container');
-            $grid.shuffle({
-                itemSelector: '.shaf-item',
-                sizer: '.shaf-sizer'
-            });
-            /* reshuffle when user clicks a filter item */
-            $('.shaf-filter li').on('click', function () {
-                // set active class
-                $('.shaf-filter li').removeClass('active');
-                $(this).addClass('active');
-                // get group name from clicked item
-                var groupName = $(this).attr('data-group');
-                // reshuffle grid
-                $grid.shuffle('shuffle', groupName);
-            });
-        }
-    });
+   
     /*--------------------------------------------------------
     / 16. Case Relative Slider
     /----------------------------------------------------------*/

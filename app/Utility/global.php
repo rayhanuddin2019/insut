@@ -373,6 +373,55 @@ function insut_related_posts_by_tags( $post_id = '', $feature_image = false ) {
  
  }
 
+ function insut_related_posts_by_case_cat( $post_id = '', $feature_image = false ) {
+    
+   try{
+       
+         if($post_id==''){
+            $post_id = get_the_ID();
+         }
+        
+         $related_count = insut_option('case_related_post_number',5);
+    
+         $terms = get_the_terms($post_id, 'case-cat' );
+         $tslugs_arr = [];
+        
+         if ($terms && ! is_wp_error($terms)) :
+
+             $tslugs_arr = array();
+             foreach ($terms as $term) {
+               array_push($tslugs_arr, $term->slug);
+                 
+             }
+             
+         endif;
+
+        
+         $args = array(
+            'post__not_in'   => array($post_id),
+            'posts_per_page' => $related_count,
+            'post_type'      => 'quomodo-case',
+       
+         );
+
+         $args['tax_query'] = array(
+            array(
+                'taxonomy' => 'case-cat',
+                'field'    => 'slug',
+                'terms'    => $tslugs_arr,
+            ),
+        );
+               
+       return get_posts($args);
+ 
+    } catch(Exception $e) {
+    
+    return get_posts( [] ); 
+ 
+   }
+ 
+ }
+
 function insut_related_posts_by_sticky(  ) {
 	
     if(!is_category()){

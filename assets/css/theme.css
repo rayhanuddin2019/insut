@@ -5655,7 +5655,7 @@ footer .widget ul li a:hover{
 /------------------------------------------------------*/
 .case-details-section{
     position: relative;
-    padding: 130px 0;
+   
 }
 .case-details-area{
     position: relative;
@@ -5765,9 +5765,6 @@ footer .widget ul li a:hover{
 .f-box-title{
     width: 300px;
     min-height: 310px;
-    position: absolute;
-    left: 0;
-    top: 0;
     background: #f5f8ff;
     text-align: center;
     padding: 39px 15px 23px;

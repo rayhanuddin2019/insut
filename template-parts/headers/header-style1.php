@@ -4,7 +4,9 @@
    
     $logo              = INSUT_IMG . '/logo.png';
     $insut_logo_url    = insut_option( 'logo', $logo );
-  
+    if($insut_logo_url == ''){
+        $insut_logo_url = $logo;
+    }
     $button_enable     = insut_option('button_enable','0');
     $button_link       = insut_option('button_link','#');
     $button_text       = insut_option('button_text','Contact Us');

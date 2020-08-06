@@ -632,7 +632,7 @@ function insut_get_contact_forms_seven_list(){
    return $forms_list;
 }
 
-function insut_social_share(){
+function insut_social_share($attr_cls = 'sbp-social'){
    // option social.php 
    $post_social_share_show = insut_option('post_social_share_show',0);
   
@@ -647,7 +647,7 @@ function insut_social_share(){
    }
 
    ?>
-        <ul class="sbp-social">
+        <ul class="<?php echo esc_attr($attr_cls); ?>">
            
                <?php
                  foreach($general_social_share as $share){

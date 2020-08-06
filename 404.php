@@ -4,41 +4,35 @@
  * the template for displaying 404 pages (Not Found)
  */
 
-get_header();
+   get_header();
+
 
 ?>
          <?php if(insut_option('error_enable_main_container',0)): ?>
-            <main id="site-content" class="qomodo-main-container blog-single" role="main">
+            <main id="site-content" class="qomodo-main-container blog" role="main">
          <?php  endif; ?>
-               <section class="error-area">
-                  <div class="page-title-bg">
-                        <div class="page-title-shape-1">
-                           <img src="<?php echo esc_url(INSUT_IMG); ?>/shapes/login-shape.png" alt="<?php echo esc_attr__('Error Shape','insut'); ?>">
-                        </div>
-                        <div class="page-title-shape-2">
-                           <img src="<?php echo esc_url(INSUT_IMG); ?>/shapes/page-title-shape-2.png" alt="<?php echo esc_attr__('Error Shape 2','insut'); ?>">
-                        </div>
-                        <div class="shape-1"></div>
-                        <div class="shape-2"></div>
-                        <div class="shape-3"></div>
-                        <div class="shape-4"></div>
-                  </div>
-                  <div class="container">
-                        <div class="row">
-                           <div class="col-lg-12">
-                              <div class="error-content text-center">
-                                    <img src="<?php echo esc_url(INSUT_IMG); ?>/error-thumb.png" alt="<?php echo esc_attr__('Error Thumb','insut'); ?>">
-                                    <h2 class="title"><?php echo esc_html(insut_option('error_text')); ?></h2>
-                                    <span> <?php echo esc_html('This page does not exist or has been removed', 'insut'); ?> </span>
-                                    <?php if(insut_option('enable_404_search_button',1)): ?> 
-                                      <a class="main-btn" href="<?php echo esc_url( home_url( '/' ) ); ?>">  <?php esc_html_e('Back to Home', 'insut'); ?></a>
-                                    <?php endif; ?>
+                     <!-- 404 Section Start -->
+                        <section class="section-404" style="background-image: url(<?php echo esc_url(INSUT_IMG); ?>/404.jpg);">
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col-lg-5 col-md-8">
+                                          <div class="content-404">
+                                             <h2><span> <?php echo esc_html__('Sorry,','insut'); ?> </span> <?php echo esc_html__('This Page Is Not Found.','insut'); ?> </h2>
+                                             <p>
+                                                <?php echo esc_html__('Commodo consequat duis aute irure dolor reprehender
+                                                voluptate velit fugiat nulla pariatur.','insut'); ?>
+                                             </p>
+                                             <a href="<?php echo esc_url(home_url('/')); ?>"><i class="icofont-arrow-left"></i> <?php echo esc_html__('Back to Home' , 'insut'); ?> </a>
+                                          </div>
+                                    </div>
+                                 </div>
                               </div>
-                           </div>
-                        </div>
-                  </div>
-               </section>
+                        </section>  
+                     <!-- 404 Section End -->
          <?php if(insut_option('error_enable_main_container',0)): ?>        
             </main><!-- Main container end -->
         <?php  endif; ?>
-<?php get_footer(); ?>
+
+ <?php if(insut_option('enable_404_footer',0)): ?>         
+     <?php get_footer(); ?>
+ <?php endif; ?>

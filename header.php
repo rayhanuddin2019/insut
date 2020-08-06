@@ -42,8 +42,17 @@
                 //   if($page_override_header):
                 //      $header_style = $page_header_layout_style;
                 //   endif;  
-                
-                get_template_part( 'template-parts/headers/header', $header_style );
+               
+                if(is_404() && insut_option('enable_404_header',1)){
+                    
+                    get_template_part( 'template-parts/headers/header', 'error' );  
+
+                }else{
+
+                    get_template_part( 'template-parts/headers/header', $header_style );
+                    
+                }
+               
                 
             ?>
            
