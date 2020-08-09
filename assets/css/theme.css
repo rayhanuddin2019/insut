@@ -6538,7 +6538,7 @@ footer .widget ul li a:hover{
 /------------------------------------------------------*/
 .single-blog-section{
     position: relative;
-    padding: 130px 0;
+    
 }
 .post-details-area{
     position: relative;
@@ -6619,6 +6619,7 @@ footer .widget ul li a:hover{
     justify-content: center;
     padding: 8px 15px 9px;
     margin: 35px 0 62px;
+    clear: both;
 }
 .post-tags h5{
     font-size: 12px;

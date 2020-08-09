@@ -68,7 +68,8 @@ class Blog
 	
     // allow search post type
 	function insut_search_filter($query) {
-	   
+		 
+	
 		if ($query->is_search) {
 			$query->set('post_type', 'post');
 		}
