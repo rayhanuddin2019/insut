@@ -9,7 +9,7 @@ CSF::createSection( INSUT_OPTION_KEY, array(
                 'id'      => 'general_text_logo',
                 'type'    => 'switcher',
                 'title'   => esc_html__( 'Text Logo', 'insut' ),
-                'default' => true
+                'default' => false
             ), 
 
             array(

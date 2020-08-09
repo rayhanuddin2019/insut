@@ -27,6 +27,7 @@ final class Init
 			Core\Hook\RequiredPlugins::class,
 			Core\Hook\Demo::class,
 			Core\Sidebar::class,
+		
 			Core\Footer::class,
 			Setup\Setup::class,
 			Setup\Menus::class,

@@ -5149,7 +5149,7 @@ footer .widget ul li a:hover{
 }
 .service-details-section{
     position: relative;
-    padding: 130px 0 80px
+    
 }
 .details-thumb{
     position: relative;
@@ -6029,7 +6029,7 @@ footer .widget ul li a:hover{
     display: inline-block;
     margin: 0 0 18px;
 }
-.sbp-meta a{
+.sbp-meta a, .sbp-meta span{
     display: inline-block;
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
@@ -6037,21 +6037,21 @@ footer .widget ul li a:hover{
     color: #656565;
     margin-right: 20px;
 }
-.sbp-meta a i{
+.sbp-meta a i,.sbp-meta span i{
     display: inline-block;
     font-size: 15px;
     padding-right: 10px;
 }
-.sbp-meta a.calendar{
+.sbp-meta a.calendar, .sbp-meta .calendar{
     margin-right: 32px;
 }
-.sbp-meta a.calendar i{
+.sbp-meta .calendar i{
     padding-right: 14px;
 }
 .sbp-meta a:hover{
     color: #0762fd;
 }
-.sbp-meta a:last-child{
+.sbp-meta a:last-child, .sbp-meta span:last-child{
     margin-right: 0;
 }
 .sbp-social{
@@ -6582,8 +6582,8 @@ footer .widget ul li a:hover{
     padding: 32px 30px 31px 100px;
 }
 .content-area blockquote:before{
-    font-family: Flaticon;
-    content: "\f106";
+    font-family: IcoFont;
+    content: "\e80d";
     font-size: 30px;
     color: #0762fd;
     line-height: 30px;
@@ -7007,3 +7007,62 @@ footer .widget ul li a:hover{
     background: #1a1f2c;
     color: #fff;
 }
+
+
+/*===========================
+    2.Contact Search css 
+===========================*/
+.contact-search-area {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.contact-search-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid #f1f1f1;
+    position: relative;
+    padding-left: 65px;
+}
+
+.contact-search-item > span {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    height: 36px;
+    width: 36px;
+    text-align: center;
+    line-height: 36px;
+    background: #09a223;
+    border-radius: 50%;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.contact-search-item .title {
+    color: #222;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+.contact-search-item ul{
+    padding: 0;
+}
+.contact-search-item ul li {
+    line-height: 28px;
+    color: #383838;
+    font-size: 15px;
+    list-style: none;
+}
+
+.contact-search-item ul li span {
+    font-weight: 500;
+    color: #222;
+    padding-right: 5px;
+}
+
+.contact-search-item ul li a {
+    color: #383838;
+}
+
+/*# sourceMappingURL=style.css.map */
+

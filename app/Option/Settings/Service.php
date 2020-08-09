@@ -41,6 +41,28 @@ CSF::createSection( INSUT_OPTION_KEY, array(
                 'default' => true
             ), 
 
+            array(
+                'id'      => 'service_related_post',
+                'type'    => 'switcher',
+                'title'   => esc_html__( 'Related Post', 'insut' ),
+                'default' => false
+            ), 
+
+            array(
+                'id'         => 'service_related_post_number',
+                'type'       => 'text',
+                'title'      => esc_html__( 'Related Service Limit', 'insut' ),
+                'desc'       => esc_html__( 'Load related Service Items by category ', 'insut' ),
+              
+            ),
+
+            array(
+                'id'      => 'service_related_post_icon',
+                'type'    => 'switcher',
+                'title'   => esc_html__( 'Related Post Icon', 'insut' ),
+                'desc'       => esc_html__( 'Enable Related post title icon from post', 'insut' ),
+                'default' => false
+            ), 
        
 
         )

@@ -81,7 +81,61 @@
                 'type'    => 'background',
                 'title'   => esc_html__( 'Upload Background', 'insut' ),
                 'desc'    => esc_html__( 'Upload main Image width 1200px and height 400px.', 'insut' ),
-                'output' => '.page-banner'
+                'output' => '.page .page-banner'
+            ),
+
+            array(
+                'type'    => 'subheading',
+                'content' => esc_html__( 'Service Banner', 'insut' ),
+            ),
+
+            array(
+                'id'      => 'service_banner_show',
+                'type'    => 'switcher',
+                'title'   => esc_html__( 'Service Banner', 'insut' ),
+                'default' => true
+            ),
+            array(
+                'id'      => 'service_show_breadcrumb',
+                'type'    => 'switcher',
+                'title'   => esc_html__( 'Service Breadcrumb', 'insut' ),
+                'default' => true
+            ),
+            array(
+
+                'id'      => 'banner_service_image',
+                'type'    => 'background',
+                'title'   => esc_html__( 'Upload Background', 'insut' ),
+                'desc'    => esc_html__( 'Upload main Image width 1200px and height 400px.', 'insut' ),
+                'output' => '.single-quomodo-service .page-banner'
+            ),
+
+            array(
+                'type'    => 'subheading',
+                'content' => esc_html__( 'Case Study Banner', 'insut' ),
+            ),
+
+            array(
+                'id'      => 'case_banner_show',
+                'type'    => 'switcher',
+                'title'   => esc_html__( 'Case Banner', 'insut' ),
+                'default' => true
+            ),
+
+            array(
+                'id'      => 'case_show_breadcrumb',
+                'type'    => 'switcher',
+                'title'   => esc_html__( 'Case Breadcrumb', 'insut' ),
+                'default' => true
+            ),
+
+            array(
+
+                'id'      => 'banner_case_image',
+                'type'    => 'background',
+                'title'   => esc_html__( 'Upload Background', 'insut' ),
+                'desc'    => esc_html__( 'Upload main Image width 1200px and height 400px.', 'insut' ),
+                'output' => '.single-quomodo-case .page-banner'
             ),
    
        
@@ -109,7 +163,7 @@
                 'id'     => 'banner_blog_breadcrumb_color',
                 'type'   => 'color',
                 'title'  => esc_html__( 'Page Breadcrumb Color', 'insut' ),
-                'output' => '.blog-banner ol li,.blog-banner li a',
+                'output' => '.blog-banner .banner-content .bread-crumbs,.blog-banner .banner-content .bread-crumbs a',
                 'output_important' => true
             ),
 
@@ -117,7 +171,7 @@
                 'id'     => 'banner_blog_breadcrumb_icon_color',
                 'type'   => 'color',
                 'title'  => esc_html__( 'Breadcrumb Icon Color', 'insut' ),
-                'output' => '.blog-banner li i',
+                'output' => '.blog-banner .bread-crumbs i',
                 'output_important' => true
             ),
 
@@ -152,7 +206,7 @@
                 'id'     => 'banner_page_breadcrumb_color',
                 'type'   => 'color',
                 'title'  => esc_html__( 'Page Breadcrumb Color', 'insut' ),
-                'output' => '.banner-page ol li, .banner-page li a',
+                'output' => ' .banner-content .bread-crumbs, .banner-content .bread-crumbs a',
                 'output_important' => true
             ),
 
@@ -160,7 +214,7 @@
                 'id'     => 'banner_page_breadcrumb_icon_color',
                 'type'   => 'color',
                 'title'  => esc_html__( 'Breadcrumb Icon Color', 'insut' ),
-                'output' => '.banner-content li i',
+                'output' => '.page .banner-content .bread-crumbs i',
                 'output_important' => true
             ),
 
@@ -178,6 +232,60 @@
                 'min'     => 0,
                 'max'     => 1,
                 'step'    => 0.1
+            ),
+            // service
+            array(
+                'type'    => 'subheading',
+                'content' => esc_html__( 'Service Banner', 'insut' ),
+            ),
+       
+            array(
+                'id'     => 'banner_service_title_color',
+                'type'   => 'color',
+                'title'  => esc_html__( 'Service Title Color', 'insut' ),
+                'output' => '.single-quomodo-service .banner-title'
+            ),
+            array(
+                'id'     => 'banner_service_breadcrumb_color',
+                'type'   => 'color',
+                'title'  => esc_html__( 'Service Breadcrumb Color', 'insut' ),
+                'output' => '.single-quomodo-service .banner-content .bread-crumbs, .single-quomodo-service .banner-content .bread-crumbs a',
+                'output_important' => true
+            ),
+
+            array(
+                'id'     => 'banner_service_breadcrumb_icon_color',
+                'type'   => 'color',
+                'title'  => esc_html__( 'Breadcrumb Icon Color', 'insut' ),
+                'output' => '.single-quomodo-service .banner-content .bread-crumbs i',
+                'output_important' => true
+            ),
+
+            array(
+                'type'    => 'subheading',
+                'content' => esc_html__( 'Case Banner', 'insut' ),
+            ),
+       
+            array(
+                'id'     => 'banner_casee_title_color',
+                'type'   => 'color',
+                'title'  => esc_html__( 'Case Title Color', 'insut' ),
+                'output' => '.single-quomodo-case .banner-title'
+            ),
+            array(
+                'id'     => 'banner_case_breadcrumb_color',
+                'type'   => 'color',
+                'title'  => esc_html__( 'Case Breadcrumb Color', 'insut' ),
+                'output' => '.single-quomodo-case .banner-content .bread-crumbs, .single-quomodo-case .banner-content .bread-crumbs a',
+                'output_important' => true
+            ),
+
+            array(
+                'id'     => 'banner_case_breadcrumb_icon_color',
+                'type'   => 'color',
+                'title'  => esc_html__( 'Breadcrumb Icon Color', 'insut' ),
+                'output' => '.single-quomodo-case .banner-content .bread-crumbs i',
+                'output_important' => true
             ),
 
             

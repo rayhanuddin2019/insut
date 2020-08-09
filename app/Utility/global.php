@@ -92,6 +92,15 @@ if(!function_exists('insut_meta_option')){
       if(is_singular('quomodo-service')){
          $post_key = 'insut_service_options';
       }
+
+      // custom post meta
+      if(is_singular('quomodo-case')){
+         $post_key = 'insut_case_options';
+      }
+      
+      if(is_singular('quomodo-contacts')){
+         $post_key = 'insut_contacts_options';
+      }
       
       if( $parent_key !='' ){
         $post_key = $parent_key;
@@ -372,7 +381,55 @@ function insut_related_posts_by_tags( $post_id = '', $feature_image = false ) {
    }
  
  }
+  
+ function insut_related_posts_by_service_cat( $post_id = '', $feature_image = false ) {
+    
+   try{
+       
+         if($post_id==''){
+            $post_id = get_the_ID();
+         }
+        
+         $related_count = insut_option('service_related_post_number',5);
+    
+         $terms = get_the_terms($post_id, 'service-cat' );
+         $tslugs_arr = [];
+        
+         if ($terms && ! is_wp_error($terms)) :
 
+             $tslugs_arr = array();
+             foreach ($terms as $term) {
+               array_push($tslugs_arr, $term->slug);
+                 
+             }
+             
+         endif;
+
+        
+         $args = array(
+            'post__not_in'   => array($post_id),
+            'posts_per_page' => $related_count,
+            'post_type'      => 'quomodo-service',
+       
+         );
+
+         $args['tax_query'] = array(
+            array(
+                'taxonomy' => 'service-cat',
+                'field'    => 'slug',
+                'terms'    => $tslugs_arr,
+            ),
+        );
+               
+       return get_posts($args);
+ 
+    } catch(Exception $e) {
+    
+    return get_posts( [] ); 
+ 
+   }
+ 
+ }
  function insut_related_posts_by_case_cat( $post_id = '', $feature_image = false ) {
     
    try{
@@ -551,7 +608,7 @@ if( !function_exists( 'insut_text_logo' ) ) :
 
 	function insut_text_logo(){
 
-		$general_text_logo = insut_option('general_text_logo','1');
+		$general_text_logo = insut_option('general_text_logo','0');
        
 		if($general_text_logo == '1' ){
         
@@ -689,6 +746,73 @@ if(!function_exists('insut_footer_allowed_pages')){
       
        $current_option[]= 'page';  
      }
+
+     if(is_singular('quomodo-case')){
+      
+      $current_option[]= 'case';  
+    }
+    
+    if(is_singular('quomodo-service')){
+      
+      $current_option[]= 'service';  
+    }
+
+     if(is_main_query()){
+         $page_for_posts = get_option( 'page_for_posts' );
+         if(get_queried_object_id() == $page_for_posts){
+            $current_option[]= 'blog'; 
+         }
+     }
+    
+     $found = array_intersect($option, $current_option);
+    
+     if(is_array($found) && count($found)){
+        return true; 
+     }   
+     return false;
+
+   } 
+}
+
+// ad allowed pages
+if(!function_exists('insut_footer_cta_allowed_pages')){
+   function insut_footer_cta_allowed_pages($option=null){
+       
+     
+      // show in all over blog
+      if(is_null($option) || !is_array($option)){
+         return true;
+      }
+      
+      if(in_array('all',$option)){
+         return true;
+      }
+      //filter
+      $current_option = []; 
+     
+
+     if(is_singular('post')){
+      $current_option[]= 'post'; 
+     }
+
+     if(is_author() || is_search() || is_tag() || is_category() || is_archive()){
+      $current_option[]= 'blog'; 
+     }
+    
+     if(is_singular('page')){
+      
+       $current_option[]= 'page';  
+     }
+
+     if(is_singular('quomodo-case')){
+      
+      $current_option[]= 'case';  
+    }
+    
+    if(is_singular('quomodo-service')){
+      
+      $current_option[]= 'service';  
+    }
 
      if(is_main_query()){
          $page_for_posts = get_option( 'page_for_posts' );

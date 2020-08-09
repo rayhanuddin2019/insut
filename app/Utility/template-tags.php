@@ -229,19 +229,28 @@ if ( !function_exists( 'insut_random_category_retrip' ) ):
                return;
 			}
 			
-		        echo '<i class="fal fa-folder" aria-hidden="true"></i>';     
-				foreach( $category as $value ):
+		      
+				foreach( $category as $sl=> $value ):
+					if($sl == 0){
+
 					
 					echo   '<a 
 								class="post-cat" 
 								href="'. esc_url (get_category_link($value->term_id) ) .'"
-								>'. 
+								><i class="fal fa-folder" aria-hidden="true"></i>'. 
 								esc_html(get_cat_name($value->term_id)).
 							'</a>';
 					if ($single) {
 						break;
 					}	
-						
+				}else{
+					echo   '<a 
+						class="post-cat" 
+						href="'. esc_url (get_category_link($value->term_id) ) .'"
+						>'. 
+						esc_html(get_cat_name($value->term_id)).
+					'</a>';	
+				}	
 				endforeach;  
 			
                  	

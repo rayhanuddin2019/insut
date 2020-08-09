@@ -26,22 +26,16 @@
             'type'   => 'color',
             'title'  => esc_html__( 'Body Text Color', 'insut' ),
             'desc'   => esc_html__( 'Set footer widgetbody content color form here.', 'insut' ),
-            'output' => 'body,.qomodo-post-navigation span,.qomodo-post-navigation i'
+            'output' => ' body , .blog p , .blog-single p, .comment-content p, .qomodo-post-navigation span'
         ),
-        array(
-            'id'     => 'main_text_color',
-            'type'   => 'color',
-            'title'  => esc_html__( 'Main Color', 'insut' ),
-            'desc'   => esc_html__( 'Set main color form here.', 'insut' ),
-            'output' => 'a.readmore__btn ,.blog .qomodo-post-body .meta i,a, .post-meta span i, .qomodo-entry-header .qomodo-entry-title a:hover'
-        ),
+      
 
         array(
             'id'     => 'title_color',
             'type'   => 'color',
             'title'  => esc_html__( 'Title Color', 'insut' ),
             'desc'   => esc_html__( 'Set blog title color form here.', 'insut' ),
-            'output' => '.qomodo-post-navigation h3 , .blog .qomodo-entry-header .qomodo-entry-title a, .inner__title h1'
+            'output' => '.qomodo-post-navigation h3 , .blog .sbp-title, .content-area .sbp-title, .comment-title'
         ),
 
         array(

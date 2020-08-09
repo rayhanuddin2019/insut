@@ -9,6 +9,7 @@
 
 	$blog_sidebar = insut_option('blog_sidebar','3');
 	$column       = ($blog_sidebar == 1 || !is_active_sidebar('sidebar-1')) ? 'col-lg-12 mx-auto' : 'col-lg-7';
+	 
 
 
 ?>

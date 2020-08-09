@@ -64,3 +64,10 @@ require_once INSUT_THEME_DIR . '/app/Option/Init.php';
 AJAX LOAD MORE OPTIONS
 -----------------------------------------------------*/
 require_once INSUT_THEME_DIR . '/app/Core/Hook/Ajax.php';
+
+
+  
+
+  
+
+ 

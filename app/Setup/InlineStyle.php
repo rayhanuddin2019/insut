@@ -95,6 +95,110 @@ class InlineStyle  {
 
        } 
        // page banner end
+       //case study 
+       if(is_singular('quomodo-case')){
+
+        $banner_page_image_overlay  = '';
+        $banner_page_image_opacity  = '';
+
+        if( insut_meta_option( get_the_ID(), 'banner_case_image_overlay' ) != '' ){
+            $banner_page_image_overlay =  insut_meta_option( get_the_ID(), 'banner_case_image_overlay' );
+        }
+
+        if( insut_meta_option( get_the_ID(), 'banner_case_image_opacity' ) != '' ){
+            $banner_page_image_opacity =  insut_meta_option( get_the_ID(), 'banner_case_image_opacity' );
+        }
+
+        // color
+        if( $banner_page_image_overlay != '' ){
+            $custom_css .="
+            .single-quomodo-case .bg-overlay:before{
+                  background:$banner_page_image_overlay;
+              }
+          ";
+        }
+         // opacity
+        if( $banner_page_image_opacity != '' ){
+            $custom_css .="
+            .single-quomodo-case .bg-overlay:before{
+                  opacity:$banner_page_image_opacity;
+              }
+          ";
+        }
+      
+
+       }
+
+        //Service
+        if( is_singular('quomodo-service') ){
+
+          $banner_page_image_overlay  = '';
+          $banner_page_image_opacity  = '';
+  
+          if( insut_meta_option( get_the_ID(), 'banner_service_image_overlay' ) != '' ){
+              $banner_page_image_overlay =  insut_meta_option( get_the_ID(), 'banner_service_image_overlay' );
+          }
+  
+          if( insut_meta_option( get_the_ID(), 'banner_service_image_opacity' ) != '' ){
+              $banner_page_image_opacity =  insut_meta_option( get_the_ID(), 'banner_service_image_opacity' );
+          }
+  
+          // color
+          if( $banner_page_image_overlay != '' ){
+              $custom_css .="
+              .single-quomodo-service .bg-overlay:before{
+                    background:$banner_page_image_overlay;
+                }
+            ";
+          }
+           // opacity
+          if( $banner_page_image_opacity != '' ){
+              $custom_css .="
+              .single-quomodo-service .bg-overlay:before{
+                    opacity:$banner_page_image_opacity;
+                }
+            ";
+          }
+        
+  
+         }
+        
+          /*----------------------------------
+            CSS ALL DEVICE
+        -----------------------------------*/
+        if( insut_option( 'custom_css' ) ){
+            $custom_css .= insut_option( 'custom_css' );
+        }
+        /*----------------------------------
+            CSS IPAD DEVICE
+        -----------------------------------*/
+        if( insut_option( 'custom_css_ipad' ) ){
+            $custom_css.="
+                @media (min-width: 1024px) and (max-width: 1400px) {
+                    ".insut_option( 'custom_css_ipad' )."
+                }
+            ";
+        }
+        /*----------------------------------
+            CSS TABLET DEVICE
+        -----------------------------------*/
+        if( insut_option( 'custom_css_tablet' ) ){
+            $custom_css.="
+                @media (min-width: 768px) and (max-width: 991px) {
+                    ".insut_option( 'custom_css_tablet' )."
+                }
+            ";
+        }
+        /*----------------------------------
+            CSS MOBILE DEVICE
+        -----------------------------------*/
+        if( insut_option( 'custom_css_mobile' ) ){
+            $custom_css.="
+                @media only screen and (max-width: 767px) {
+                    ".insut_option( 'custom_css_mobile' )."
+                }
+            ";
+        }
 
         wp_add_inline_style( 'insut-theme', $custom_css );
     }

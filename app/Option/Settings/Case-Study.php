@@ -41,7 +41,12 @@ CSF::createSection( INSUT_OPTION_KEY, array(
                 'title'   => esc_html__( 'Details page', 'insut' ),
                 'default' => true
             ), 
-
+            array(
+                'id'      => 'case_related_post',
+                'type'    => 'switcher',
+                'title'   => esc_html__( 'Related Post', 'insut' ),
+                'default' => false
+            ), 
             array(
                 'id'         => 'case_related_post_number',
                 'type'       => 'text',

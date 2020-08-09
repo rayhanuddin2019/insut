@@ -9,7 +9,7 @@
          // top  call to action
          CSF::createSection( INSUT_OPTION_KEY, array(
             'parent' => 'footer_tab', // The slug id of the parent section
-            'title'  => esc_html__( 'TopBar', 'insut' ),
+            'title'  => esc_html__( 'Call To Action', 'insut' ),
             'icon'   => 'fa fa-paint-brush',
             'fields' => array(
 
@@ -25,7 +25,26 @@
                     'title'   => esc_html__( 'Enable Call To Action', 'insut' ),
                     'default' => true
 
-                ), 
+                ),
+                
+                array(
+                    'id'          => 'footer_call_to_action_permited_pages',
+                    'type'        => 'select',
+                    'title'       => esc_html__( 'Permitted Pages', 'insut' ),
+                    'chosen'      => true,
+                    'multiple'    => true,
+                    'placeholder' => esc_html__('Select pages','insut'),
+                    'options'     => array(
+                        'all'     => esc_html__( 'All', 'insut' ),
+                        'post'    => esc_html__( 'Post', 'insut' ),
+                        'page'    => esc_html__( 'Page', 'insut' ),
+                        'service' => esc_html__( 'Service', 'insut' ),
+                        'case'    => esc_html__( 'Case Study', 'insut' ),
+                        'blog'    => esc_html__( 'Blog List', 'insut' ),
+                    ),
+                    'default'     => 'all'
+                  ),
+                  
 
                 array(
 

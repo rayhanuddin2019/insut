@@ -103,9 +103,11 @@
             value: 5890,
             slide: function (event, ui) {
                 $("#amount").html("$" + ThousandSeparate(ui.value));
+                $("#amount_hide").html("$" + ThousandSeparate(ui.value));
             }
         });
         $("#amount").html("$" + ThousandSeparate($("#slider-range").slider("value")) );
+        $("#amount_hide").html("$" + ThousandSeparate($("#slider-range").slider("value")) );
         function ThousandSeparate(val) {
             while (/(\d+)(\d{3})/.test(val.toString())){
               val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');

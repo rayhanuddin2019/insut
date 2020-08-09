@@ -28,6 +28,7 @@ if( !class_exists( 'CSF' ) ) {
  //require_once INSUT_THEME_DIR . '/app/Option/Settings/Faq.php';
  require_once INSUT_THEME_DIR . '/app/Option/Settings/Case-Study.php';
  require_once INSUT_THEME_DIR . '/app/Option/Settings/Service.php';
+ require_once INSUT_THEME_DIR . '/app/Option/Settings/Contacts.php';
  require_once INSUT_THEME_DIR . '/app/Option/Settings/Portfolio.php';
  require_once INSUT_THEME_DIR . '/app/Option/Settings/BackUp.php';
 
@@ -35,6 +36,7 @@ if( !class_exists( 'CSF' ) ) {
  /* Post Meta */
  require_once INSUT_THEME_DIR . '/app/Option/Posts/Post.php';
  require_once INSUT_THEME_DIR . '/app/Option/Posts/Quomodo-service.php';
+ require_once INSUT_THEME_DIR . '/app/Option/Posts/Quomodo-contacts.php';
  require_once INSUT_THEME_DIR . '/app/Option/Posts/Quomodo-case.php';
  require_once INSUT_THEME_DIR . '/app/Option/Posts/Page.php';
 

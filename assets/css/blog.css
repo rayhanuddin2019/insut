@@ -1,6 +1,9 @@
 
 
-.admin-bar .header__layout__1{
+.admin-bar .header__layout__1, .admin-bar .header-03{
+  margin-top: 23px;
+}
+.admin-bar .header-02{
   margin-top: 23px;
 }
 

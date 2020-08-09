@@ -38,25 +38,6 @@
             'output' => '.page .page-title'
           ),
 
-          array(
-                  'id'           => 'page_shape_one',
-                  'type'         => 'upload',
-                  'title'   => esc_html__( 'Upload Shape', 'insut' ),
-                  'library'      => 'image',
-                  'placeholder'  => 'http://',
-                  'button_title' => esc_html__( 'Add Shape', 'insut' ),
-                  'remove_title' => esc_html__( 'Remove Shape', 'insut' ),
-          ),
-
-          array(
-              'id'           => 'page_shape_two',
-              'type'         => 'upload',
-              'title'   => esc_html__( 'Upload Shape', 'insut' ),
-              'library'      => 'image',
-              'placeholder'  => 'http://',
-              'button_title' => esc_html__( 'Add Shape', 'insut' ),
-              'remove_title' => esc_html__( 'Remove Shape', 'insut' ),
-          ),
 
             array(
                 'id'    => 'banner_page_image_overlay',
@@ -94,16 +75,6 @@
               'output_important' => true
           ),
 
-          array(
-              'id'     => 'banner_page_breadcrumb_icon_color',
-              'type'   => 'color',
-              'output_mode' => 'background-color',
-              'title'  => esc_html__( 'Backround Cirlce Color', 'insut' ),
-              'output' => '.page .page-title-bg::before,.page .page-title-bg .shape-1,.page .page-title-bg .shape-2,.page .page-title-bg .shape-3,.page .page-title-bg .shape-4,.page .page-title-bg::after',
-              'output_important' => true
-          ),
-
-       
     
         )
       ) );

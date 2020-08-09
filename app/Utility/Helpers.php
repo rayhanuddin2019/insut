@@ -293,7 +293,7 @@ if ( ! function_exists( 'insut_post_meta' ) ) :
                         else:
 
                            printf(
-                              '<i class="fal fa-user"></i><a href="%1$s"> %2$s</a>',
+                              '<a href="%1$s"><i class="fal fa-user"></i> %2$s</a>',
                               esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), 
                               get_the_author()
                            );
@@ -312,10 +312,17 @@ if ( ! function_exists( 'insut_post_meta' ) ) :
               
                
                if( insut_option('blog_comment',1) ):  
-                  printf(' <a href="#" class="comments"><i class="icofont-speech-comments"></i> %1$s</a>',
+                  printf('<span class="comments"><i class="icofont-speech-comments"></i> %1$s</span>',
                   esc_html(get_comments_number(get_the_ID())) 
                   ); 
                endif;
+
+               if( insut_option('blog_views',0) ):  
+                  printf('<span class="like"><i class="icofont-heart-alt"></i> %1$s</span>',
+                  esc_html(insut_get_postview(get_the_ID())) 
+                  ); 
+               endif;
+
                insut_random_category_retrip();
               
            

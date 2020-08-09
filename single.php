@@ -33,7 +33,7 @@
                                     get_template_part( 'template-parts/blog/blog-parts/part', 'author' );
                                     insut_post_nav();
                                     comments_template(); 
-                                    
+                                    insut_set_postview();
                                     
                                   ?>
                           <?php endwhile; ?>

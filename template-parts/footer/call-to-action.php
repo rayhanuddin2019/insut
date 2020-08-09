@@ -1,9 +1,15 @@
 <?php 
 
-  if( ! insut_option('footer_call_to_action',0)){
+  if( ! insut_option('footer_call_to_action',0) ){
      return;
   }
-  
+
+  $allowed_page = insut_footer_cta_allowed_pages(insut_option('footer_call_to_action_permited_pages'));
+
+  if( ! $allowed_page ){
+     return;
+  } 
+
   $footer_call_to_action_left_image = insut_option('footer_call_to_action_left_image');
   $call_to_action_icon              = insut_option('footer_call_to_action_icon');
   $button_title                     = insut_option('footer_call_to_action_button_title');
@@ -31,7 +37,7 @@
                                             <?php echo insut_kses($title); ?>
                                         </h3>
                                         <div class="call-info">
-                                            <a href="#" class="insut-btn">
+                                            <a href="<?php echo esc_url($button_link); ?>" class="insut-btn">
                                             <?php if( $button_icon == ''): ?>
                                                 <i class="icofont-home"></i>
                                             <?php else: ?>

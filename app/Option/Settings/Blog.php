@@ -37,7 +37,7 @@
                 'id'      => 'blog_author',
                 'type'    => 'switcher',
                 'title'   => esc_html__( 'Blog Author', 'insut' ),
-                'default' => true
+                'default' => false
             ), 
             
             array(
@@ -59,6 +59,13 @@
                 'type'    => 'switcher',
                 'title'   => esc_html__( 'Blog Comment', 'insut' ),
                 'default' => true
+            ), 
+            
+            array(
+                'id'      => 'blog_views',
+                'type'    => 'switcher',
+                'title'   => esc_html__( 'Blog Views', 'insut' ),
+                'default' => false
             ),
             
             array(

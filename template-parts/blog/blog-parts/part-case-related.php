@@ -1,6 +1,9 @@
 
 <?php
    // related post 
+   if( !insut_option( 'case_related_post',0 ) ){
+    return;
+  }
    $related_case = insut_related_posts_by_case_cat(get_the_id());
   
    
