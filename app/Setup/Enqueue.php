@@ -18,7 +18,9 @@ class Enqueue
 	}
    
     public function admin_enqueue_scripts(){
+		
 		wp_enqueue_style( 'icofont', INSUT_CSS . '/icofont.min.css', null, INSUT_VERSION );
+		wp_enqueue_style( 'insut-icon', INSUT_CSS . '/insut-icon.css', null, INSUT_VERSION );
 		wp_enqueue_script('insut-admin', INSUT_JS . '/admin.js', array('jquery'), INSUT_VERSION, true);
 		$insut_data = [
 			
