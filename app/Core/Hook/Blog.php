@@ -17,7 +17,7 @@ class Blog
 		add_filter( 'get_search_form', [$this,'insut_search_form'] );
 		add_filter( 'next_posts_link_attributes', [$this,'next_posts_link_attributes'] );
 		add_filter( 'previous_posts_link_attributes', [$this,'previous_posts_link_attributes'] );
-		add_filter( 'widget_title', [$this,'widget_title'] );
+		//add_filter( 'widget_title', [$this,'widget_title'] );
 		add_filter( 'get_comment_date', [$this,'change_comment_date_format'], 10, 3 );
 		
 		if(!is_admin()) { 

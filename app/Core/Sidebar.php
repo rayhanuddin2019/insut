@@ -28,8 +28,8 @@ class Sidebar
                 'description'   => esc_html__('Appears on posts.', 'insut'),
                 'before_widget' => '<div id="%1$s" class="widget %2$s">',
                 'after_widget'  => '</div>',
-                'before_title'  => '<h3 class="widget-title">',
-                'after_title'   => '</h3>',
+                'before_title'  => '<h3 class="widget-title"> ',
+                'after_title'   => '<span> </span></h3>',
         ) );
       
     }

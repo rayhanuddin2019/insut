@@ -41,6 +41,7 @@ if( class_exists( 'CSF' ) ) {
         ),
 
         array(
+          
           'id'      => 'insut_email',
           'type'    => 'text',
           'title'   => esc_html__( 'Email', 'insut' ),

@@ -13,7 +13,7 @@
  =============================*/
 
 .qomodo-main-container{
-    padding:100px 0px;
+    padding:125px 0px;
 }
 
 /*=============================
@@ -89,21 +89,6 @@
 .blog-post-author .thumb{
   padding-right: 40px;
 }
-/*=============================
-   blog Single media
- =============================*/
-
-
-
-/*=============================
-   Blog Single tags
- =============================*/
-
-
-
-/*=============================
-   Social share
- =============================*/
 
 
   /*=========================================================================
@@ -111,7 +96,7 @@
 ==========================================================================*/
 
  .insut-pagination .pagination-dots{
-   line-height: 2.7;
+   line-height: 3.0;
  }
 
 /*=============================
@@ -218,7 +203,7 @@
     line-height: 46px;
   }
   .qomodo-blog-post-comment  .comment-edit-link{
-    color: #ff4f4f;
+    color: #0762fd;
   }
  .qomodo-blog-post-comment .btn-comments {
   border: none;
@@ -341,7 +326,7 @@
   margin: 0;
   padding: 20px 0;
 }
-.comments-list .comment {
+.comments-list .comment, .wp-block-rss {
   list-style: none;
 }
 .comments-list .comment .last {
@@ -413,10 +398,17 @@
   float: right;
   color: #000;
 }
+
 #cancel-comment-reply-link:hover {
   color: #0056b3;
 }
 
+.wp-block-button__link{
+  background:linear-gradient(-90deg, rgba(0,169,252,1) 0%, rgba(8,85,253,1) 100%);
+}
+.wp-block-button.is-style-outline .wp-block-button__link, .post-single .wp-block-cover p:not(.has-text-color){
+   color: #fff;
+}
 
   /* Page link */
   .page-links .page-link {
@@ -465,6 +457,9 @@
   .wp-block-search input[type="search"] {
       width: 80%;
       border: 1px solid #e2e2e1;
+  }
+  .wp-block-search input[type="search"]:focus{
+    border: none;
   }
   .wp-block-search__button {
 
@@ -608,8 +603,8 @@
   }
   
   .widget_calendar td#today {
-    background: #ff7800;
-    color: #3c3a5a;
+    background: #0762fd;
+    color: #fff;
   }
   .widget_calendar td#today a{
     color: #ffff;
@@ -742,6 +737,21 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+  .wp-block-archives-list {
+    list-style: none;;
+  }
+  /* Calender */
+  .wp-block-calendar table th{
+    background: #0762fd;
+    color:#fff;
+  }
+
+  .wp-block-calendar tfoot a {
+      color: #fff;
+      text-decoration: none;
+      padding: 13px;
+      background: #0762fd;
   }
   
   .wp-caption.alignnone {
@@ -1057,7 +1067,6 @@
   z-index: 2;
 }
 
-/* Post Audio */
 
 
 
@@ -1068,34 +1077,7 @@
   /*=========================== ===========
            sidebar
   ========================================*/
- 
- 
-  
-  .blog-sidebar .widget.widget-tags ul li {
-    /* display: inline-block;
-    margin-bottom: 8px;
-    margin-right: 4px; */
-  }
-  
-  .blog-sidebar .widget.widget-tags ul li a {
-    /* display: block;
-    padding: 5px 20px;
-    border: 1px solid #eee;
-    color: #666;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s; */
-  }
-  
-  .blog-sidebar .widget.widget-tags ul li a:hover {
-    /* background: #ff4f4f;
-    color: #1c1c24;
-    -webkit-transition: all ease 500ms;
-    -o-transition: all ease 500ms;
-    transition: all ease 500ms; */
-  }
-  
- 
+
   
   .blog-sidebar .widget .block-title {
     margin-bottom: 30px;
@@ -1129,7 +1111,7 @@
   }
   
   .blog-sidebar ul.sub-menu, .blog-sidebar ul.children ,.widget ul.sub-menu, .widget ul.children  {
-    padding: 10px 0px 0 20px;
+    padding: 10px 0px 0 13px;
   }
   
   .blog-sidebar ul.children,.blog-sidebar ul.children ,.widget ul.children,.widget ul.children {
@@ -1175,11 +1157,14 @@
   .page-links .page-link {
     display: inline-block;
   }
-  .page-link{
-    color: #ff4f4f;
+  .qomodo-entry-content .page-links{
+    color: #0762fd; 
+  }
+  .qomodo-entry-content .page-links span.page-link{
+    color: #0762fd;
   }
   .page-link:hover{
-    background: #ff4f4f;
+    background: #0762fd;
     color: #ffffff !important;
   }
   .page .qomodo-entry-footer{
@@ -1211,18 +1196,15 @@
   width: 100%;
   height: 100%;
   content: "";
-  background: #ff4f4f;
+  background: linear-gradient(-90deg, rgba(0,169,252,1) 0%, rgba(8,85,253,1) 100%);
   z-index: 0;
-  opacity: 0.3;
+ 
 }
 
 /*=========================================================================
                                 Page 
 ==========================================================================*/
 
-.page .qomodo-entry-header {
-   /* margin-bottom: 20px; */
-}
 
 /*=========================================================================
                               Error Page 
@@ -1240,8 +1222,15 @@
 /*=========================================================================
                               Footer widget
 ==========================================================================*/
-  
-  
+  .footer-area .widget{
+    padding: 0px 0px 50px;
+  }
+  .footer-area .widget:last-child{
+    padding-bottom: 0;
+  }
+  .footer-area table , .footer-area table a, .footer-area .widget, .footer-area .rsswidget {
+     color:#fff;
+  }
   .footer-area .tagcloud a:hover{
      background:#ff4f4f;
   }

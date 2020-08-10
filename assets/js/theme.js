@@ -222,6 +222,15 @@
         });
     }
 
+
+        /*---------------------------------
+           17 COMMENTS
+        ----------------------------------*/
+        var comment_form = $('textarea#comment');
+        if (comment_form.length) {
+            $('textarea#comment').html($('textarea#comment').html().trim());
+        }
+
    
 
 })(jQuery);

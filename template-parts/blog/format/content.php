@@ -1,14 +1,11 @@
 
 
-    <div class="single-blog-post">
+    <div class="single-blog-post <?php echo esc_attr(is_sticky()?'sticky':''); ?>">
         <?php if(has_post_thumbnail()): ?>
             <div class="sbp-thumb">
                     <img class="img-fluid" src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt=" <?php the_title(); ?>">
                     <?php 
-                    if ( is_sticky() ) {
-                        echo '<sup class="meta-featured-post thumb"> <i class="fal fa-thumbtack"></i> '  . ' </sup>';
-                    }
-                    $image_icon = insut_meta_option(get_the_id(),'image_icon');
+                     $image_icon = insut_meta_option(get_the_id(),'image_icon');
                    ?> 
                 <div class="sbp-icon">
                     <?php if( $image_icon == '' ):  ?> 

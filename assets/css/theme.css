@@ -2114,6 +2114,10 @@
     position: relative;
     margin-bottom: 40px;
 }
+
+.single.single-post{
+    margin-bottom: 0;
+}
 .post-thumb{
     position: relative;
     margin: 0 0 0;
@@ -2260,6 +2264,7 @@
     height: 100%;
     background: rgba(9, 0, 0, .85);
 }
+
 .footer-01 .widget{
     position: relative;
 }
@@ -4906,22 +4911,23 @@ footer .widget ul li a:hover{
     font-size: 54px;
     line-height: 52px;
     margin: 0 0 25px;
+    color:#fff;
 }
 .bread-crumbs{
     display: inline-block;
     font-size: 19px;
     line-height: 32px;
-    color: #0762fd;
+    color: #fff;
     font-weight: 500;
 }
 .bread-crumbs a{
-    color: #1a1f2c;
+    color: #fff;
 }
 .bread-crumbs a:hover{
-    color: #0762fd;
+    color: #fff;
 }
 .bread-crumbs i{
-    color: #1a1f2c;
+    color: #fff;
     font-size: 16px;
     margin: 0 3px;
 }
@@ -5982,13 +5988,21 @@ footer .widget ul li a:hover{
     position: relative;
     margin-bottom: 50px;
 }
+.single-blog-post.sticky{
+    background: #e3e8f1;
+}
+
+.single-blog-post.sticky .sbp-details{
+   border:none;
+}
 .sbp-thumb{
     position: relative;
     text-align: center;
     margin: 0;
+    
 }
 .sbp-thumb img{
-    width: 100%;
+   
     height: auto;
 }
 .sbp-icon{
@@ -6150,6 +6164,7 @@ footer .widget ul li a:hover{
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
+
 .insut-pagination a.next,
 .insut-pagination a.prev{
     font-size: 18px;
@@ -6168,7 +6183,7 @@ footer .widget ul li a:hover{
     position: relative;
     margin: 0 0 58px;
     background: #f5f8ff;
-    padding: 35px 30px 43px;
+    padding: 35px 30px 20px;
 }
 .blog-sidebar .widget .widget-title{
     font-size: 23px;
@@ -6290,6 +6305,7 @@ footer .widget ul li a:hover{
 }
 .single-rc-post img{
     width: 76px;
+    max-width: 76px;
     height: 76px;
     border-radius: 50%;
     margin-right: 20px;
@@ -6424,7 +6440,7 @@ footer .widget ul li a:hover{
     min-height: 40px;
     height: auto;
     min-width: 111px;
-    font-size: 15px;
+    font-size: 15px !important;
     line-height: .8;
     color: #444444;
     padding: 13px 10px;
@@ -6615,8 +6631,7 @@ footer .widget ul li a:hover{
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.2px;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     padding: 8px 15px 9px;
     margin: 35px 0 62px;
     clear: both;
@@ -6626,10 +6641,12 @@ footer .widget ul li a:hover{
     line-height: 28px;
     letter-spacing: 1.2px;
     margin: 0 0 0;
+    display: inline-block;
 }
 .post-tags a{
     color: #6f757f;
     margin: 0 9px;
+    display: inline-block;
 }
 .post-tags a:hover{
     color: #0762fd;

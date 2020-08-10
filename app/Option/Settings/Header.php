@@ -299,23 +299,7 @@
                 'output_important'=> true,
                 'output' =>'.navbar.navbar-expand-lg:after'
             ),
-            // sticky menu
-            array(
-                'id'      => 'sticky_bg',
-                'type'    => 'background',
-                'title'   => esc_html__( 'Menu Sticky Background', 'insut' ),
-                'desc'    => esc_html__( 'Set the menu sticky background form here.', 'insut' ),
-                'default' => array(
-                    'image'      => '',
-                    'repeat'     => 'repeat',
-                    'position'   => 'center center',
-                    'attachment' => 'scroll',
-                    'size'       => '',
-                    'color'      => '',
-                ),
-                'output_important'=> true,
-                'output' =>'.header-nav.sticky'
-            ),
+           
          
             array(
                 'type'    => 'subheading',
@@ -345,31 +329,9 @@
                 'desc'             => esc_html__( 'Set the menu hover top icon.', 'insut' ),
                 'background_color' => true,
                 'output'           => '.navbar-expand-lg .navbar-nav li .nav-link:before,.navbar-two.navbar-expand-lg .navbar-nav li .nav-link:before,.navbar-two.navbar-expand-lg .navbar-nav li .nav-link:after,.navbar-three.navbar-expand-lg .navbar-nav li .nav-link:before,.navbar-three.navbar-expand-lg .navbar-nav li .nav-link:after',
-               
-                //'dependency' => array( 'header_style', '==', 'style1' ),
+        
             ),
-            //sticky
-            array(
-                'type'    => 'subheading',
-                'content' => esc_html__( 'Menu Sticky Color', 'insut' ),
-            ),
-            array(
-                'id'      => 'menu_sticky_color',
-                'type'    => 'color',
-                'title'   => esc_html__( 'Menu Sticky Color', 'insut' ),
-                'desc'    => esc_html__( 'Set the menu sticky color by color picker', 'insut' ),
-                'default' => '',
-               
-                'output'  => '.header-nav.sticky .navigation .navbar .navbar-nav .nav-item a'
-            ),
-            array(
-                'id'      => 'menu_sticky_hover_color',
-                'type'    => 'color',
-                'title'   => esc_html__( 'Menu Sticky Hover Color', 'insut' ),
-                'desc'    => esc_html__( 'Set the menu sticky hover color by color picker', 'insut' ),
-                'default' => '',
-                'output'  => '.header-nav.sticky .navigation .navbar .navbar-nav .nav-item:hover a'
-            ),
+            
             //dropdown
             array(
                 'type'    => 'subheading',

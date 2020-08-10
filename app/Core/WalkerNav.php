@@ -118,7 +118,7 @@ class WalkerNav extends Walker_Nav_Menu
             $atts ['class']= $manual_class;
         }
         if (is_array($item->classes) && in_array('current-menu-item', $item->classes)) {
-            $atts['class'] .= ' active';
+            $atts['class'] .= ' active-item';
         }
         // print_r($item);
         //

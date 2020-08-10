@@ -1,7 +1,7 @@
 
       <?php $audio_link = insut_meta_option(get_the_ID(),'feature_audio'); ?>
   
-      <div class="single-blog-post">
+      <div class="single-blog-post <?php echo esc_attr(is_sticky()?'sticky':''); ?>">
           <div class="sbp-details clearfix">
               <?php insut_post_meta() ?> 
               <?php insut_social_share() ?> 

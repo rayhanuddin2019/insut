@@ -23,7 +23,7 @@
                     'id'      => 'footer_call_to_action',
                     'type'    => 'switcher',
                     'title'   => esc_html__( 'Enable Call To Action', 'insut' ),
-                    'default' => true
+                    'default' => false
 
                 ),
                 
@@ -118,7 +118,7 @@
         // Footer
         CSF::createSection( INSUT_OPTION_KEY, array(
             'parent' => 'footer_tab', // The slug id of the parent section
-            'title'  => esc_html__( 'Footer Color & Background', 'insut' ),
+            'title'  => esc_html__( 'Footer layout & style', 'insut' ),
             'icon'   => 'fa fa-paint-brush',
             'fields' => array(
                 array(
