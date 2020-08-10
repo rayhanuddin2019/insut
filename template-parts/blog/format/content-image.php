@@ -5,7 +5,14 @@
             <div class="sbp-thumb">
                  <img class="img-fluid" src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt=" <?php the_title(); ?>">
                  <div class="sbp-icon">
-                    <i class="flaticon-wifi-router"></i>
+                   <?php 
+                     $image_icon = insut_meta_option(get_the_id(),'image_icon');
+                   ?>
+                   <?php if( $image_icon == '' ):  ?> 
+                        <i class="insut-Icon11"> <span class="path3"></span> </i>
+                    <?php else: ?>
+                        <i class="<?php echo esc_attr($image_icon); ?>"> <span class="path3"></span> </i>
+                    <?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>

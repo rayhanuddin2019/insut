@@ -8,7 +8,7 @@
     $button_link       = insut_option('button_link','#');
     $button_text       = insut_option('button_text','Contact Us');
     $enable_flag       = insut_option('enable_flag','0');
-    $flag_url       = insut_option('flag_url','#');
+    $flag_url          = insut_option('flag_url','#');
     $flag_label       = insut_option('flag_label');
     $flag_image        = insut_option('flag_image','#');
     $flag              = INSUT_IMG . '/home2/flag.png';
@@ -47,8 +47,8 @@
                         <div class="inner-topbar clearfix">
                            <?php if($header_contact_address): ?>
                                 <div class="top-left">
-                                    <h5><i class="icofont-google-map"></i><a href="mailto:insut@gmail.com"><?php echo esc_html($header_contact_email_value); ?></a></h5>
-                                    <h5><i class="icofont-google-map"></i><?php echo esc_html($header_contact_address_value); ?></h5>
+                                    <h5><i class="insut-Icon18"></i><a href="mailto:<?php echo esc_attr($header_contact_email_value); ?>"><?php echo esc_html($header_contact_email_value); ?></a></h5>
+                                    <h5><i class="insut-Icon13"></i><?php echo esc_html($header_contact_address_value); ?></h5>
                                 </div>
                             <?php endif; ?>
                                 <div class="top-right">
@@ -87,7 +87,7 @@
                                 <?php if($header_contact_phone): ?>
                                 <!-- Info Start-->
                                 <div class="single-info">
-                                    <i class="fa fa-volume-control-phone"></i>
+                                    <i class="insut-Icon10"></i>
                                     <h5>
                                         <span> 
                                             <?php echo esc_html($header_contact_phone_label); ?>
@@ -114,7 +114,7 @@
                             <?php if($button_enable): ?>  
                                 <!-- Quote Btn Start -->
                                 <a href="<?php echo esc_url($button_link); ?>" class="get-a-quote">
-                                    <i class="icofont-ui-user"></i>
+                                    <i class="insut-Icon5"></i>
                                     <?php echo esc_html($button_text); ?>
                                 </a>
                                 <!-- Quote Btn End -->

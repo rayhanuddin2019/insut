@@ -59,7 +59,7 @@
                                     <!-- Info Start-->
                                     <?php if($header_contact_phone): ?>
                                         <div class="single-info">
-                                            <i class="fa fa-volume-control-phone"></i>
+                                            <i class="insut-Icon10"></i>
                                             <h5>
                                                 <span> 
                                                     <?php echo esc_html($header_contact_phone_label); ?>
@@ -72,7 +72,7 @@
 
                                     <?php if($header_contact_email): ?>
                                         <div class="single-info">
-                                            <i class="fa fa-volume-control-phone"></i>
+                                            <i class="insut-Icon18"></i>
                                                 <h5><span> <?php echo esc_html($header_contact_email_label); ?></span>
                                                 <a href="mailto:<?php echo esc_attr( $header_contact_email_value ); ?>">
                                                     <?php echo esc_html($header_contact_email_value); ?>
@@ -83,7 +83,7 @@
 
                                     <?php if($header_contact_address): ?>
                                         <div class="single-info">
-                                            <i class="fa fa-volume-control-phone"></i>
+                                            <i class="insut-Icon13"></i>
                                             <h5>
                                                 <span><?php echo esc_html($header_contact_address_label); ?></span>
                                                 <?php echo esc_html($header_contact_address_value); ?>

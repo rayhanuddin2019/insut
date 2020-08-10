@@ -9,9 +9,9 @@
                     <img src="<?php echo get_the_post_thumbnail_url(null,'full'); ?>" alt=" <?php the_title_attribute(); ?>">
                     <div class="sbp-icon">
                         <?php if( $image_icon == '' ):  ?> 
-                            <i class="flaticon-wifi-router"></i>
+                            <i class="insut-Icon11"> <span class="path3"></span> </i>
                         <?php else: ?>
-                            <i class="<?php echo esc_attr($image_icon); ?>"></i>
+                            <i class="<?php echo esc_attr($image_icon); ?>"> <span class="path3"></span> </i>
                         <?php endif; ?>
                     </div>
                 </div>

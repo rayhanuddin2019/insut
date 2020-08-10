@@ -39,9 +39,9 @@
                                         <div class="call-info">
                                             <a href="<?php echo esc_url($button_link); ?>" class="insut-btn">
                                             <?php if( $button_icon == ''): ?>
-                                                <i class="icofont-home"></i>
+                                                <i class="insut-Logo"> <span class="path3"></span> </i>
                                             <?php else: ?>
-                                                <i class="<?php echo esc_attr($button_icon); ?>"></i>
+                                                <i class="<?php echo esc_attr($button_icon); ?>"> <span class="path3"></span> </i>
                                             <?php endif; ?>
                                                 
                                             <?php echo esc_html($button_title); ?>
@@ -57,7 +57,7 @@
                             <!-- Middle Icon -->
                             <div class="find-icon">
                                  <?php if($call_to_action_icon == ''): ?>
-                                    <i class="icofont-globe"></i>
+                                    <i class="insut-Icon14"></i>
                                  <?php else: ?>
                                     <i class="<?php echo esc_attr($call_to_action_icon); ?>"></i>
                                  <?php endif; ?>

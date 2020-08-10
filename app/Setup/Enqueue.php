@@ -49,6 +49,7 @@ class Enqueue
 			wp_enqueue_style( 'slick', INSUT_CSS . '/slick.css', null, INSUT_VERSION );
 		
 			// theme css
+			wp_enqueue_style( 'insut-icon', INSUT_CSS . '/insut-icon.css', null, INSUT_VERSION );
 			wp_enqueue_style( 'insut-preset', INSUT_CSS . '/preset.css', null, INSUT_VERSION );
 			wp_enqueue_style( 'insut-blog', INSUT_CSS . '/blog.css', null, INSUT_VERSION );
 			wp_enqueue_style( 'insut-theme', INSUT_CSS . '/theme.css', null, INSUT_VERSION );
