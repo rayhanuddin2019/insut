@@ -1,13 +1,3 @@
-/*
- Theme Name: Insut
- Theme URI: 
- Author: Mosharof
- Author URI: 
- Description: Insut - Insurance HTML5 Responsive Template
- Version: 1.0
- License:
- License URI:
- */
 
 /*==================================
  [Table of contents]
@@ -272,6 +262,10 @@
     color: inherit;
     font-size: inherit;
 }
+.navbar-expand-lg .navbar-nav li .dropdown-menu .dropdown-menu{
+    left: 100%;
+    top: 0;
+}
 .navbar-expand-lg .navbar-nav li .dropdown-menu li{
     display: block;
     padding: 0;
@@ -284,13 +278,16 @@
     margin: 0;
     font-size: 15px;
     font-weight: 500;
+    min-width: 180px;
 }
+
 .navbar-expand-lg .navbar-nav li .dropdown-menu li a:hover{
     padding-left: 30px;
     color: #44a52b;
     background: transparent;
 }
-.navbar-expand-lg .navbar-nav li:hover .dropdown-menu{
+
+.navbar-expand-lg .navbar-nav li:hover > .dropdown-menu{
     visibility: visible;
     opacity: 1;
     transform: rotateX(0deg);
@@ -298,6 +295,7 @@
     -moz-transform: rotateX(0deg);
     -webkit-transform: rotateX(0deg);
 }
+
 .contact-btn{
     position: relative;
     z-index: 2;
@@ -319,6 +317,11 @@
     display: inline-block;
     position: relative;
     top: 3px;
+}
+.contact-btn svg{
+    height: 27px;
+    margin-right: 14px;
+    display: inline-block;
 }
 .contact-btn:after{
     background: rgb(51,159,48);
@@ -500,18 +503,14 @@
 }
 .select-agent:before{
     position: absolute;
-    left: 18px;
-    top: 0;
+    left: 15px;
+    top: -2px;
     bottom: 0;
+    content: '';
     margin: auto;
-    content:"\ef41";
-    font-size: 25px;
-    background-image: linear-gradient(-90deg, rgba(51,159,48,1) 0%, rgba(173,206,15,1) 100%);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    line-height: 70px;
-    font-family: IcoFont;
+    height: 22px;
+    width: 20px;
+    background: url(../images/hand.svg) no-repeat center center / cover;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow{
     height: 100%;
@@ -566,15 +565,11 @@
     left: 18px;
     top: 0;
     bottom: 0;
+    content: '';
     margin: auto;
-    content:"\ef41";
-    font-size: 25px;
-    background-image: linear-gradient(-90deg, rgba(51,159,48,1) 0%, rgba(173,206,15,1) 100%);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    line-height: 70px;
-    font-family: IcoFont;
+    height: 22px;
+    width: 14px;
+    background: url(../images/location.svg) no-repeat center center / cover;
 }
 .agent-address .insut-btn{
     z-index: 3;
@@ -710,6 +705,14 @@
     line-height: 30px;
     margin: 0;
 }
+
+.icon-box-01 svg{
+    position: absolute;
+   left: 0;
+   top: 8px;
+   height: 30px;
+}
+
 .about-area-thumb{
     text-align: right;
     margin-left: 35px;
@@ -1005,6 +1008,18 @@
     position: relative;
     top: 1px;
 }
+
+.service-tab-title li a svg{
+    height: 25px;
+    margin-right: 17px;
+    position: relative;
+    top: -2px;
+}
+.service-tab-title li a svg .b{
+    fill: #fff;
+}
+
+
 /*---- Service Tab Content ----*/
 .tab-content-box{
     margin-left: 15px;
@@ -1130,7 +1145,7 @@
     margin-top: 25px;
     display: block;
 }
-}
+
 /*----- Client Logo -----*/
 .clinet-logo{
     display: flex;
@@ -1296,6 +1311,29 @@
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
+
+.fact-icon svg{
+    position: relative;
+    z-index: 3;
+    height: 32px;
+    margin-top: 10px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.fact-icon svg .a,
+.fact-icon svg .b{
+    fill: #000;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.single-funfact:hover .fact-icon svg .a,
+.single-funfact:hover .fact-icon svg .b{
+    fill: #fff;
+}
+
 .single-funfact:hover .fact-icon i{
     color: #fff;
 }
@@ -1463,6 +1501,31 @@
     position: relative;
     z-index: 2;
 }
+
+.qss-icon svg{
+    position: relative;
+    z-index: 2;
+    height: 36px;
+    margin-top: 22px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.qss-icon svg .a{
+    fill: url(#a);
+}
+.qss-icon svg .a,
+.qss-icon svg .b{
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.qss-item:hover .qss-icon svg .a,
+.qss-item:hover .qss-icon svg .b{
+    fill: #fff;
+}
+
+
 .qss-icon:after{
     width: 100%;
     height: 100%;
@@ -1726,6 +1789,17 @@
     left: 0;
     top: 0;
 }
+
+.icon-box-02 svg{
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.icon-box-02 svg .a{
+    fill: url(#a);
+}
+
 .icon-box-02 p{
     font-size: 14px;
     line-height: 12px;
@@ -1957,6 +2031,15 @@
     top: -2px;
     line-height: 90px;
 }
+
+.calltoaction-wrapper .icon-box-02 svg{
+    height: 90px;
+    top: -2px;
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
 .calltoaction-wrapper .icon-box-02 p{
     font-size: 20px;
     color: #0e0e0e;
@@ -2167,6 +2250,14 @@
     -o-transition: all 0.6s ease;
     transition: all 0.6s ease;
 }
+.post-icon svg{
+    height: 25px;
+    margin-top: -8px;
+}
+.post-icon svg .b{
+    fill: #fff;
+}
+
 .single-post:hover .post-icon{
     -moz-transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
@@ -2274,7 +2365,7 @@
     line-height: 32px;
     margin: 0 0 40px;
 }
-.about-widget{
+ .about-widget{
     position: relative;
     background: #0e0e0e;
     padding: 63px 40px 36px;
@@ -2318,6 +2409,16 @@
     left: 0;
     top: 4px;
 }
+.icon-box-03 svg{
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+.icon-box-03 svg .a, .icon-box-03 svg .b {
+    fill: url(#a);
+}
+
 .icon-box-03 span{
     color: #fff;
     display: block;
@@ -2597,6 +2698,16 @@ footer .widget ul li a:hover{
     padding-top: 8px;
     padding-bottom: 12px;
 }
+.top-left h5 svg{
+    height: 18px;
+    margin-right: 10px;
+}
+.top-left h5 i{
+    font-size: 20px;
+    padding-right: 15px;
+    position: relative;
+    top: 3px;
+}
 .top-left h5{
     display: inline-block;
     font-size: 15px;
@@ -2747,11 +2858,16 @@ footer .widget ul li a:hover{
     padding: 29px 54px 32px;
     margin-top: 48px;
 }
+
 .get-a-quote i{
     font-size: 28px;
     padding-right: 20px;
     position: relative;
     top: 3px;
+}
+.get-a-quote svg{
+    height: 30px;
+    margin-right: 15px;
 }
 .get-a-quote:after{
     background: rgb(51,159,48);
@@ -2924,6 +3040,9 @@ footer .widget ul li a:hover{
     line-height: 94px;
     z-index: 3;
 }
+.find-icon svg{
+    height: 45px;
+}
 .find-wrapper h3{
     font-size: 37px;
     line-height: 45px;
@@ -2959,7 +3078,7 @@ footer .widget ul li a:hover{
     display: inline-block;
     border-radius: 3px;
     font-family: 'Poppins', sans-serif;
-    padding: 6px 19px;
+    padding: 6px 15px;
     position: relative;
 }
 .find-form-title li a:after{
@@ -2995,6 +3114,10 @@ footer .widget ul li a:hover{
 .find-form-title li a i{
     font-size: 16px;
     padding-right: 10px;
+}
+.find-form-title li a svg{
+    height: 16px;
+    margin-right: 2px;
 }
 .find-form{
     position: relative;
@@ -3115,6 +3238,11 @@ footer .widget ul li a:hover{
     z-index: 3;
     overflow: hidden;
 }
+.ab-icon svg{
+    height: 76px;
+    margin-left: 30px;
+}
+
 .ab-icon:after{
     position: absolute;
     right: -20px;
@@ -3180,6 +3308,19 @@ footer .widget ul li a:hover{
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
+
+.ab-icon-box i svg{
+    height: 30px;
+}
+.ab-icon-box i svg .a,
+.ab-icon-box i svg .b{
+    fill: #0762fd;
+}
+.ab-icon-box:hover i svg .a,
+.ab-icon-box:hover i svg .b{
+    fill: #fff;
+}
+
 .ab-icon-box h4{
     font-size: 18px;
     line-height: 30px;
@@ -3290,6 +3431,21 @@ footer .widget ul li a:hover{
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
+
+.ser-icon svg{
+    height: 82px;
+}
+.ser-icon svg path,
+.ser-icon svg .a,
+.ser-icon svg .b{
+    fill: #363a46;
+}
+.single-service:hover svg .a,
+.single-service:hover svg path,
+.single-service:hover svg .b{
+    fill: #2c79fd;
+}
+
 .ser-details{
     position: relative;
     padding: 9px 0 0;
@@ -3407,6 +3563,16 @@ footer .widget ul li a:hover{
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
+
+.why-choose-box i svg{
+    height: 30px;
+}
+.why-choose-box i svg .a, 
+.why-choose-box i svg path, 
+.why-choose-box i svg .b {
+    fill: #0762fd;
+}
+
 .why-choose-box h4{
     font-size: 18px;
     line-height: 28px;
@@ -3880,6 +4046,10 @@ footer .widget ul li a:hover{
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
+.gall-hover svg{
+    height: 25px;
+}
+
 .photo-gallery a:hover .gall-hover{
     visibility: visible;
     opacity: 1;
@@ -3962,8 +4132,8 @@ footer .widget ul li a:hover{
     padding: 27px 15px 11px 100px;
 }
 .topbar-wrap .single-info i{
-    font-size: 36px;
-    left: 47px;
+    font-size: 28px;
+    left: 40px;
     top: 31px;
 }
 
@@ -4047,12 +4217,6 @@ footer .widget ul li a:hover{
 .navbar.navbar-three.navbar-expand-lg .navbar-nav li .dropdown-menu a{
     padding: 18px 20px;
 }
-
-
-
-
-
-
 
 /*---- Hero Banner ----*/
 .hero-banner{
@@ -4303,6 +4467,13 @@ footer .widget ul li a:hover{
     background: #fff;
     color: #0762fd;
 }
+
+.ab-ht-content .insut-btn:hover svg path, 
+.ab-ht-content .insut-btn:hover svg .a, 
+.ab-ht-content .insut-btn:hover svg .b {
+    fill: #0762fd;
+}
+
 .ab-ht-content .insut-btn:hover:after{
     background: #0762fd;
 }
@@ -4336,6 +4507,11 @@ footer .widget ul li a:hover{
     left: -56px;
     bottom: 95px;
 }
+
+.ab-icon-two svg{
+    height: 48px;
+}
+
 .ab-icon-two:after{
     position: absolute;
     width: 155px;
@@ -4470,6 +4646,20 @@ footer .widget ul li a:hover{
     padding: 44px 0;
     margin-bottom: 34px;
 }
+.ser-box-icon svg{
+    height: 60px;
+}
+.ser-box-icon svg path,
+.ser-box-icon svg .a,
+.ser-box-icon svg .b{
+    fill: #0762fd;
+}
+.back .ser-box-icon svg path,
+.back .ser-box-icon svg .a,
+.back .ser-box-icon svg .b{
+    fill: #1a1f2c;
+}
+
 .back .ser-box-icon{
     color: #1a1f2c;
 }
@@ -4740,6 +4930,11 @@ footer .widget ul li a:hover{
 .change-quote-color .quote-form.light-form .icon-box-02 i{
     color: #ffba00;
 }
+.change-quote-color .insut-btn svg path, 
+.change-quote-color .insut-btn svg .a, 
+.change-quote-color .insut-btn svg .b{
+    fill: #1a1f2c;
+}
 .change-quote-color .quote-form.light-form .icon-box-02 p {
     color: #e5e9f3;
 }
@@ -4977,6 +5172,20 @@ footer .widget ul li a:hover{
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
+.single-feature-box:hover .feature-icon i svg path,
+.single-feature-box:hover .feature-icon i svg .a,
+.single-feature-box:hover .feature-icon i svg .b{
+    fill: #fff;
+}
+.feature-icon i svg{
+    height: 100px;
+}
+.feature-icon i svg path,
+.feature-icon i svg .a,
+.feature-icon i svg .b{
+    fill: #0762fd;
+}
+
 .single-feature-box h4{
     font-size: 30px;
     line-height: 32px;
@@ -5114,6 +5323,14 @@ footer .widget ul li a:hover{
     -o-transition: all 0.6s ease;
     transition: all 0.6s ease;
 }
+.ser-post-icon svg{
+    height: 26px;
+}
+.ser-post-icon svg path,
+.ser-post-icon svg .a,
+.ser-post-icon svg .a{
+    fill: #fff;
+}
 .single-service-box:hover .ser-post-icon{
     -moz-transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
@@ -5189,6 +5406,10 @@ footer .widget ul li a:hover{
     right: -40px;
     margin: 0;
 }
+.details-thumb .ser-post-icon svg{
+    height: 40px;
+}
+
 .details-content{
     position: relative;
     padding-left: 40px;
@@ -6027,6 +6248,15 @@ footer .widget ul li a:hover{
     -o-transition: all 0.6s ease;
     transition: all 0.6s ease;
 }
+
+.sbp-icon svg{
+    height: 25px;
+}
+.sbp-icon svg path,
+.sbp-icon svg .b{
+    fill: #fff;
+}
+
 .single-blog-post:hover .sbp-icon{
     -moz-transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);

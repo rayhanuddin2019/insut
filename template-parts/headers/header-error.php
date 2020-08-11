@@ -39,7 +39,7 @@
                                          <?php if($item['icon'] != ''): ?>
                                             <i class="<?php echo esc_attr($item['icon']); ?>"></i>  
                                          <?php else: ?> 
-                                            <i class="fa fa-volume-control-phone"></i>   
+                                            <i class="insut-Icon10"></i>   
                                          <?php endif; ?>
                                         <h5><span> <?php echo esc_html($item['label']) ?> </span> <?php echo esc_html($item['content']) ?></h5>
                                     </div>

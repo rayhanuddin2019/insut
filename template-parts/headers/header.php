@@ -45,8 +45,8 @@
                         <div class="inner-topbar clearfix">
                            <?php if($header_contact_address): ?>
                                 <div class="top-left">
-                                    <h5><i class="icofont-google-map"></i><a href="mailto:insut@gmail.com"><?php echo esc_html($header_contact_email_value); ?></a></h5>
-                                    <h5><i class="icofont-google-map"></i><?php echo esc_html($header_contact_address_value); ?></h5>
+                                    <h5><i class="insut-Icon12"></i><a href="mailto:insut@gmail.com"><?php echo esc_html($header_contact_email_value); ?></a></h5>
+                                    <h5><i class="insut-Icon13"></i><?php echo esc_html($header_contact_address_value); ?></h5>
                                 </div>
                             <?php endif; ?>
                                 <div class="top-right">
@@ -85,7 +85,7 @@
                                 <?php if($header_contact_phone): ?>
                                 <!-- Info Start-->
                                 <div class="single-info">
-                                    <i class="fa fa-volume-control-phone"></i>
+                                    <i class="insut-Icon10"></i>
                                     <h5>
                                         <span> 
                                             <?php echo esc_html($header_contact_phone_label); ?>

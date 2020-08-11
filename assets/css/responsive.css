@@ -1,13 +1,3 @@
-/*
- Theme Name: Insut
- Theme URI: 
- Author: Mosharof
- Author URI: 
- Description: Insut - Insurance HTML5 Responsive Template
- Version: 1.0
- License:
- License URI:
- */
 /*=======================================================================
 [Table of contents]
 =========================================================================
@@ -211,6 +201,9 @@
     .service-tab-title li a i{
     	padding-right: 12px;
     }
+    .service-tab-title li a svg{
+    	margin-right: 7px;
+    }
     .tab-content-box{
     	margin-left: 0;
     }
@@ -302,7 +295,10 @@
 	.top-left{
 		left: 250px;
 		border-left: none;
-		padding-left: 30px;
+		padding-left: 15px;
+	}
+	.top-left h5 svg{
+		margin-right: 5px;
 	}
 	.top-left h5{
 		padding-right: 15px;
@@ -323,6 +319,12 @@
 		font-size: 50px;
 		line-height: 55px;
 	}
+	.icon-box-02 h5{
+		font-size: 16px;
+	}
+	.hero-content .icon-box-02{
+		padding-left: 50px;
+	}
 	.hero-slider-two-item p{
 		font-size: 18px;
 		line-height: 30px;
@@ -335,8 +337,11 @@
 		padding: 24px 20px 22px 65px;
 	}
 	.find-form-title li a{
-		padding: 6px 11px;
+		padding: 6px 6px;
 		font-size: 14px;
+	}
+	.find-form-title li a svg{
+		height: 13px;
 	}
 	.ab-shape-1,
 	.ab-shape-2{
@@ -402,8 +407,15 @@
 	.topbar-wrap .single-info{
 		padding-left: 70px;
 	}
+	.single-info h5{
+		font-size: 15px;
+		letter-spacing: 0;
+	}
 	.topbar-wrap .single-info i{
 		left: 20px;
+	}
+	.topbar-wrap .single-info svg{
+		left: 15px;
 	}
 	.hero-banner{
 		padding-top: 180px;
@@ -557,7 +569,7 @@
 		margin-top: 60px;
 	}
 	.single-info{
-		padding: 12px 15px 11px 35px;
+		padding: 12px 15px 11px 39px;
 	}
 	.single-info:after{
 		display: none;
@@ -568,6 +580,10 @@
 	}
 	.single-info h5 span{
 		font-size: 13px;
+		margin-bottom: 12px;
+	}
+	.single-info svg{
+		height: 22px;
 	}
 	.single-info i{
 		font-size: 25px;
@@ -615,6 +631,9 @@
 	}
 	.service-tab-title li a i{
 		padding-right: 12px;
+	}
+	.service-tab-title li a svg{
+		margin-right: 7px;
 	}
 	.tab-content-box{
 		padding: 40px 20px 38px 20px;
@@ -665,6 +684,10 @@
 		position: relative;
 		margin-bottom: 25px;
 	}
+	.calltoaction-wrapper .icon-box-02 svg{
+		position: relative;
+		margin-bottom: 25px;
+	}
 	.calltoaction-wrapper .icon-box-02 h5 {
 	    font-size: 30px;
 	}
@@ -692,7 +715,7 @@
     	float: left;
 	}
 	.sc-box i{
-		margin-right: 15px;
+		margin-right: 10px;
 	}
 	.blog-sidebar{
 		padding-right: 60px;
@@ -778,6 +801,20 @@
 	.navbar-expand-lg .navbar-nav li .dropdown-menu li{
 		border-color: rgba(0, 0, 0, .1);
 	}
+	.navbar-expand-lg .navbar-nav li.dropdown .dropdown-menu li a.nav-link:after{
+		color: #1a1f2c;
+	}
+	.navbar-expand-lg .navbar-nav li .dropdown-menu li .dropdown-menu{
+		visibility: visible;
+		opacity: 1;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+	.navbar-expand-lg .navbar-nav li .dropdown-menu li .dropdown-menu.show {
+	    display: block;
+	    transition: all .4s ease;
+	}
     .hero-slider{
     	padding: 0;
     }
@@ -817,7 +854,7 @@
     .about-area-thumb{
     	margin-left: 0;
     }
-    .cus-column {
+    .ser-cus-column {
 	    padding-left: 15px;
 	    padding-right: 15px;
 	}
@@ -869,11 +906,17 @@
     }
     .top-left{
     	left: 210px;
-    	padding-left: 15px;
+    	padding-left: 10px;
     }
     .top-left h5{
     	padding-right: 10px;
     	font-size: 14px;
+    }
+    .top-left h5 svg{
+    	margin-right: 3px;
+    }
+    .topbar-socail li a{
+    	margin-left: 7px;
     }
     .top-left h5 i{
     	padding-right: 5px;
@@ -1099,6 +1142,10 @@
 		padding-top: 12px;
 	}
 	.topbar-wrap .single-info i{
+		left: 30px;
+		top: 18px;
+	}
+	.topbar-wrap .single-info svg{
 		left: 30px;
 		top: 18px;
 	}
@@ -1383,6 +1430,10 @@
 	}
 	.calltoaction-wrapper .icon-box-02 p,
 	.calltoaction-wrapper .icon-box-02 i{
+		position: relative;
+		margin-bottom: 25px;
+	}
+	.calltoaction-wrapper .icon-box-02 svg{
 		position: relative;
 		margin-bottom: 25px;
 	}
@@ -1826,5 +1877,8 @@
 	}
 	.comment-list .children{
 		padding-left: 15px;
+	}
+	.find-form input[type="search"]{
+		padding-right: 15px;
 	}
 }

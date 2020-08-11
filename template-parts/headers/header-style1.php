@@ -131,7 +131,7 @@
                             <?php if($button_enable): ?>  
                                 <!-- Contact Btn -->
                                    <a href="<?php echo esc_url($button_link); ?>" class="contact-btn">
-                                        <i class="fa fa-volume-control-phone"></i>
+                                        <i class="insut-Icon10"></i>
                                         <?php echo esc_html($button_text); ?>
                                    </a>
                                 <!-- Contact Btn End -->
