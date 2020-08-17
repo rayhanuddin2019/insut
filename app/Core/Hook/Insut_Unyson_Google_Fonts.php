@@ -51,7 +51,7 @@ class Insut_Unyson_Google_Fonts {
 
 	public static function output_url() {
 		if ( $url = self::generate_url() ):
-		  wp_enqueue_style( 'appsred-google-fonts', esc_attr( $url ), null, INSUT_VERSION );
+		  wp_enqueue_style( 'insut-google-fonts', esc_attr( $url ), null, INSUT_VERSION );
 		endif;
 	}
 
