@@ -1215,7 +1215,8 @@
      color:#fff;
   }
   .footer-area .tagcloud a:hover{
-     background:#ff4f4f;
+     background:linear-gradient(-90deg, rgba(0,169,252,1) 0%, rgba(8,85,253,1) 100%);
+     color:#fff;
   }
 
   .footer-area ul li a,
