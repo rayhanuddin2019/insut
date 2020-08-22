@@ -1,9 +1,26 @@
 
+<<<<<<< HEAD
     <?php if(!quomodo_market_option('blog_grid',0)): ?>
         <div class="blog-standard-item mt-30 <?php echo esc_attr(is_sticky()?'sticky':''); ?>">
             <?php if(has_post_thumbnail()): ?>
                 <div class="blog-standard-thumb">
                    <img src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt=" <?php the_title(); ?>">
+=======
+
+    <div class="single-blog-post <?php echo esc_attr(is_sticky()?'sticky':''); ?>">
+        <?php if(has_post_thumbnail()): ?>
+            <div class="sbp-thumb">
+                 <img class="img-fluid" src="<?php echo esc_url(get_the_post_thumbnail_url()); ?>" alt=" <?php the_title(); ?>">
+                 <div class="sbp-icon">
+                   <?php 
+                     $image_icon = insut_meta_option(get_the_id(),'image_icon');
+                   ?>
+                   <?php if( $image_icon == '' ):  ?> 
+                        <i class="insut-Icon11"> <span class="path3"></span> </i>
+                    <?php else: ?>
+                        <i class="<?php echo esc_attr($image_icon); ?>"> <span class="path3"></span> </i>
+                    <?php endif; ?>
+>>>>>>> e263985ac7f7eb9b1ed4fe6c7687141874a33a91
                 </div>
             <?php endif; ?>
             <div class="blog-standard-content">
