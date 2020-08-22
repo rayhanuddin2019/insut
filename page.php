@@ -7,7 +7,7 @@
 	get_header(); 
 	get_template_part( 'template-parts/banner/content', 'banner-page' ); 
 
-	$blog_sidebar = insut_option('blog_sidebar','3');
+	$blog_sidebar = quomodo_market_option('blog_sidebar','3');
 	$column       = ($blog_sidebar == 1 || !is_active_sidebar('sidebar-1')) ? 'col-lg-12 mx-auto' : 'col-lg-7';
 	 
 
@@ -32,7 +32,7 @@
 										if ( is_user_logged_in() ) {
 											echo '<p>';
 												edit_post_link( 
-													esc_html__( 'Edit', 'insut' ), 
+													esc_html__( 'Edit', 'quomodo-market' ), 
 													'<span class="meta-edit">', 
 													'</span>'
 												);

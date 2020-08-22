@@ -1,6 +1,6 @@
 {	
 	"autoload": {
-		"psr-4": { "Insut\\": "./app" }
+		"psr-4": { "QuomodoMarket\\": "./app" }
 
 	}
 	

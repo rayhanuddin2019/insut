@@ -1,5 +1,5 @@
 <?php
-namespace Insut\Custom;
+namespace QuomodoMarket\Custom;
 
 /**
  * Extras.

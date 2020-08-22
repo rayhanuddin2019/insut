@@ -324,77 +324,77 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 			// Load class strings.
 			$this->strings = array(
-				'page_title'                      => esc_html__( 'Install Required Plugins', 'insut' ),
-				'menu_title'                      => esc_html__( 'Install Plugins', 'insut' ),
+				'page_title'                      => esc_html__( 'Install Required Plugins', 'quomodo-market' ),
+				'menu_title'                      => esc_html__( 'Install Plugins', 'quomodo-market' ),
 				/* translators: %s: plugin name. */
-				'installing'                      => esc_html__( 'Installing Plugin: %s', 'insut' ),
+				'installing'                      => esc_html__( 'Installing Plugin: %s', 'quomodo-market' ),
 				/* translators: %s: plugin name. */
-				'updating'                        => esc_html__( 'Updating Plugin: %s', 'insut' ),
-				'oops'                            => esc_html__( 'Something went wrong with the plugin API.', 'insut' ),
+				'updating'                        => esc_html__( 'Updating Plugin: %s', 'quomodo-market' ),
+				'oops'                            => esc_html__( 'Something went wrong with the plugin API.', 'quomodo-market' ),
 				'notice_can_install_required'     => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'This theme requires the following plugin: %1$s.',
 					'This theme requires the following plugins: %1$s.',
-					'insut'
+					'quomodo-market'
 				),
 				'notice_can_install_recommended'  => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'This theme recommends the following plugin: %1$s.',
 					'This theme recommends the following plugins: %1$s.',
-					'insut'
+					'quomodo-market'
 				),
 				'notice_ask_to_update'            => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
 					'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
-					'insut'
+					'quomodo-market'
 				),
 				'notice_ask_to_update_maybe'      => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'There is an update available for: %1$s.',
 					'There are updates available for the following plugins: %1$s.',
-					'insut'
+					'quomodo-market'
 				),
 				'notice_can_activate_required'    => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'The following required plugin is currently inactive: %1$s.',
 					'The following required plugins are currently inactive: %1$s.',
-					'insut'
+					'quomodo-market'
 				),
 				'notice_can_activate_recommended' => _n_noop(
 					/* translators: 1: plugin name(s). */
 					'The following recommended plugin is currently inactive: %1$s.',
 					'The following recommended plugins are currently inactive: %1$s.',
-					'insut'
+					'quomodo-market'
 				),
 				'install_link'                    => _n_noop(
 					'Begin installing plugin',
 					'Begin installing plugins',
-					'insut'
+					'quomodo-market'
 				),
 				'update_link'                     => _n_noop(
 					'Begin updating plugin',
 					'Begin updating plugins',
-					'insut'
+					'quomodo-market'
 				),
 				'activate_link'                   => _n_noop(
 					'Begin activating plugin',
 					'Begin activating plugins',
-					'insut'
+					'quomodo-market'
 				),
-				'return'                          => esc_html__( 'Return to Required Plugins Installer', 'insut' ),
-				'dashboard'                       => esc_html__( 'Return to the Dashboard', 'insut' ),
-				'plugin_activated'                => esc_html__( 'Plugin activated successfully.', 'insut' ),
-				'activated_successfully'          => esc_html__( 'The following plugin was activated successfully:', 'insut' ),
+				'return'                          => esc_html__( 'Return to Required Plugins Installer', 'quomodo-market' ),
+				'dashboard'                       => esc_html__( 'Return to the Dashboard', 'quomodo-market' ),
+				'plugin_activated'                => esc_html__( 'Plugin activated successfully.', 'quomodo-market' ),
+				'activated_successfully'          => esc_html__( 'The following plugin was activated successfully:', 'quomodo-market' ),
 				/* translators: 1: plugin name. */
-				'plugin_already_active'           => esc_html__( 'No action taken. Plugin %1$s was already active.', 'insut' ),
+				'plugin_already_active'           => esc_html__( 'No action taken. Plugin %1$s was already active.', 'quomodo-market' ),
 				/* translators: 1: plugin name. */
-				'plugin_needs_higher_version'     => esc_html__( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'insut' ),
+				'plugin_needs_higher_version'     => esc_html__( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'quomodo-market' ),
 				/* translators: 1: dashboard link. */
-				'complete'                        => esc_html__( 'All plugins installed and activated successfully. %1$s', 'insut' ),
-				'dismiss'                         => esc_html__( 'Dismiss this notice', 'insut' ),
-				'notice_cannot_install_activate'  => esc_html__( 'There are one or more required or recommended plugins to install, update or activate.', 'insut' ),
-				'contact_admin'                   => esc_html__( 'Please contact the administrator of this site for help.', 'insut' ),
+				'complete'                        => esc_html__( 'All plugins installed and activated successfully. %1$s', 'quomodo-market' ),
+				'dismiss'                         => esc_html__( 'Dismiss this notice', 'quomodo-market' ),
+				'notice_cannot_install_activate'  => esc_html__( 'There are one or more required or recommended plugins to install, update or activate.', 'quomodo-market' ),
+				'contact_admin'                   => esc_html__( 'Please contact the administrator of this site for help.', 'quomodo-market' ),
 			);
 
 			do_action( 'tgmpa_register' );
@@ -515,8 +515,8 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			$actions['update'] = sprintf(
 				'<a href="%1$s" title="%2$s" class="edit">%3$s</a>',
 				esc_url( $this->get_tgmpa_status_url( 'update' ) ),
-				esc_attr__( 'This plugin needs to be updated to be compatible with your theme.', 'insut' ),
-				esc_html__( 'Update Required', 'insut' )
+				esc_attr__( 'This plugin needs to be updated to be compatible with your theme.', 'quomodo-market' ),
+				esc_html__( 'Update Required', 'quomodo-market' )
 			);
 
 			return $actions;
@@ -820,7 +820,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 				// Display message based on if all plugins are now active or not.
 				if ( $this->is_tgmpa_complete() ) {
-					echo '<p>', sprintf( esc_html( $this->strings['complete'] ), '<a href="' . esc_url( self_admin_url() ) . '">' . esc_html__( 'Return to the Dashboard', 'insut' ) . '</a>' ), '</p>';
+					echo '<p>', sprintf( esc_html( $this->strings['complete'] ), '<a href="' . esc_url( self_admin_url() ) . '">' . esc_html__( 'Return to the Dashboard', 'quomodo-market' ) . '</a>' ), '</p>';
 					echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 				} else {
 					echo '<p><a href="', esc_url( $this->get_tgmpa_url() ), '" target="_parent">', esc_html( $this->strings['return'] ), '</a></p>';
@@ -927,10 +927,10 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 					if ( true === $GLOBALS['wp_filesystem']->move( $from_path, $to_path ) ) {
 						return trailingslashit( $to_path );
 					} else {
-						return new WP_Error( 'rename_failed', esc_html__( 'The remote plugin package does not contain a folder with the desired slug and renaming did not work.', 'insut' ) . ' ' . esc_html__( 'Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines.', 'insut' ), array( 'found' => $subdir_name, 'expected' => $desired_slug ) );
+						return new WP_Error( 'rename_failed', esc_html__( 'The remote plugin package does not contain a folder with the desired slug and renaming did not work.', 'quomodo-market' ) . ' ' . esc_html__( 'Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines.', 'quomodo-market' ), array( 'found' => $subdir_name, 'expected' => $desired_slug ) );
 					}
 				} elseif ( empty( $subdir_name ) ) {
-					return new WP_Error( 'packaged_wrong', esc_html__( 'The remote plugin package consists of more than one file, but the files are not packaged in a folder.', 'insut' ) . ' ' . esc_html__( 'Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines.', 'insut' ), array( 'found' => $subdir_name, 'expected' => $desired_slug ) );
+					return new WP_Error( 'packaged_wrong', esc_html__( 'The remote plugin package consists of more than one file, but the files are not packaged in a folder.', 'quomodo-market' ) . ' ' . esc_html__( 'Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines.', 'quomodo-market' ), array( 'found' => $subdir_name, 'expected' => $desired_slug ) );
 				}
 			}
 
@@ -1114,12 +1114,12 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 						$count          = count( $plugin_group );
 						$linked_plugins = array_map( array( 'TGMPA_Utils', 'wrap_in_em' ), $linked_plugins );
 						$last_plugin    = array_pop( $linked_plugins ); // Pop off last name to prep for readability.
-						$imploded       = empty( $linked_plugins ) ? $last_plugin : ( implode( ', ', $linked_plugins ) . ' ' . esc_html_x( 'and', 'plugin A *and* plugin B', 'insut' ) . ' ' . $last_plugin );
+						$imploded       = empty( $linked_plugins ) ? $last_plugin : ( implode( ', ', $linked_plugins ) . ' ' . esc_html_x( 'and', 'plugin A *and* plugin B', 'quomodo-market' ) . ' ' . $last_plugin );
 
 						$rendered .= sprintf(
 							$line_template,
 							sprintf(
-								translate_nooped_plural( $this->strings[ $type ], $count, 'insut' ),
+								translate_nooped_plural( $this->strings[ $type ], $count, 'quomodo-market' ),
 								$imploded,
 								$count
 							)
@@ -1167,14 +1167,14 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				if ( $install_count > 0 ) {
 					$action_links['install'] = sprintf(
 						$link_template,
-						translate_nooped_plural( $this->strings['install_link'], $install_count, 'insut' ),
+						translate_nooped_plural( $this->strings['install_link'], $install_count, 'quomodo-market' ),
 						esc_url( $this->get_tgmpa_status_url( 'install' ) )
 					);
 				}
 				if ( $update_count > 0 ) {
 					$action_links['update'] = sprintf(
 						$link_template,
-						translate_nooped_plural( $this->strings['update_link'], $update_count, 'insut' ),
+						translate_nooped_plural( $this->strings['update_link'], $update_count, 'quomodo-market' ),
 						esc_url( $this->get_tgmpa_status_url( 'update' ) )
 					);
 				}
@@ -1183,7 +1183,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			if ( current_user_can( 'activate_plugins' ) && $activate_count > 0 ) {
 				$action_links['activate'] = sprintf(
 					$link_template,
-					translate_nooped_plural( $this->strings['activate_link'], $activate_count, 'insut' ),
+					translate_nooped_plural( $this->strings['activate_link'], $activate_count, 'quomodo-market' ),
 					esc_url( $this->get_tgmpa_status_url( 'activate' ) )
 				);
 			}
@@ -1975,7 +1975,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				esc_html(
 					sprintf(
 						/* translators: %s: version number */
-						__( 'TGMPA v%s', 'insut' ),
+						__( 'TGMPA v%s', 'quomodo-market' ),
 						self::TGMPA_VERSION
 					)
 				),
@@ -2266,10 +2266,10 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 */
 		protected function get_plugin_advise_type_text( $required ) {
 			if ( true === $required ) {
-				return esc_html__( 'Required', 'insut' );
+				return esc_html__( 'Required', 'quomodo-market' );
 			}
 
-			return esc_html__( 'Recommended', 'insut' );
+			return esc_html__( 'Recommended', 'quomodo-market' );
 		}
 
 		/**
@@ -2285,13 +2285,13 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			switch ( $type ) {
 				case 'repo':
-					$string = esc_html__( 'WordPress Repository', 'insut' );
+					$string = esc_html__( 'WordPress Repository', 'quomodo-market' );
 					break;
 				case 'external':
-					$string = esc_html__( 'External Source', 'insut' );
+					$string = esc_html__( 'External Source', 'quomodo-market' );
 					break;
 				case 'bundled':
-					$string = esc_html__( 'Pre-Packaged', 'insut' );
+					$string = esc_html__( 'Pre-Packaged', 'quomodo-market' );
 					break;
 			}
 
@@ -2308,25 +2308,25 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 */
 		protected function get_plugin_status_text( $slug ) {
 			if ( ! $this->tgmpa->is_plugin_installed( $slug ) ) {
-				return esc_html__( 'Not Installed', 'insut' );
+				return esc_html__( 'Not Installed', 'quomodo-market' );
 			}
 
 			if ( ! $this->tgmpa->is_plugin_active( $slug ) ) {
-				$install_status = esc_html__( 'Installed But Not Activated', 'insut' );
+				$install_status = esc_html__( 'Installed But Not Activated', 'quomodo-market' );
 			} else {
-				$install_status = esc_html__( 'Active', 'insut' );
+				$install_status = esc_html__( 'Active', 'quomodo-market' );
 			}
 
 			$update_status = '';
 
 			if ( $this->tgmpa->does_plugin_require_update( $slug ) && false === $this->tgmpa->does_plugin_have_update( $slug ) ) {
-				$update_status = esc_html__( 'Required Update not Available', 'insut' );
+				$update_status = esc_html__( 'Required Update not Available', 'quomodo-market' );
 
 			} elseif ( $this->tgmpa->does_plugin_require_update( $slug ) ) {
-				$update_status = esc_html__( 'Requires Update', 'insut' );
+				$update_status = esc_html__( 'Requires Update', 'quomodo-market' );
 
 			} elseif ( false !== $this->tgmpa->does_plugin_have_update( $slug ) ) {
-				$update_status = esc_html__( 'Update recommended', 'insut' );
+				$update_status = esc_html__( 'Update recommended', 'quomodo-market' );
 			}
 
 			if ( '' === $update_status ) {
@@ -2335,7 +2335,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			return sprintf(
 				/* translators: 1: install status, 2: update status */
-				_x( '%1$s, %2$s', 'Install/Update Status', 'insut' ),
+				_x( '%1$s, %2$s', 'Install/Update Status', 'quomodo-market' ),
 				$install_status,
 				$update_status
 			);
@@ -2381,19 +2381,19 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				switch ( $type ) {
 					case 'all':
 						/* translators: 1: number of plugins. */
-						$text = _nx( 'All <span class="count">(%s)</span>', 'All <span class="count">(%s)</span>', $count, 'plugins', 'insut' );
+						$text = _nx( 'All <span class="count">(%s)</span>', 'All <span class="count">(%s)</span>', $count, 'plugins', 'quomodo-market' );
 						break;
 					case 'install':
 						/* translators: 1: number of plugins. */
-						$text = _n( 'To Install <span class="count">(%s)</span>', 'To Install <span class="count">(%s)</span>', $count, 'insut' );
+						$text = _n( 'To Install <span class="count">(%s)</span>', 'To Install <span class="count">(%s)</span>', $count, 'quomodo-market' );
 						break;
 					case 'update':
 						/* translators: 1: number of plugins. */
-						$text = _n( 'Update Available <span class="count">(%s)</span>', 'Update Available <span class="count">(%s)</span>', $count, 'insut' );
+						$text = _n( 'Update Available <span class="count">(%s)</span>', 'Update Available <span class="count">(%s)</span>', $count, 'quomodo-market' );
 						break;
 					case 'activate':
 						/* translators: 1: number of plugins. */
-						$text = _n( 'To Activate <span class="count">(%s)</span>', 'To Activate <span class="count">(%s)</span>', $count, 'insut' );
+						$text = _n( 'To Activate <span class="count">(%s)</span>', 'To Activate <span class="count">(%s)</span>', $count, 'quomodo-market' );
 						break;
 					default:
 						$text = '';
@@ -2475,7 +2475,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			$output = array();
 
 			if ( $this->tgmpa->is_plugin_installed( $item['slug'] ) ) {
-				$installed = ! empty( $item['installed_version'] ) ? $item['installed_version'] : _x( 'unknown', 'as in: "version nr unknown"', 'insut' );
+				$installed = ! empty( $item['installed_version'] ) ? $item['installed_version'] : _x( 'unknown', 'as in: "version nr unknown"', 'quomodo-market' );
 
 				$color = '';
 				if ( ! empty( $item['minimum_version'] ) && $this->tgmpa->does_plugin_require_update( $item['slug'] ) ) {
@@ -2483,7 +2483,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				}
 
 				$output[] = sprintf(
-					'<p><span style="min-width: 32px; text-align: right; float: right;%1$s">%2$s</span>' . esc_html__( 'Installed version:', 'insut' ) . '</p>',
+					'<p><span style="min-width: 32px; text-align: right; float: right;%1$s">%2$s</span>' . esc_html__( 'Installed version:', 'quomodo-market' ) . '</p>',
 					$color,
 					$installed
 				);
@@ -2491,7 +2491,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			if ( ! empty( $item['minimum_version'] ) ) {
 				$output[] = sprintf(
-					'<p><span style="min-width: 32px; text-align: right; float: right;">%1$s</span>' . esc_html__( 'Minimum required version:', 'insut' ) . '</p>',
+					'<p><span style="min-width: 32px; text-align: right; float: right;">%1$s</span>' . esc_html__( 'Minimum required version:', 'quomodo-market' ) . '</p>',
 					$item['minimum_version']
 				);
 			}
@@ -2503,7 +2503,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				}
 
 				$output[] = sprintf(
-					'<p><span style="min-width: 32px; text-align: right; float: right;%1$s">%2$s</span>' . esc_html__( 'Available version:', 'insut' ) . '</p>',
+					'<p><span style="min-width: 32px; text-align: right; float: right;%1$s">%2$s</span>' . esc_html__( 'Available version:', 'quomodo-market' ) . '</p>',
 					$color,
 					$item['available_version']
 				);
@@ -2526,7 +2526,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 * @since 2.2.0
 		 */
 		public function no_items() {
-			echo esc_html__( 'No plugins to install, update or activate.', 'insut' ) . ' <a href="' . esc_url( self_admin_url() ) . '"> ' . esc_html__( 'Return to the Dashboard', 'insut' ) . '</a>';
+			echo esc_html__( 'No plugins to install, update or activate.', 'quomodo-market' ) . ' <a href="' . esc_url( self_admin_url() ) . '"> ' . esc_html__( 'Return to the Dashboard', 'quomodo-market' ) . '</a>';
 			echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 		}
 
@@ -2540,14 +2540,14 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		public function get_columns() {
 			$columns = array(
 				'cb'     => '<input type="checkbox" />',
-				'plugin' => esc_html__( 'Plugin', 'insut' ),
-				'source' => esc_html__( 'Source', 'insut' ),
-				'type'   => esc_html__( 'Type', 'insut' ),
+				'plugin' => esc_html__( 'Plugin', 'quomodo-market' ),
+				'source' => esc_html__( 'Source', 'quomodo-market' ),
+				'type'   => esc_html__( 'Type', 'quomodo-market' ),
 			);
 
 			if ( 'all' === $this->view_context || 'update' === $this->view_context ) {
-				$columns['version'] = esc_html__( 'Version', 'insut' );
-				$columns['status']  = esc_html__( 'Status', 'insut' );
+				$columns['version'] = esc_html__( 'Version', 'quomodo-market' );
+				$columns['status']  = esc_html__( 'Status', 'quomodo-market' );
 			}
 
 			return apply_filters( 'tgmpa_table_columns', $columns );
@@ -2596,18 +2596,18 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			// Display the 'Install' action link if the plugin is not yet available.
 			if ( ! $this->tgmpa->is_plugin_installed( $item['slug'] ) ) {
 				/* translators: %2$s: plugin name in screen reader markup */
-				$actions['install'] = esc_html__( 'Install %2$s', 'insut' );
+				$actions['install'] = esc_html__( 'Install %2$s', 'quomodo-market' );
 			} else {
 				// Display the 'Update' action link if an update is available and WP complies with plugin minimum.
 				if ( false !== $this->tgmpa->does_plugin_have_update( $item['slug'] ) && $this->tgmpa->can_plugin_update( $item['slug'] ) ) {
 					/* translators: %2$s: plugin name in screen reader markup */
-					$actions['update'] = esc_html__( 'Update %2$s', 'insut' );
+					$actions['update'] = esc_html__( 'Update %2$s', 'quomodo-market' );
 				}
 
 				// Display the 'Activate' action link, but only if the plugin meets the minimum version.
 				if ( $this->tgmpa->can_plugin_activate( $item['slug'] ) ) {
 					/* translators: %2$s: plugin name in screen reader markup */
-					$actions['activate'] = esc_html__( 'Activate %2$s', 'insut' );
+					$actions['activate'] = esc_html__( 'Activate %2$s', 'quomodo-market' );
 				}
 			}
 
@@ -2677,7 +2677,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				<tr class="plugin-update-tr">
 					<td colspan="', absint( $this->get_column_count() ), '" class="plugin-update colspanchange">
 						<div class="update-message">',
-							esc_html__( 'Upgrade message from the plugin author:', 'insut' ),
+							esc_html__( 'Upgrade message from the plugin author:', 'quomodo-market' ),
 							' <strong>', wp_kses_data( $item['upgrade_notice'] ), '</strong>
 						</div>
 					</td>
@@ -2710,16 +2710,16 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			if ( 'update' !== $this->view_context && 'activate' !== $this->view_context ) {
 				if ( current_user_can( 'install_plugins' ) ) {
-					$actions['tgmpa-bulk-install'] = esc_html__( 'Install', 'insut' );
+					$actions['tgmpa-bulk-install'] = esc_html__( 'Install', 'quomodo-market' );
 				}
 			}
 
 			if ( 'install' !== $this->view_context ) {
 				if ( current_user_can( 'update_plugins' ) ) {
-					$actions['tgmpa-bulk-update'] = esc_html__( 'Update', 'insut' );
+					$actions['tgmpa-bulk-update'] = esc_html__( 'Update', 'quomodo-market' );
 				}
 				if ( current_user_can( 'activate_plugins' ) ) {
-					$actions['tgmpa-bulk-activate'] = esc_html__( 'Activate', 'insut' );
+					$actions['tgmpa-bulk-activate'] = esc_html__( 'Activate', 'quomodo-market' );
 				}
 			}
 
@@ -2750,9 +2750,9 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				// Did user actually select any plugins to install/update ?
 				if ( empty( $_POST['plugin'] ) ) {
 					if ( 'install' === $install_type ) {
-						$message = esc_html__( 'No plugins were selected to be installed. No action taken.', 'insut' );
+						$message = esc_html__( 'No plugins were selected to be installed. No action taken.', 'quomodo-market' );
 					} else {
-						$message = esc_html__( 'No plugins were selected to be updated. No action taken.', 'insut' );
+						$message = esc_html__( 'No plugins were selected to be updated. No action taken.', 'quomodo-market' );
 					}
 
 					echo '<div id="message" class="error"><p>', esc_html( $message ), '</p></div>';
@@ -2793,9 +2793,9 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				// No need to proceed further if we have no plugins to handle.
 				if ( empty( $plugins_to_install ) ) {
 					if ( 'install' === $install_type ) {
-						$message = esc_html__( 'No plugins are available to be installed at this time.', 'insut' );
+						$message = esc_html__( 'No plugins are available to be installed at this time.', 'quomodo-market' );
 					} else {
-						$message = esc_html__( 'No plugins are available to be updated at this time.', 'insut' );
+						$message = esc_html__( 'No plugins are available to be updated at this time.', 'quomodo-market' );
 					}
 
 					echo '<div id="message" class="error"><p>', esc_html( $message ), '</p></div>';
@@ -2901,7 +2901,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 				// Did user actually select any plugins to activate ?
 				if ( empty( $_POST['plugin'] ) ) {
-					echo '<div id="message" class="error"><p>', esc_html__( 'No plugins were selected to be activated. No action taken.', 'insut' ), '</p></div>';
+					echo '<div id="message" class="error"><p>', esc_html__( 'No plugins were selected to be activated. No action taken.', 'quomodo-market' ), '</p></div>';
 
 					return false;
 				}
@@ -2927,7 +2927,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 				// Return early if there are no plugins to activate.
 				if ( empty( $plugins_to_activate ) ) {
-					echo '<div id="message" class="error"><p>', esc_html__( 'No plugins are available to be activated at this time.', 'insut' ), '</p></div>';
+					echo '<div id="message" class="error"><p>', esc_html__( 'No plugins are available to be activated at this time.', 'quomodo-market' ), '</p></div>';
 
 					return false;
 				}
@@ -2941,11 +2941,11 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 					$count        = count( $plugin_names ); // Count so we can use _n function.
 					$plugin_names = array_map( array( 'TGMPA_Utils', 'wrap_in_strong' ), $plugin_names );
 					$last_plugin  = array_pop( $plugin_names ); // Pop off last name to prep for readability.
-					$imploded     = empty( $plugin_names ) ? $last_plugin : ( implode( ', ', $plugin_names ) . ' ' . esc_html_x( 'and', 'plugin A *and* plugin B', 'insut' ) . ' ' . $last_plugin );
+					$imploded     = empty( $plugin_names ) ? $last_plugin : ( implode( ', ', $plugin_names ) . ' ' . esc_html_x( 'and', 'plugin A *and* plugin B', 'quomodo-market' ) . ' ' . $last_plugin );
 
 					printf( // WPCS: xss ok.
 						'<div id="message" class="updated"><p>%1$s %2$s.</p></div>',
-						esc_html( _n( 'The following plugin was activated successfully:', 'The following plugins were activated successfully:', $count, 'insut' ) ),
+						esc_html( _n( 'The following plugin was activated successfully:', 'The following plugins were activated successfully:', $count, 'quomodo-market' ) ),
 						$imploded
 					);
 
@@ -3151,8 +3151,8 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 * @since 2.2.0
 					 */
 					public function activate_strings() {
-						$this->strings['activation_failed']  = esc_html__( 'Plugin activation failed.', 'insut' );
-						$this->strings['activation_success'] = esc_html__( 'Plugin activated successfully.', 'insut' );
+						$this->strings['activation_failed']  = esc_html__( 'Plugin activation failed.', 'quomodo-market' );
+						$this->strings['activation_success'] = esc_html__( 'Plugin activated successfully.', 'quomodo-market' );
 					}
 
 					/**
@@ -3491,29 +3491,29 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 						if ( 'update' === $this->options['install_type'] ) {
 							parent::add_strings();
 							/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-							$this->upgrader->strings['skin_before_update_header'] = esc_html__( 'Updating Plugin %1$s (%2$d/%3$d)', 'insut' );
+							$this->upgrader->strings['skin_before_update_header'] = esc_html__( 'Updating Plugin %1$s (%2$d/%3$d)', 'quomodo-market' );
 						} else {
 							/* translators: 1: plugin name, 2: error message. */
-							$this->upgrader->strings['skin_update_failed_error'] = esc_html__( 'An error occurred while installing %1$s: <strong>%2$s</strong>.', 'insut' );
+							$this->upgrader->strings['skin_update_failed_error'] = esc_html__( 'An error occurred while installing %1$s: <strong>%2$s</strong>.', 'quomodo-market' );
 							/* translators: 1: plugin name. */
-							$this->upgrader->strings['skin_update_failed'] = esc_html__( 'The installation of %1$s failed.', 'insut' );
+							$this->upgrader->strings['skin_update_failed'] = esc_html__( 'The installation of %1$s failed.', 'quomodo-market' );
 
 							if ( $this->tgmpa->is_automatic ) {
 								// Automatic activation strings.
-								$this->upgrader->strings['skin_upgrade_start'] = esc_html__( 'The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'insut' );
+								$this->upgrader->strings['skin_upgrade_start'] = esc_html__( 'The installation and activation process is starting. This process may take a while on some hosts, so please be patient.', 'quomodo-market' );
 								/* translators: 1: plugin name. */
-								$this->upgrader->strings['skin_update_successful'] = esc_html__( '%1$s installed and activated successfully.', 'insut' ) . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__( 'Show Details', 'insut' ) . '</span><span class="hidden">' . esc_html__( 'Hide Details', 'insut' ) . '</span>.</a>';
-								$this->upgrader->strings['skin_upgrade_end']       = esc_html__( 'All installations and activations have been completed.', 'insut' );
+								$this->upgrader->strings['skin_update_successful'] = esc_html__( '%1$s installed and activated successfully.', 'quomodo-market' ) . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__( 'Show Details', 'quomodo-market' ) . '</span><span class="hidden">' . esc_html__( 'Hide Details', 'quomodo-market' ) . '</span>.</a>';
+								$this->upgrader->strings['skin_upgrade_end']       = esc_html__( 'All installations and activations have been completed.', 'quomodo-market' );
 								/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-								$this->upgrader->strings['skin_before_update_header'] = esc_html__( 'Installing and Activating Plugin %1$s (%2$d/%3$d)', 'insut' );
+								$this->upgrader->strings['skin_before_update_header'] = esc_html__( 'Installing and Activating Plugin %1$s (%2$d/%3$d)', 'quomodo-market' );
 							} else {
 								// Default installation strings.
-								$this->upgrader->strings['skin_upgrade_start'] = esc_html__( 'The installation process is starting. This process may take a while on some hosts, so please be patient.', 'insut' );
+								$this->upgrader->strings['skin_upgrade_start'] = esc_html__( 'The installation process is starting. This process may take a while on some hosts, so please be patient.', 'quomodo-market' );
 								/* translators: 1: plugin name. */
-								$this->upgrader->strings['skin_update_successful'] = esc_html__( '%1$s installed successfully.', 'insut' ) . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__( 'Show Details', 'insut' ) . '</span><span class="hidden">' . esc_html__( 'Hide Details', 'insut' ) . '</span>.</a>';
-								$this->upgrader->strings['skin_upgrade_end']       = esc_html__( 'All installations have been completed.', 'insut' );
+								$this->upgrader->strings['skin_update_successful'] = esc_html__( '%1$s installed successfully.', 'quomodo-market' ) . ' <a href="#" class="hide-if-no-js" onclick="%2$s"><span>' . esc_html__( 'Show Details', 'quomodo-market' ) . '</span><span class="hidden">' . esc_html__( 'Hide Details', 'quomodo-market' ) . '</span>.</a>';
+								$this->upgrader->strings['skin_upgrade_end']       = esc_html__( 'All installations have been completed.', 'quomodo-market' );
 								/* translators: 1: plugin name, 2: action number 3: total number of actions. */
-								$this->upgrader->strings['skin_before_update_header'] = esc_html__( 'Installing Plugin %1$s (%2$d/%3$d)', 'insut' );
+								$this->upgrader->strings['skin_before_update_header'] = esc_html__( 'Installing Plugin %1$s (%2$d/%3$d)', 'quomodo-market' );
 							}
 						}
 					}
@@ -3573,7 +3573,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 							echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 							$update_actions['dashboard'] = sprintf(
 								esc_html( $this->tgmpa->strings['complete'] ),
-								'<a href="' . esc_url( self_admin_url() ) . '">' . esc_html__( 'Return to the Dashboard', 'insut' ) . '</a>'
+								'<a href="' . esc_url( self_admin_url() ) . '">' . esc_html__( 'Return to the Dashboard', 'quomodo-market' ) . '</a>'
 							);
 						} else {
 							$update_actions['tgmpa_page'] = '<a href="' . esc_url( $this->tgmpa->get_tgmpa_url() ) . '" target="_parent">' . esc_html( $this->tgmpa->strings['return'] ) . '</a>';

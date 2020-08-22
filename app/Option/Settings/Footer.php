@@ -1,140 +1,96 @@
 <?php 
         
         // footer a top-tab
-        CSF::createSection( INSUT_OPTION_KEY, array(
+        CSF::createSection( quomodo_market_option_KEY, array(
             'id'    => 'footer_tab',                         // Set a unique slug-like ID
-            'title' => esc_html__( 'Footer', 'insut' ),
+            'title' => esc_html__( 'Footer', 'quomodo-market' ),
             'icon'  => 'fa fa-cog',
         ) ); 
          // top  call to action
-         CSF::createSection( INSUT_OPTION_KEY, array(
+         CSF::createSection( quomodo_market_option_KEY, array(
             'parent' => 'footer_tab', // The slug id of the parent section
-            'title'  => esc_html__( 'Call To Action', 'insut' ),
+            'title'  => esc_html__( 'MailChimp', 'quomodo-market' ),
             'icon'   => 'fa fa-paint-brush',
             'fields' => array(
 
                 array(
                 'type'    => 'subheading',
-                'content' => esc_html__( 'Call To Action', 'insut' ),
+                'content' => esc_html__( 'MailChimp Subscribe', 'quomodo-market' ),
                 ),
 
                 array(
 
-                    'id'      => 'footer_call_to_action',
+                    'id'      => 'footer_subscribe',
                     'type'    => 'switcher',
-                    'title'   => esc_html__( 'Enable Call To Action', 'insut' ),
+                    'title'   => esc_html__( 'Enable MailChimp', 'quomodo-market' ),
                     'default' => false
 
                 ),
+
+                array(
+                    'id'         => 'footer_subscribe_mailchimp_code',
+                    'type'       => 'text',
+                    'title'      => esc_html__( 'Mailchimp Shortcode', 'quomodo-market' ),
+                    'desc'       => esc_html__( 'Set Shortcode', 'quomodo-market' ),
+                ),
+
                 
                 array(
-                    'id'          => 'footer_call_to_action_permited_pages',
+                    'id'          => 'footer_subscribe_permited_pages',
                     'type'        => 'select',
-                    'title'       => esc_html__( 'Permitted Pages', 'insut' ),
+                    'title'       => esc_html__( 'Permitted Pages', 'quomodo-market' ),
                     'chosen'      => true,
                     'multiple'    => true,
-                    'placeholder' => esc_html__('Select pages','insut'),
+                    'placeholder' => esc_html__('Select pages','quomodo-market'),
                     'options'     => array(
-                        'all'     => esc_html__( 'All', 'insut' ),
-                        'post'    => esc_html__( 'Post', 'insut' ),
-                        'page'    => esc_html__( 'Page', 'insut' ),
-                        'service' => esc_html__( 'Service', 'insut' ),
-                        'case'    => esc_html__( 'Case Study', 'insut' ),
-                        'blog'    => esc_html__( 'Blog List', 'insut' ),
+                        'all'     => esc_html__( 'All', 'quomodo-market' ),
+                        'post'    => esc_html__( 'Post', 'quomodo-market' ),
+                        'page'    => esc_html__( 'Page', 'quomodo-market' ),
+                        //'service' => esc_html__( 'Service', 'quomodo-market' ),
+                  
+                        'blog'    => esc_html__( 'Blog List', 'quomodo-market' ),
                     ),
                     'default'     => 'all'
                   ),
-                  
-
+           
                 array(
-
-                    'id'     => 'footer_call_to_action_bg',
-                    'type'   => 'background',
-                    'title'  => esc_html__( 'Call To Action Background ', 'insut' ),
-                    'desc'   => esc_html__( 'Upload a new background image to set the footer background.', 'insut' ),
-                    'output' => '.call-section-3',
-             
-                ),
-                array(
-
-                    'id'           => 'footer_call_to_action_left_image',
-                    'type'         => 'upload',
-                    'title'        => esc_html__( 'Upload left image', 'insut' ),
-                    'library'      => 'image',
-                    'placeholder'  => 'http://',
-                    'button_title' => esc_html__( 'Add Image', 'insut' ),
-                    'remove_title' => esc_html__( 'Remove Image','insut' ),
-
-                ),
-
-                array(
-                    'id'         => 'footer_call_to_action_title',
+                    'id'         => 'footer_subscribe_title',
                     'type'       => 'textarea',
-                    'title'      => esc_html__( 'Title', 'insut' ),
-                    'desc'       => esc_html__( 'Set title', 'insut' ),
+                    'title'      => esc_html__( 'Title', 'quomodo-market' ),
+                    'desc'       => esc_html__( 'Set title', 'quomodo-market' ),
                 ),
 
-                array(
-                    'id'    => 'footer_call_to_action_icon',
-                    'type'  => 'icon',
-                    'title'      => esc_html__( 'Middle Icons', 'insut' ),
-                  ),
-
-                array(
-                    'id'         => 'footer_call_to_action_button_title',
-                    'type'       => 'text',
-                    'title'      => esc_html__( 'Button Title', 'insut' ),
-                    'desc'       => esc_html__( 'Set Button title', 'insut' ),
-                ),  
-
-                array(
-                    'id'         => 'footer_call_to_action_button_link',
-                    'type'       => 'text',
-                    'title'      => esc_html__( 'Button link', 'insut' ),
-                    'desc'       => esc_html__( 'Set Button link', 'insut' ),
-                ),
-                array(
-                    'id'    => 'footer_call_to_action_button_icon',
-                    'type'  => 'icon',
-                    'title'      => esc_html__( 'Button Icons', 'insut' ),
-                  ),
-
-                array(
-                    'id'         => 'footer_call_to_action_contact_title',
-                    'type'       => 'text',
-                    'title'      => esc_html__( 'Contact Label', 'insut' ),
-                    'desc'       => esc_html__( 'Set Contact label', 'insut' ),
-                ),  
-
-                array(
-                    'id'         => 'footer_call_to_action_contact_value',
-                    'type'       => 'text',
-                    'title'      => esc_html__( 'Contact value', 'insut' ),
-                    'desc'       => esc_html__( 'Set Contact value', 'insut' ),
-                ),
+                 // back button
+                 array(
+                    'id'      => 'footer_back_top_button',
+                    'type'    => 'switcher',
+                    'title'   => esc_html__( 'Enable Back to Button', 'quomodo-market' ),
+                    'default' => true
+                ), 
+  
 
             ),
          ) ); 
         // Footer
-        CSF::createSection( INSUT_OPTION_KEY, array(
+        CSF::createSection( quomodo_market_option_KEY, array(
             'parent' => 'footer_tab', // The slug id of the parent section
-            'title'  => esc_html__( 'Footer layout & style', 'insut' ),
+            'title'  => esc_html__( 'Footer layout & style', 'quomodo-market' ),
             'icon'   => 'fa fa-paint-brush',
             'fields' => array(
                 array(
                 'type'    => 'subheading',
-                'content' => esc_html__( 'Footer Settings', 'insut' ),
+                'content' => esc_html__( 'Footer Settings', 'quomodo-market' ),
                 ),
                
                 array(
                     'id'      => 'footer_style',
                     'type'    => 'image_select',
-                    'title'   => esc_html__( 'Footer Style', 'insut' ),
-                    'desc'    => esc_html__( 'Select the Footer style which you want to show on your website.', 'insut' ),
+                    'title'   => esc_html__( 'Footer Style', 'quomodo-market' ),
+                    'desc'    => esc_html__( 'Select the Footer style which you want to show on your website.', 'quomodo-market' ),
                     'options' => array(
                         
-                        'style1'       => INSUT_IMG. '/admin/footer/style1.png',
-                        'style2'       => INSUT_IMG. '/admin/footer/style2.png',
+                        'style1'       => QUOMODO_MARKET_IMG. '/admin/footer/style1.png',
+                       
                     ),
 
                     'default' => 'style1',
@@ -142,69 +98,81 @@
                 
                 
                 array(
+                    'id'      => 'footer_bg_color',
+                    'type'    => 'background',
+                    'title'   => esc_html__( 'Footer Background Color ', 'quomodo-market' ),
+                    'output' => '.footer-area',
+                    'background_gradient'  => true,
+             
+                ), 
+                
+                array(
                     'id'      => 'footer_bg',
                     'type'    => 'background',
-                    'title'   => esc_html__( 'Footer Background ', 'insut' ),
-                    'desc'    => esc_html__( 'Upload a new background image to set the footer background.', 'insut' ),
-                    'output' => '.footer-area',
+                    'title'   => esc_html__( 'Footer Background ', 'quomodo-market' ),
+                    'desc'    => esc_html__( 'Upload a new background image to set the footer background.', 'quomodo-market' ),
+                    'output' => '.footer-area::before',
+                    'background_color' => false
+                  
              
                 ),
                 array(
-                    'type'    => 'subheading',
-                    'content' => esc_html__( 'Footer Inner Box', 'insut' ),
-                    'dependency' => array( 'footer_style', '==', 'style2' ),
-                ),
-
-                array(
-                    'id'      => 'footer_inner_bg',
+                    'id'      => 'footer_bg2',
                     'type'    => 'background',
-                    'title'   => esc_html__( 'Footer inner Background ', 'insut' ),
-                    'desc'    => esc_html__( 'Upload a new background image to set the footer background.', 'insut' ),
-                    'output' => '.footer-area .footer-bg-wrap',
-                    'background_gradient'=> true,
-                    'dependency' => array( 'footer_style', '==', 'style2' ),
+                    'title'   => esc_html__( 'Footer Background 2', 'quomodo-market' ),
+                    'desc'    => esc_html__( 'Upload a new background image to set the footer background.', 'quomodo-market' ),
+                    'output' => '.footer-area::after',
+                    'background_color' => false
+                  
              
                 ),
-                array(
-                    'id'       => 'footer_area_inner_box_padding',
-                    'type'     => 'spacing',
-                    'title'   => esc_html__( 'Footer inner Padding', 'insut' ),
-                    'output_mode' => 'padding',
-                    'output'      => '.footer-area .footer-bg-wrap',
-                    'dependency' => array( 'footer_style', '==', 'style2' ),
-                  ),
+                       
                 array(
                     'type'    => 'subheading',
-                    'content' => esc_html__( 'Footer Main Box', 'insut' ),
+                    'content' => esc_html__( 'Footer Main Box', 'quomodo-market' ),
                 ),
                 array(
                     'id'       => 'footer_area_padding',
                     'type'     => 'spacing',
-                    'title'   => esc_html__( 'Footer Padding', 'insut' ),
+                    'title'   => esc_html__( 'Footer Padding', 'quomodo-market' ),
                     'output_mode' => 'padding',
-                    'output'      => '.footer-01'
+                    'output'      => '.footer-area',
+                    'bottom'  => false,
+                   
                   ),
+
+                array(
+                'id'       => 'footer_area_padding_bottom',
+                'type'     => 'spacing',
+                'title'   => esc_html__( 'Footer Padding Bottom', 'quomodo-market' ),
+                'output_mode' => 'padding',
+                'output'      => '.footer-widget-box',
+                'top'  => false,
+                'left'  => false,
+                'right'  => false,
+                
+                ),
 
  
                 array(
                   'type'    => 'subheading',
-                  'content' => esc_html__( 'Footer Text & Link Color', 'insut' ),
+                  'content' => esc_html__( 'Footer Text & Link Color', 'quomodo-market' ),
                 ),
 
                 array(
                     'id'      => 'footer_widget_title_color',
                     'type'    => 'color',
-                    'title'   => esc_html__( 'Widget Title Color', 'insut' ),
-                    'desc'    => esc_html__( 'Set footer widget title color form here.', 'insut' ),
+                    'title'   => esc_html__( 'Widget Title Color', 'quomodo-market' ),
+                    'desc'    => esc_html__( 'Set footer widget title color form here.', 'quomodo-market' ),
                     'output' => '.footer-area .widget-title'
                 ),
 
                 array(
                     'id'      => 'footer_widget_content_color',
                     'type'    => 'color',
-                    'title'   => esc_html__( 'Widget content Color', 'insut' ),
+                    'title'   => esc_html__( 'Widget content Color', 'quomodo-market' ),
                     'output_important'=> true,
-                    'desc'    => esc_html__( 'Set footer widget content color form here.', 'insut' ),
+                    'desc'    => esc_html__( 'Set footer widget content color form here.', 'quomodo-market' ),
                     'output' => '
                         .footer-area .widget,
                          footer .widget ul li a ,
@@ -228,7 +196,7 @@
                 array(
                     'id'       => 'footer_widget_title_margin',
                     'type'     => 'spacing',
-                    'title'   => esc_html__( 'Widget title margin', 'insut' ),
+                    'title'   => esc_html__( 'Widget title margin', 'quomodo-market' ),
                     'output_mode' => 'margin',
                     'output'      => '.footer-area .widget-title'
                 ),
@@ -236,7 +204,7 @@
                 array(
                     'id'       => 'footer_widget_content_margin',
                     'type'     => 'spacing',
-                    'title'   => esc_html__( 'Widget content margin', 'insut' ),
+                    'title'   => esc_html__( 'Widget margin', 'quomodo-market' ),
                     'output_mode' => 'margin',
                     'output'      => '.footer-area .widget'
                 ),
@@ -245,8 +213,8 @@
                 array(
                     'id'      => 'footer_link_color',
                     'type'    => 'link_color',
-                    'title'   => esc_html__( 'Footer links color', 'insut' ),
-                    'desc'    => esc_html__( 'Set the footer area link color', 'insut' ),
+                    'title'   => esc_html__( 'Footer links color', 'quomodo-market' ),
+                    'desc'    => esc_html__( 'Set the footer area link color', 'quomodo-market' ),
                     'output_important'=> true,
                     'output' => '.footer-area .tagcloud a, .footer-area .widget a, .footer-area .widget ul li a.url,.footer-area .widget ul li a.rsswidget'
                 ),
@@ -254,87 +222,84 @@
              
                 array(
                     'type'    => 'subheading',
-                    'content' => esc_html__( 'Copyright & Back Button', 'insut' ),
+                    'content' => esc_html__( 'Copyright & Back Button', 'quomodo-market' ),
                 ),
 
                 array(
                     'id'      => 'footer_copyright__bg',
                     'type'    => 'background',
-                    'title'   => esc_html__( 'Copyright ', 'insut' ),
-                    'desc'    => esc_html__( 'Upload a new background image to set the footer background.', 'insut' ),
-                    'output' => '.copyright, .copyright-02',
+                    'title'   => esc_html__( 'Copyright ', 'quomodo-market' ),
+                    'desc'    => esc_html__( 'Upload a new background image to set the footer background.', 'quomodo-market' ),
+                    'output' => '.footer-copyright',
                     
                 ),
 
                 array(
                     'id'       => 'copyright_padding',
                     'type'     => 'spacing',
-                    'title'   => esc_html__( 'Copyright Padding', 'insut' ),
+                    'title'   => esc_html__( 'Copyright Padding', 'quomodo-market' ),
                     'output_mode' => 'padding',
-                    'output'      => '.copyright'
+                    'output'      => '.footer-copyright'
                   ),
 
                   array(
                     'id'       => 'copyright_content_padding',
                     'type'     => 'spacing',
-                    'title'   => esc_html__( 'Copyright content Padding', 'insut' ),
+                    'title'   => esc_html__( 'Copyright content Padding', 'quomodo-market' ),
                     'output_mode' => 'padding',
-                    'output'      => '.copyright p, .copyright-02 p'
+                    'output'      => '.footer-copyright p'
                   ),
              
 
                 array(
                     'id'      => 'footer_copyright_color',
                     'type'    => 'color',
-                    'title'   => esc_html__( 'Copyright Text Color', 'insut' ),
-                    'desc'    => esc_html__( 'Set footer copyright text color form here.', 'insut' ),
-                    'output'  => '.copyright p , .copyright-02 p'
+                    'title'   => esc_html__( 'Copyright Text Color', 'quomodo-market' ),
+                    'desc'    => esc_html__( 'Set footer copyright text color form here.', 'quomodo-market' ),
+                    'output'  => '.footer-copyright p'
                 ),
 
                 array(
                     'id'      => 'footer_copyright_link_color',
                     'type'    => 'link_color',
-                    'title'   => esc_html__( 'Copyright link Color', 'insut' ),
-                    'desc'    => esc_html__( 'Set footer copyright link color form here.', 'insut' ),
-                    'output'  => '.copyright p a, .copyright-02 p a'
+                    'title'   => esc_html__( 'Copyright link Color', 'quomodo-market' ),
+                    'desc'    => esc_html__( 'Set footer copyright link color form here.', 'quomodo-market' ),
+                    'output'  => '.footer-copyright p a'
+                ),
+
+                
+                array(
+                    'id'      => 'footer_copyright_credited_color',
+                    'type'    => 'color',
+                    'title'   => esc_html__( 'Credited By Text Color', 'quomodo-market' ),
+                    'desc'    => esc_html__( 'Set footer copyright text color form here.', 'quomodo-market' ),
+                    'output'  => '.footer-copyright .copyright-item span'
                 ),
 
                 array(
-                    'id'     => 'footer_copyright_border',
-                    'type'   => 'border',
-                    'title'   => esc_html__( 'Copyright Border', 'insut' ),
-                    'output'  => '.copyright, .copyright-02'
-                  ),
-                // back button
-                array(
-                    'id'      => 'footer_back_top_button',
-                    'type'    => 'switcher',
-                    'title'   => esc_html__( 'Enable Back to Button', 'insut' ),
-                    'default' => true
-                ), 
-
-                array(
-                    'id'     => 'footer_copyright_back_button',
-                    'type'   => 'border',
-                    'title'  => esc_html__( 'Back Button Border', 'insut' ),
-                    'output' => '#backtotop'
+                    'id'      => 'footer_credited_link_color',
+                    'type'    => 'link_color',
+                    'title'   => esc_html__( 'Credited By Highlight Color', 'quomodo-market' ),
+                    'desc'    => esc_html__( 'Set footer copyright link color form here.', 'quomodo-market' ),
+                    'output'  => '.footer-copyright .copyright-item span span'
                 ),
+  
     
 
                 array(
                     'id'      => 'footer_copyright_icon_color',
                     'type'    => 'color',
-                    'title'   => esc_html__( 'Back Button Icon Color', 'insut' ),
-                    'desc'    => esc_html__( 'Set footer Back Button icon color form here.', 'insut' ),
-                    'output' => '#backtotop i'
+                    'title'   => esc_html__( 'Back Button Icon Color', 'quomodo-market' ),
+                    'desc'    => esc_html__( 'Set footer Back Button icon color form here.', 'quomodo-market' ),
+                    'output' => '.back-to-top i'
                 ),
 
                 array(
                     'id'               => 'backbutton_button_color',
                     'type'             => 'background',
                     'output_important' => true,
-                    'title'            => esc_html__( 'Button Background', 'insut' ),
-                    'output'           => '#backtotop',
+                    'title'            => esc_html__( 'Button Background', 'quomodo-market' ),
+                    'output'           => '.back-to-top',
                     'output_mode'      => 'background-color',
                     'background_gradient' => true,
                    
@@ -344,8 +309,8 @@
                     'id'               => 'button_one_bghover_color',
                     'type'             => 'background',
                     'output_important' => true,
-                    'title'            => esc_html__( 'Button Background hover bgColor', 'insut' ),
-                    'output'           => '#backtotop:after',
+                    'title'            => esc_html__( 'Button Background hover bgColor', 'quomodo-market' ),
+                    'output'           => '.back-to-top:hover',
                     'output_mode'      => 'background-color',
                     'background_gradient' => true,
                    
@@ -356,43 +321,38 @@
         ) );
 
         // copyright
-        CSF::createSection( INSUT_OPTION_KEY, array(
+        CSF::createSection( quomodo_market_option_KEY, array(
             'parent' => 'footer_tab', // The slug id of the parent section
-            'title'  => esc_html__( 'Footer Copyright', 'insut' ),
+            'title'  => esc_html__( 'Footer Copyright', 'quomodo-market' ),
             'icon'   => 'fa fa-copyright',
             'fields' => array(
                 array(
                     'id'       => 'copyright_text',
                     'type'     => 'wp_editor',
-                    'title'    => esc_html__( 'Footer Copyright', 'insut' ),
-                    'desc'     => esc_html__( 'Set the footer copyright text','insut' ),
+                    'title'    => esc_html__( 'Footer Copyright', 'quomodo-market' ),
+                    'desc'     => esc_html__( 'Set the footer copyright text','quomodo-market' ),
                     'settings' => array(
-                        'textarea_rows' => 10,
-                        'tinymce'       => true,
+                        'textarea_rows' => 5,
+                        'tinymce'       => false,
                         'media_buttons' => false,
                       ),
                       'default' => 'Copryright &copy; QuomodoTheme All Right Reserved.',
                 ),
 
+              
                 array(
-                    'id'      => 'enable_footer_logo',
-                    'type'    => 'switcher',
-                    'title'   => esc_html__( 'Footer Logo', 'insut' ),
-                    'default' => true
+                    'id'       => 'copyright_credited_by',
+                    'type'     => 'textarea',
+                    'title'    => esc_html__( 'Footer Credited By', 'quomodo-market' ),
+                    'desc'     => esc_html__( 'Set the footer Credited text with {  } for heighlight text','quomodo-market' ),
+                    'settings' => array(
+                        'textarea_rows' => 2,
+                        'tinymce'       => true,
+                        'media_buttons' => false,
+                      ),
+                      'default' => 'Copryright &copy; QuomodoTheme All Right Reserved.',
                 ),
-
-                array(
-                    'id'           => 'copyright_logo',
-                    'type'         => 'upload',
-                    'title'        => esc_html__( 'Copyright Logo', 'insut' ),
-                    'library'      => 'image',
-                    'placeholder'  => 'http://',
-                    'button_title' => esc_html__( 'Add Image', 'insut' ),
-                    'remove_title' => esc_html__( 'Remove Image', 'insut' ),
-                ),
-
-                 
-    
+             
       
             ),
 

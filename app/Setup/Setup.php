@@ -1,6 +1,6 @@
 <?php
 
-namespace Insut\Setup;
+namespace QuomodoMarket\Setup;
 
 class Setup
 {
@@ -20,7 +20,7 @@ class Setup
          * You can activate this if you're planning to build a multilingual theme
          */
         
-        load_theme_textdomain( 'insut', get_template_directory() . '/languages' );
+        load_theme_textdomain( 'quomodo-market', get_template_directory() . '/languages' );
         add_theme_support( 'automatic-feed-links' );
   
         add_theme_support( 'title-tag' );
@@ -32,9 +32,9 @@ class Setup
         
         //1200 x 628
         set_post_thumbnail_size(1200, 780, ['center', 'center']);
-        add_image_size( 'insut_two_column', 350, 228, [ 'center', 'center' ] );
-        add_image_size( 'insut_one_column', 730, 475, [ 'center', 'center' ] );
-        add_image_size( 'insut_sidebar_img', 80, 80, true );
+        add_image_size( 'quomodo_market_two_column', 350, 228, [ 'center', 'center' ] );
+        add_image_size( 'quomodo_market_one_column', 730, 475, [ 'center', 'center' ] );
+        add_image_size( 'quomodo_market_sidebar_img', 80, 80, true );
   
         add_theme_support( 'html5', array(
               'search-form',

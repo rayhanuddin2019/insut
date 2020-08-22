@@ -1,11 +1,8 @@
 
+ /* .admin-bar .header-nav.sticky{
+  margin-top: 23px;
+}  */
 
-.admin-bar .header__layout__1, .admin-bar .header-03{
-  margin-top: 23px;
-}
-.admin-bar .header-02{
-  margin-top: 23px;
-}
 
 
 /*=============================
@@ -13,7 +10,7 @@
  =============================*/
 
 .qomodo-main-container{
-    padding:125px 0px;
+    padding:120px 0px;
 }
 
 /*=============================
@@ -95,7 +92,7 @@
                                 Pagination 
 ==========================================================================*/
 
- .insut-pagination .pagination-dots{
+ .pagination-dots{
    line-height: 3.0;
  }
 
@@ -218,7 +215,7 @@
   letter-spacing: .84px;
   padding: 0 32px;
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -263,7 +260,7 @@
   font-weight: 600;
   letter-spacing: .48px;
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+
   resize: none;
   appearance: none;
   padding: 0 30px;
@@ -336,7 +333,7 @@
 }
 .comments-list .comment-author {
 
-  font-family: 'Poppins', sans-serif;
+
   color: #1a1f2c;
   font-weight: 700;
   font-size: 18px;
@@ -1125,30 +1122,21 @@
   .tag-lists a,
   .wp-block-tag-cloud a,
   .tagcloud a {
-/*     
+    
     font-size: 18px;
-    font-weight: 500;
-    color: #1b1b25;
-    line-height: 45px;
-    padding: 0 30px;
-    background: rgba(255, 79, 79, 0.06);
-    border-radius: 5px;
+    color: #3467ff;
+    font-weight: 400;
     display: inline-block;
-    margin-bottom: 20px;
-    margin-right: 15px; */
+    border-radius: 3px;
+    border: solid 1px #3467ff;
+    background-color: #f8f9fd;
+    padding: 0 14px;
+    line-height: 30px;
+    margin-left: 8px;
+    margin-bottom: 8px;
    
   }
 
-  .tagcloud a:hover{
-    color: #1b1b25;
-  }
-
-  .tag-lists a:hover
-   {
-    background: #ff4f4f;
-    color: #fff;
-    border-color: #ff4f4f;
-  }
   
   .textwidget img {
     margin: 10px 0;
@@ -1174,11 +1162,6 @@
     margin-bottom: 15px;
   }
 
- 
- 
-  /* Social widget */
-  
-
    
   /*=========================================================================
                                 Banner 
@@ -1201,21 +1184,15 @@
  
 }
 
-/*=========================================================================
-                                Page 
-==========================================================================*/
-
 
 /*=========================================================================
                               Error Page 
 ==========================================================================*/
 
 
-
-/*=========================================================================
-                              Search Page 
-==========================================================================*/
-
+.blog-error-page .main-btn,.blog-error-page .error-code{
+  margin-top: 30px;
+}
 
 
 
@@ -1229,17 +1206,14 @@
     padding-bottom: 0;
   }
   .footer-area table , .footer-area table a, .footer-area .widget, .footer-area .rsswidget {
-     color:#fff;
-  }
-  .footer-area .tagcloud a:hover{
-     background:#ff4f4f;
+     color:inherit;
   }
 
   .footer-area ul li a,
   .footer-area div#calendar_wrap table > tbody > tr > td,
   .footer-area .widget ul li a.url,
   .footer-area ul li {
-    color: #c7c7c7;
+    color: #6f6f76;
   }
   
  
@@ -1247,11 +1221,27 @@
   .footer-area .widget ul li a.url,
   .footer-area .widget ul li a.rsswidget,   
   .footer-area .widget_calendar td#today{
-    color: #fff;
+    color: #5c5353;
   }
-  .footer-area ul:not(.menu) li {
-      /* padding-bottom: 8px; */
-  }
+  .footer-area .rsswidget {
+    color: inherit;
+}
+
+ .footer-area .widget_archive ul li a{
+    padding: 0;
+ }
+ .footer-area .widget_archive ul li a:hover{
+  padding: 0 15px;
+  background: #fff;
+ }
+
+ .footer-area .select, .blog-sidebar .select{
+    display: block; 
+ }
+ .footer-area .select .options, .blog-sidebar .select .options{
+   margin-top:20px;
+ }
+ 
 
 
 

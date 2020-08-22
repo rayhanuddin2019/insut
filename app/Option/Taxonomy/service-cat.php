@@ -5,7 +5,7 @@ if( class_exists( 'CSF' ) ) {
 
     //
     // Set a unique slug-like ID
-    $cat_prefix = 'insut_service_cat_options';
+    $cat_prefix = 'quomodo_market_service_cat_options';
   
     //
     // Create taxonomy options
@@ -22,8 +22,8 @@ if( class_exists( 'CSF' ) ) {
         array(
           'id'      => 'image_icon',
           'type'    => 'icon',
-          'title'   => esc_html__( 'Icon', 'insut' ),
-          'desc'    => esc_html__( 'Set the Thumb icon ', 'insut' ),
+          'title'   => esc_html__( 'Icon', 'quomodo-market' ),
+          'desc'    => esc_html__( 'Set the Thumb icon ', 'quomodo-market' ),
           
         ),
   

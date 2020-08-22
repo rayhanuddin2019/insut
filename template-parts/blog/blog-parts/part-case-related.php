@@ -1,16 +1,16 @@
 
 <?php
    // related post 
-   if( !insut_option( 'case_related_post',0 ) ){
+   if( !quomodo_market_option( 'case_related_post',0 ) ){
     return;
   }
-   $related_case = insut_related_posts_by_case_cat(get_the_id());
+   $related_case = quomodo_market_related_posts_by_case_cat(get_the_id());
   
    
 
 ?>
     <div class="realtive-case-area">
-        <h3> <?php echo esc_html__('Some Relative Case Studies','insut'); ?> </h3>
+        <h3> <?php echo esc_html__('Some Relative Case Studies','quomodo-market'); ?> </h3>
         <div class="case-relative-slider owl-carousel">
             <?php foreach($related_case as $case) : ?>
 

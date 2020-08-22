@@ -1,10 +1,10 @@
 <?php
   
-   $blog_author = insut_option('blog_single_author_box',0); 
+   $blog_author = quomodo_market_option('blog_single_author_box',0); 
   
    $user_id = get_the_author_meta( 'ID' );
-   $insut_profile_options = get_user_meta( get_the_author_meta( 'ID' ) , 'insut_profile_options', true );
-   $social = isset($insut_profile_options['social_share'])?$insut_profile_options['social_share']:'';
+   $quomodo_market_profile_options = get_user_meta( get_the_author_meta( 'ID' ) , 'quomodo_market_profile_options', true );
+   $social = isset($quomodo_market_profile_options['social_share'])?$quomodo_market_profile_options['social_share']:'';
 
 ?> 
 <?php if( $blog_author ): ?>

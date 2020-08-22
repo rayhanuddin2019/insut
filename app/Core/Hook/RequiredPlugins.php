@@ -1,6 +1,6 @@
 <?php
-namespace Insut\Core\Hook;
-require_once( INSUT_THEME_DIR . '/app/Plugins/class-tgm-plugin-activation.php');
+namespace QuomodoMarket\Core\Hook;
+require_once( QUOMODO_MARKET_THEME_DIR . '/app/Plugins/class-tgm-plugin-activation.php');
 /**
  * Tags.
  */
@@ -23,48 +23,64 @@ class RequiredPlugins
         $plugins	 = array(
            
             array(
-                'name'		 => esc_html__( 'Elementor', 'insut' ),
+                'name'		 => esc_html__( 'Elementor', 'quomodo-market' ),
                 'slug'		 => 'elementor',
                 'required'	 => true,
             ),
             array(
-                'name'		 => esc_html__( 'Contact form 7', 'insut' ),
+                'name'		 => esc_html__( 'Contact form 7', 'quomodo-market' ),
                 'slug'		 => 'contact-form-7',
                 'required'	 => true,
             ),
             array(
-                'name'		 => esc_html__( 'Mailchimp', 'insut' ),
+                'name'		 => esc_html__( 'Mailchimp', 'quomodo-market' ),
                 'slug'		 => 'mailchimp-for-wp',
                 'required'	 => true,
             ),
             array(
-                'name'		 => esc_html__( 'Unyson', 'insut' ),
+                'name'		 => esc_html__( 'Unyson', 'quomodo-market' ),
                 'slug'		 => 'unyson',
                 'required'	 => true,
             ),
             array(
-                'name'		 => esc_html__( 'Classic editor', 'insut' ),
+                'name'		 => esc_html__( 'Classic editor', 'quomodo-market' ),
                 'slug'		 => 'classic-editor',
                 'required'	 => true,
                 
             ),
+
             array(
-                'name'		 => esc_html__( 'Codester Framework', 'insut' ),
-                'slug'		 => 'codestar-framework',
+                'name'		 => esc_html__( 'WooCommerce', 'quomodo-market' ),
+                'slug'		 => 'woocommerce',
                 'required'	 => true,
-                'source'     => get_template_directory() . '/app/Plugins/archive/codestar-framework.zip', // The plugin source.
+                
             ), 
+            
             array(
-                'name'		 => esc_html__( 'Insut Essentials', 'insut' ),
-                'slug'		 => 'insut-essential',
+                'name'		 => esc_html__( 'Dokan Lite', 'quomodo-market' ),
+                'slug'		 => 'dokan-lite',
                 'required'	 => true,
-                'source'     => get_template_directory() . '/app/Plugins/archive/insut-essential.zip', // The plugin source.
+                
+            ),
+            
+            array(
+                'name'		 => esc_html__( 'Dokan Pro', 'quomodo-market' ),
+                'slug'		 => 'dokan-pro',
+                'required'	 => true,
+                
+            ),
+           
+            array(
+                'name'		 => esc_html__( 'Quomodo Marketplace Essential ', 'quomodo-market' ),
+                'slug'		 => 'quomodo-market-essential',
+                'required'	 => true,
+                'source'     => get_template_directory() . '/app/Plugins/archive/quomodo-market-essential.zip', // The plugin source.
             ),	
         );
     
     
         $config = array(
-            'id'			 => 'insut', // Unique ID for hashing notices for multiple instances of TGMPA.
+            'id'			 => 'quomodo-market', // Unique ID for hashing notices for multiple instances of TGMPA.
             'default_path'	 => '', // Default absolute path to bundled plugins.
             'menu'			 => 'insut-install-plugins', // Menu slug.
             'parent_slug'	 => 'themes.php', // Parent menu slug.

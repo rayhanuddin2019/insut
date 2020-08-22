@@ -1,6 +1,6 @@
 <?php
 
-namespace Insut\Core\Hook;
+namespace QuomodoMarket\Core\Hook;
 
 /**
  * Tags.

@@ -1,5 +1,5 @@
 <?php
-namespace Insut\Core\Hook;
+namespace QuomodoMarket\Core\Hook;
 
 /**
  * demo import.
@@ -19,10 +19,10 @@ class Demo
 	
     function backups_demos( $demos ) {
         
-        $demo_content_installer	 = 'http://wp.quomodosoft.com/insut/demo-content';
+        $demo_content_installer	 = 'http://wp.quomodosoft.com/quomodo-marketplace/demo-content';
         $demos_array			 = array(
             'default'			 => array(
-                    'title'			 => esc_html__( 'Demo', 'insut' ),
+                    'title'			 => esc_html__( 'Demo', 'quomodo-market' ),
                     'screenshot'	 => esc_url( $demo_content_installer ) . '/default/screenshot.png',
                     'preview_link'	 => esc_url( 'https://themeforest.net/user/quomodotheme/portfolio' ),
             ),

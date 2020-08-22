@@ -17,9 +17,9 @@
 				<?php
 
 					if(get_comments_number()==1){
-						printf( '%1$s ' . esc_html__( 'Comment', 'insut' ), get_comments_number() );
+						printf( '%1$s ' . esc_html__( 'Comment', 'quomodo-market' ), get_comments_number() );
 					}else{
-						printf( '%1$s ' . esc_html__( 'Comments', 'insut' ), get_comments_number() );
+						printf( '%1$s ' . esc_html__( 'Comments', 'quomodo-market' ), get_comments_number() );
 					}
 				
 				?>
@@ -29,13 +29,13 @@
 				<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
 
 					<h1 class="screen-reader-text">
-						<?php esc_html_e( 'Comment navigation', 'insut' ); ?>
+						<?php esc_html_e( 'Comment navigation', 'quomodo-market' ); ?>
 					</h1>
 					<div class="nav-previous">
-						<?php previous_comments_link( esc_html__( '&larr; Older Comments', 'insut' ) ); ?>
+						<?php previous_comments_link( esc_html__( '&larr; Older Comments', 'quomodo-market' ) ); ?>
 					</div>
 					<div class="nav-next">
-						<?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'insut' ) ); ?>
+						<?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'quomodo-market' ) ); ?>
 					</div>
 				
 				</nav><!-- #comment-nav-above -->
@@ -45,7 +45,7 @@
 				<?php
 						wp_list_comments( array(
 							'reply_text'        => '<i class="fas fa-reply"></i> Reply',
-								'callback'          => 'insut_comment_style',
+								'callback'          => 'quomodo_market_comment_style',
 								'style'			 => 'ul',
 								'short_ping'	 => false,
 								'type'              => 'all',
@@ -59,21 +59,21 @@
 						<nav id="comment-nav-bellow" class="navigation comment-navigation" role="navigation">
 						
 							<h1 class="screen-reader-text">
-								<?php esc_html_e( 'Comment navigation', 'insut' ); ?>
+								<?php esc_html_e( 'Comment navigation', 'quomodo-market' ); ?>
 							</h1>
 
 							<div class="nav-previous">
-								<?php previous_comments_link( esc_html__( '&larr; Older Comments', 'insut' ) ); ?>
+								<?php previous_comments_link( esc_html__( '&larr; Older Comments', 'quomodo-market' ) ); ?>
 							</div>
 							
 							<div class="nav-next">
-								<?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'insut' ) ); ?>
+								<?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'quomodo-market' ) ); ?>
 							</div>
 						</nav><!-- #comment-nav-bellow -->
 			<?php endif; //check for comment navigation ?>
 
 			<?php if ( !comments_open() ) : ?>
-				<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'insut' ); ?></p>
+				<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'quomodo-market' ); ?></p>
 			<?php endif; ?>
 
 		<?php endif; // comments have end ?>
@@ -93,9 +93,9 @@
 			$aria_req      = ( $req ? " aria-required='true'" : '' );
 
 			$fields = array(
-				'author' => '<div class="comment-info row"><div class="col-md-6"><input placeholder="'.  esc_attr__('Enter Name', 'insut').'" id="author" class="form-control" name="author" type="text" value="' . esc_attr( $commenter[ 'comment_author' ] ) . '" size="30"' . $aria_req . ' /></div><div class="col-md-6">',
-				'email'	 => '<input placeholder="'.  esc_attr__('Enter Email', 'insut').'" id="email" name="email" class="form-control" type="email" value="' . esc_attr( $commenter[ 'comment_author_email' ] ) . '" size="30"' . $aria_req . ' /></div>',
-				'url'	 => '<div class="col-md-12"><input placeholder="'.  esc_attr__('Enter Website', 'insut').'" id="url" name="url" class="form-control" type="url" value="' . esc_attr( $commenter[ 'comment_author_url' ] ) . '" size="30" /></div></div>',
+				'author' => '<div class="comment-info row"><div class="col-md-6"><input placeholder="'.  esc_attr__('Enter Name', 'quomodo-market').'" id="author" class="form-control" name="author" type="text" value="' . esc_attr( $commenter[ 'comment_author' ] ) . '" size="30"' . $aria_req . ' /></div><div class="col-md-6">',
+				'email'	 => '<input placeholder="'.  esc_attr__('Enter Email', 'quomodo-market').'" id="email" name="email" class="form-control" type="email" value="' . esc_attr( $commenter[ 'comment_author_email' ] ) . '" size="30"' . $aria_req . ' /></div>',
+				'url'	 => '<div class="col-md-12"><input placeholder="'.  esc_attr__('Enter Website', 'quomodo-market').'" id="url" name="url" class="form-control" type="url" value="' . esc_attr( $commenter[ 'comment_author_url' ] ) . '" size="30" /></div></div>',
 			);
 
 			if ( is_user_logged_in() ) {
@@ -110,7 +110,7 @@
 						<div class="col-md-12 ' . $cl . '">
 							<textarea 
 								class="form-control qomodo-form-comment-textarea" 
-								placeholder="'.  esc_attr__('Enter Comments', 'insut').'" 
+								placeholder="'.  esc_attr__('Enter Comments', 'quomodo-market').'" 
 								id="comment" 
 								name="comment" 
 								cols="45" rows="8" 
@@ -123,20 +123,20 @@
 				/** This filter is documented in wp-includes/link-template.php */
 				'must_log_in'		 => '
 					<p class="must-log-in">
-					'.esc_html__('You must be','insut').' <a href="'.esc_url(wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) )).'">'.esc_html__('logged in','insut').'</a> '.esc_html__('to post a comment.','insut').'
+					'.esc_html__('You must be','quomodo-market').' <a href="'.esc_url(wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) )).'">'.esc_html__('logged in','quomodo-market').'</a> '.esc_html__('to post a comment.','quomodo-market').'
 					</p>',
 				/** This filter is documented in wp-includes/link-template.php */
 				'logged_in_as'		 => '
 					<p class="logged-in-as">
-					'.esc_html__('Logged in as','insut').' <a href="'.esc_url(get_edit_user_link()).'">'.esc_html($user_identity).'</a>. <a href="'.esc_url(wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) )).'" title="'.esc_attr__('Log out of this account','insut').'">'.esc_html__('Log out?','insut').'</a>
+					'.esc_html__('Logged in as','quomodo-market').' <a href="'.esc_url(get_edit_user_link()).'">'.esc_html($user_identity).'</a>. <a href="'.esc_url(wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) )).'" title="'.esc_attr__('Log out of this account','quomodo-market').'">'.esc_html__('Log out?','quomodo-market').'</a>
 					</p>',
 				'id_form'			 => 'commentform',
 				'id_submit'			 => 'submit',
 				'class_submit'		 => 'btn-comments btn btn-primary',
-				'title_reply'		 => esc_html__( 'Leave a Reply', 'insut' ),
-				'title_reply_to'	 => esc_html__( 'Leave a Reply to %s', 'insut' ),
-				'cancel_reply_link'	 => esc_html__( 'Cancel reply', 'insut' ),
-				'label_submit'		 => esc_html__( 'Post Comment', 'insut' ),
+				'title_reply'		 => esc_html__( 'Leave a Reply', 'quomodo-market' ),
+				'title_reply_to'	 => esc_html__( 'Leave a Reply to %s', 'quomodo-market' ),
+				'cancel_reply_link'	 => esc_html__( 'Cancel reply', 'quomodo-market' ),
+				'label_submit'		 => esc_html__( 'Post Comment', 'quomodo-market' ),
 				'submit_button'        => '<button name="%1$s" type="submit" id="%2$s" class="%3$s"> %4$s <i class="icofont-arrow-right"></i> </button>',
 				'format'			 => 'xhtml',
 			];

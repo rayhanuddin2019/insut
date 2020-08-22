@@ -1,6 +1,6 @@
 <?php
 
-namespace Insut\Core;
+namespace QuomodoMarket\Core;
 
 /**
  * Sidebar.
@@ -23,13 +23,13 @@ class Sidebar
     {
        
         register_sidebar( array(
-                'name'          => esc_html__('Blog widget area', 'insut'),
+                'name'          => esc_html__('Blog widget area', 'quomodo-market'),
                 'id'            => 'sidebar-1',
-                'description'   => esc_html__('Appears on posts.', 'insut'),
+                'description'   => esc_html__('Appears on posts.', 'quomodo-market'),
                 'before_widget' => '<div id="%1$s" class="widget %2$s">',
                 'after_widget'  => '</div>',
-                'before_title'  => '<h3 class="widget-title"> ',
-                'after_title'   => '<span> </span></h3>',
+                'before_title'  => '<div class="blog-common-title"> <h3 class="widget-title title"> ',
+                'after_title'   => '</h3></div>',
         ) );
       
     }

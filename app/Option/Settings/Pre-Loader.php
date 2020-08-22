@@ -2,27 +2,27 @@
 
 
         // pre-loader
-        CSF::createSection( INSUT_OPTION_KEY, array(
+        CSF::createSection( quomodo_market_option_KEY, array(
        
-			'title'   => esc_html__( 'Preloader', 'insut' ),
+			'title'   => esc_html__( 'Preloader', 'quomodo-market' ),
             'icon'   => 'fa fa-spinner',
 		    'fields' => array(
 				array(
 				  'type'    => 'subheading',
-				  'content' => esc_html__( 'Preloader Type', 'insut' ),
+				  'content' => esc_html__( 'Preloader Type', 'quomodo-market' ),
 				),
 				array(
 					'id'      => 'enable_preloader',
 					'type'    => 'switcher',
-					'title'   => esc_html__( 'Enable Preloader', 'insut' ),
-					'desc'    => esc_html__( 'If you want to enable or disable preloader you can set ( YES / NO )', 'insut' ),
+					'title'   => esc_html__( 'Enable Preloader', 'quomodo-market' ),
+					'desc'    => esc_html__( 'If you want to enable or disable preloader you can set ( YES / NO )', 'quomodo-market' ),
 					'default' => true,
 				),
 				array(
 					'id'      => 'prloader_style',
 					'type'    => 'image_select',
-					'title'   => esc_html__( 'Select Preloader Style', 'insut' ),
-					'desc'    => esc_html__( 'You can set specifc preloader style in every page form here.', 'insut' ),
+					'title'   => esc_html__( 'Select Preloader Style', 'quomodo-market' ),
+					'desc'    => esc_html__( 'You can set specifc preloader style in every page form here.', 'quomodo-market' ),
 					'options' => array(
 					
 					),
@@ -31,16 +31,16 @@
 				),
 				array(
 				  'type'    => 'subheading',
-				  'content' => esc_html__( 'Preloader Background & Color', 'insut' ),
+				  'content' => esc_html__( 'Preloader Background & Color', 'quomodo-market' ),
 				),
 				
 				array(
 					'id'      => 'preloader_bg',
 					'type'    => 'background',
-					'title'   => esc_html__( 'Preloader Background', 'insut' ),
+					'title'   => esc_html__( 'Preloader Background', 'quomodo-market' ),
 					'class'   => '.loaders-container',
 					'output'  => '.loaders-container',
-					'desc'    => esc_html__( 'Upload a new background image or select color to set the preloader background.', 'insut' ),
+					'desc'    => esc_html__( 'Upload a new background image or select color to set the preloader background.', 'quomodo-market' ),
 					'default' => array(
 						'image'      => '',
 						'repeat'     => 'repeat',
@@ -54,8 +54,8 @@
 				array(
 					'id'                    => 'preloader_text_color',
 					'type'                  => 'background',
-					'title'                 => esc_html__( 'Preloader Text Color', 'insut' ),
-					'desc'                  => esc_html__( 'Set the preloader text color', 'insut' ),
+					'title'                 => esc_html__( 'Preloader Text Color', 'quomodo-market' ),
+					'desc'                  => esc_html__( 'Set the preloader text color', 'quomodo-market' ),
 					'default'               => '#fff',
 					'background_image'      => false,
 					'background_position'   => false,

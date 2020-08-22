@@ -5,7 +5,7 @@
 					<?php the_post_thumbnail( 'full' ); ?>
 				</figure>
 		<?php endif; ?>
-		<?php if( !insut_option('page_banner_show',0)): ?>
+		<?php if( !quomodo_market_option('page_banner_show',0)): ?>
 			<header class="qomodo-entry-header"> 
 				<h2 class="qomodo-title">
 					<?php the_title(); ?>
@@ -19,8 +19,8 @@
 					if ( is_search() ) {
 						the_excerpt();
 					} else {
-						the_content( esc_html__( 'Continue reading &rarr;', 'insut' ) );
-						insut_link_pages();
+						the_content( esc_html__( 'Continue reading &rarr;', 'quomodo-market' ) );
+						quomodo_market_link_pages();
 					}
 			?>
 		</div> 

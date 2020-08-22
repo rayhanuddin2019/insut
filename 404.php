@@ -1,38 +1,34 @@
-
 <?php
-/**
- * the template for displaying 404 pages (Not Found)
- */
 
-   get_header();
-
+get_header();
+get_template_part( 'template-parts/banner/content', 'banner-blog' ); 
 
 ?>
-         <?php if(insut_option('error_enable_main_container',0)): ?>
-            <main id="site-content" class="qomodo-main-container blog" role="main">
-         <?php  endif; ?>
-                     <!-- 404 Section Start -->
-                        <section class="section-404" style="background-image: url(<?php echo esc_url(INSUT_IMG); ?>/404.jpg);">
-                              <div class="container">
-                                 <div class="row">
-                                    <div class="col-lg-5 col-md-8">
-                                          <div class="content-404">
-                                             <h2><span> <?php echo esc_html__('Sorry,','insut'); ?> </span> <?php echo esc_html__('This Page Is Not Found.','insut'); ?> </h2>
-                                             <p>
-                                                <?php echo esc_html__('Commodo consequat duis aute irure dolor reprehender
-                                                voluptate velit fugiat nulla pariatur.','insut'); ?>
-                                             </p>
-                                             <a href="<?php echo esc_url(home_url('/')); ?>"><i class="icofont-arrow-left"></i> <?php echo esc_html__('Back to Home' , 'insut'); ?> </a>
-                                          </div>
-                                    </div>
-                                 </div>
-                              </div>
-                        </section>  
-                     <!-- 404 Section End -->
-         <?php if(insut_option('error_enable_main_container',0)): ?>        
-            </main><!-- Main container end -->
-        <?php  endif; ?>
 
- <?php if(insut_option('enable_404_footer',0)): ?>         
-     <?php get_footer(); ?>
- <?php endif; ?>
+<div id="site-content" class="qomodo-main-container blog blog-area" role="main">
+	<div class="container">
+		<div class="row">
+         <div class="col-lg-6 mx-auto">
+            <section class="blog-error-page">
+                  <div class="error-page text-center">
+                  <?php	get_search_form(); ?>
+                     <div class="error-code">
+                        <h2><strong><?php esc_html_e('404', 'quomodo-market'); ?></strong></h2>
+                     </div>
+                     <div class="error-message">
+                        <h3><?php esc_html_e('Oops... Page Not Found!', 'quomodo-market'); ?></h3>
+                     </div>
+                     <div class="error-body">
+                        <?php esc_html_e('Try using the button below to go to main page of the site', 'quomodo-market'); ?> <br>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="main-btn"><?php esc_html_e('Back to Home Page', 'quomodo-market'); ?></a>
+                     </div>
+                  </div>
+               </div>
+            </section> 
+         </div><!-- #col -->
+  	</div><!-- #container -->
+</div>
+
+
+<?php
+get_footer();

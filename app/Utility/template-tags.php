@@ -1,8 +1,8 @@
 <?php
 
-if ( ! function_exists( 'insut_post_thumbnail' ) ) :
+if ( ! function_exists( 'quomodo_market_post_thumbnail' ) ) :
 	
-	function insut_post_thumbnail() {
+	function quomodo_market_post_thumbnail() {
 
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
@@ -31,9 +31,9 @@ if ( ! function_exists( 'insut_post_thumbnail' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'insut_return' ) ) :
+if ( ! function_exists( 'quomodo_market_return' ) ) :
 
-  function insut_return($arg){
+  function quomodo_market_return($arg){
  
    return $arg;
   }
@@ -43,133 +43,121 @@ endif;
 
 // display meta information for a specific post
 // ----------------------------------------------------------------------------------------
-if ( !function_exists('insut_get_breadcrumbs') ) {
+if ( !function_exists('quomodo_market_get_breadcrumbs') ) {
    
-	function insut_get_breadcrumbs( $seperator = '/', $word = '' ) {
+	function quomodo_market_get_breadcrumbs( $seperator = '', $word = '' ) {
 
-		$general_breadcrumb_limit = insut_option('general_breadcrumb_limit');
+		$general_breadcrumb_limit = quomodo_market_option('general_breadcrumb_limit');
 		
         
 		if($general_breadcrumb_limit > 0){
 			$word = $general_breadcrumb_limit;
 		}
 		
-		
+		echo '<ol class="breadcrumb" >';
 		if ( !is_home() ) {
 
-			echo '<i class="fa fa-home"></i> <a href="';
+			echo '<li class="breadcrumb-item"><a href="';
 			   echo esc_url( get_home_url( '/' ) );
 			echo '">';
 		
-			echo esc_html__( 'Home', 'insut' );
-			echo "</a>".'&nbsp;'.wp_kses_post( $seperator ).'&nbsp;';
+			echo esc_html__( 'Home', 'quomodo-market' );
+			echo "</a>". wp_kses_post( $seperator )."</li> ";
 
 			if ( is_category() || is_single() ) {
 			
 				if(is_single()){
-					$category = get_the_category();
-					if(empty($category) || is_array($category)){
-						$category = get_the_category(get_queried_object_id());
-					}
-		            
+
+					$category = isset(get_the_category()[0])?get_the_category()[0]:'';
+
 				}else{
 
 					$category = get_category( get_query_var( 'cat' ) );
-
-				} 
-				if( is_array($category) && isset($category[0]) ) {
-					echo ' <a href='.get_category_link($category[0]->term_id). '>';
-				}else{
-					if(isset($category->term_id)){
-						echo ' <a href='.get_category_link($category->term_id). '>';	
-					}
-					
+                    
+				}
+				$my_term = null; 
+				if(isset($category->term_id)){
+				  $my_term = isset($category->term_id)?$category->term_id:null; 
 				}
 				
+				echo '<li class="breadcrumb-item"> <a href='.get_category_link($my_term). '>';
 				
 				$post		 = get_queried_object();
-				
 				$postType	 = get_post_type_object( get_post_type( $post ) );
 
 				if( !empty( $category ) ) {
-					if(is_array($category)){
 
-						echo esc_html( $category[0]->cat_name ) . '</a>';
-
-					}else{
-						
-						echo esc_html( $category->cat_name ) . '</a> ';
-					}
-					
+					echo esc_html( $category->cat_name ) . '</a> </li>';
 
 				} elseif( $postType ) {
 
-					echo esc_html( $postType->labels->singular_name ) . '</a>';
+					echo esc_html( $postType->labels->singular_name ) . '</a></li>';
 
 				}
 				
 				if( is_single() ) {
 
-					echo '&nbsp;'.wp_kses_post( $seperator ).'&nbsp;';
+					echo '<li class="breadcrumb-item">'.wp_kses_post( $seperator ).'&nbsp';
 				    	echo esc_html( $word ) != '' ? wp_trim_words( get_the_title(), $word ) : get_the_title();
-					
+					echo '</li>';
 					
 				}
 				
 			} elseif( is_page() ) {
 
-				
+				echo '<li class="breadcrumb-item">';
 				  echo esc_html( $word ) != '' ? wp_trim_words( get_the_title(), $word ) : get_the_title();
-				
+				echo '</li>';
 
 			}
 		}
 		if ( is_tag() ) {
 
-			
+			echo '<li class="breadcrumb-item">';
 			  single_tag_title();
-			
+			echo '</li>';
 
 		} elseif ( is_day() ) {
 
-			echo esc_html__( 'Blogs for', 'insut' ) . " ";
+			echo"<li class='breadcrumb-item'>" . esc_html__( 'Blogs for', 'quomodo-market' ) . " ";
 		    	the_time( 'F jS, Y' );
-			
+			echo'</li>';
 
 		} elseif ( is_month() ) {
 
-			echo esc_html__( 'Blogs for', 'insut' ) . " ";
+			echo"<li class='breadcrumb-item'>" . esc_html__( 'Blogs for', 'quomodo-market' ) . " ";
 			   the_time( 'F, Y' );
-			
+			echo'</li>';
 
 		} elseif ( is_year() ) {
 
-			echo esc_html__( 'Blogs for', 'insut' ) . " ";
+			echo"<li class='breadcrumb-item'>" . esc_html__( 'Blogs for', 'quomodo-market' ) . " ";
 			   the_time( 'Y' );
-			
+			echo'</li>';
 
 		} elseif ( is_author() ) {
 
-			echo esc_html__( 'Author Blogs', 'insut' );
-			
+			echo"<li class='breadcrumb-item'>" . esc_html__( 'Author Blogs', 'quomodo-market' );
+			echo'</li>';
 
 		} elseif ( isset( $_GET[ 'paged' ] ) && !empty( $_GET[ 'paged' ] ) ) {
 
-			echo  esc_html__( 'Blogs', 'insut' );
-		
+			echo "<li class='breadcrumb-item'>" . esc_html__( 'Blogs', 'quomodo-market' );
+			echo'</li>';
 
 		} elseif ( is_search() ) {
 
-			echo esc_html__( 'Search Result', 'insut' );
-			
+			echo"<li class='breadcrumb-item'>" . esc_html__( 'Search Result', 'quomodo-market' );
+			echo'</li>';
 
 		} elseif ( is_404() ) {
 
-			echo esc_html__( '404 Not Found', 'insut' );
-			
+			echo"<li class='breadcrumb-item'>" . esc_html__( '404 Not Found', 'quomodo-market' );
+			echo'</li>';
 
 		}
 		
+		echo '</ol>';
 	
 	}
 
@@ -187,8 +175,8 @@ endif;
 /*-----------------------------
 	RANDOM SINGLE TAG
 ------------------------------*/
-if ( !function_exists( 'insut_random_tag_retrip' ) ): 
-	function insut_random_tag_retrip(){
+if ( !function_exists( 'quomodo_market_random_tag_retrip' ) ): 
+	function quomodo_market_random_tag_retrip(){
 
 		if ( 'post' === get_post_type() ) {
 
@@ -208,17 +196,19 @@ endif;
 /*-----------------------------
 	RANDOM SINGLE CATEGORY
 ------------------------------*/
-if ( !function_exists( 'insut_random_category_retrip' ) ): 
+if ( !function_exists( 'quomodo_market_random_category_retrip' ) ): 
 
-	function insut_random_category_retrip(){
+	function quomodo_market_random_category_retrip($fsingle=false){
 
-		$blog_cat_show   = insut_option( 'blog_category', '1' );
-		$single          = insut_option( 'blog_category_single','0');
+		$blog_cat_show   = quomodo_market_option( 'blog_category', '1' );
+		$single          = quomodo_market_option( 'blog_category_single','1');
 		
 		if( ! $blog_cat_show ){
           return;
 		}
-
+        if($fsingle){
+			$single = true;	
+		}
 		if ( 'post' === get_post_type() ) {
 
 			$category        = get_the_category();

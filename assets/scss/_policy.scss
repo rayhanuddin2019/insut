@@ -1,0 +1,38 @@
+/*===========================
+    15.POLICY css 
+===========================*/
+
+
+
+
+
+.policy-area{
+    padding-bottom: 79px;
+    padding-top: 86px;
+    
+}
+
+.policy-content{
+    & .policy-title{
+        & .title{
+            font-size: 40px;
+            font-weight: 700;
+        }
+    }
+    & .text{
+        font-size: 16px;
+        line-height: 27px;
+    }
+    & .item{
+        font-size: 16px;
+        line-height: 27px;
+        padding-top: 13px;
+        & .title{
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+    }
+
+}
+

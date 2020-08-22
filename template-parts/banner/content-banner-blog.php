@@ -3,15 +3,16 @@
 
       $banner_image             = '';
       $banner_title             = get_bloginfo( 'name' );
-      $show                     = insut_option('blog_banner_show',1);
-      $show_breadcrumb          = insut_option('blog_show_breadcrumb',1);
+      $show                     = quomodo_market_option('blog_banner_show',1);
+      $show_breadcrumb          = quomodo_market_option('blog_show_breadcrumb',1);
       $banner_class             = '';
 
       /* Title start */   
 
-      if( insut_option( 'banner_blog_title') != '' ){
+      if( quomodo_market_option( 'banner_blog_title') != '' ){
 
-         $banner_title = insut_option( 'banner_blog_title');
+         $banner_title = quomodo_market_option( 'banner_blog_title');
+         $banner_title      = str_replace(['{', '}'], ['<span>', '</span>'], $banner_title);
             
       }
 
@@ -20,37 +21,36 @@
 ?>
 <?php if($show): ?>
 
-   
-<div class="blog-banner">
 
-      <section class="page-banner bg-overlay">
-         <div class="container">
-             <div class="row">
-                 <div class="col-lg-12">
-                     <div class="banner-content">
-                         <h3 class="banner-title">
-                                 <?php 
-                                       if(is_archive()){
-                                          the_archive_title();
-                                       }else{
-                                          echo esc_html($banner_title);
-                                       }
-                                 ?> 
-                         </h3>
-                         <div class="bread-crumbs">
-
-                           <?php if($show_breadcrumb): ?>
-                              <?php insut_get_breadcrumbs(' <i class="icofont-arrow-right"></i> '); ?>
-                           <?php endif; ?> 
-
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </section>  
-      
-</div>
+    <!--====== PAGE TITLE PART START ======-->
+    <div class="blog-banner">
+        <div class="page-title-area page-banner banner-page bg-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="page-title-content text-center">
+                            <h3 class="title">
+                                    <?php 
+                                        if(is_archive()){
+                                            the_archive_title();
+                                        }else{
+                                            echo quomodo_market_kses($banner_title);
+                                        }
+                                    ?> 
+                            
+                            </h3>
+                            <nav aria-label="breadcrumb">
+                                <?php if($show_breadcrumb): ?>
+                                   <?php quomodo_market_get_breadcrumbs(); ?>
+                                <?php endif; ?>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====== PAGE TITLE PART ENDS ======-->
 
 <?php endif; ?>
 

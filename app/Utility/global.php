@@ -6,9 +6,9 @@
 * function to display number of posts.
 */
 // ::::::::::::::::::::::::::::
-function insut_get_postview($postID){
+function quomodo_market_get_postview($postID){
 
-   $count_key = 'insut_post_views_count';
+   $count_key = 'quomodo_market_post_views_count';
    $count     = get_post_meta($postID, $count_key, true);
 
    if($count==''){
@@ -18,13 +18,13 @@ function insut_get_postview($postID){
    return $count;
 }
 
-function insut_google_fonts_url($font_families	 = []) {
+function quomodo_market_google_fonts_url($font_families	 = []) {
 	$fonts_url		 = '';
 	/*
     Translators: If there are characters in your language that are not supported
     by chosen font(s), translate this to 'off'. Do not translate into your own language.
     */
-	if ( $font_families && 'off' !== _x( 'on', 'Google font: on or off', 'insut' ) ) { 
+	if ( $font_families && 'off' !== _x( 'on', 'Google font: on or off', 'quomodo-market' ) ) { 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) )
 		);
@@ -36,13 +36,13 @@ function insut_google_fonts_url($font_families	 = []) {
 }
 
 // function to count views.
-function insut_set_postview($postID=null) {
+function quomodo_market_set_postview($postID=null) {
 
    if( is_null($postID) ){
       $postID = get_the_ID();
    }   
 
-   $count_key = 'insut_post_views_count';
+   $count_key = 'quomodo_market_post_views_count';
    $count     = get_post_meta($postID, $count_key, true);
 
    if( $count=='' ){
@@ -61,8 +61,8 @@ function insut_set_postview($postID=null) {
 }
 
 /* return the specific value from theme options  */
-if(!function_exists('insut_option')){
-   function insut_option( $option = '', $default = '' , $parent = 'insut_settings') {
+if(!function_exists('quomodo_market_option')){
+   function quomodo_market_option( $option = '', $default = '' , $parent = 'quomodo_market_settings') {
       
       if( class_exists( 'CSF' ) ){
          $options = get_option( $parent ); 
@@ -75,32 +75,20 @@ if(!function_exists('insut_option')){
 
 // return the specific value from metabox
 // ----------------------------------------------------------------------------------------
-if(!function_exists('insut_meta_option')){
-   function insut_meta_option( $postid, $key, $default_value = '', $parent_key = '' ) {
+if(!function_exists('quomodo_market_meta_option')){
+   function quomodo_market_meta_option( $postid, $key, $default_value = '', $parent_key = '' ) {
       
-      $post_key = 'insut_post_options';  
+      $post_key = 'quomodo_market_post_options';  
      
       // page meta
       if(is_singular( 'page' )){
-         $post_key = 'insut_page_options';
+         $post_key = 'quomodo_market_page_options';
       }
        // post meta
       if(is_singular('post')){
-         $post_key = 'insut_post_options';
+         $post_key = 'quomodo_market_post_options';
       }
       // custom post meta
-      if(is_singular('quomodo-service')){
-         $post_key = 'insut_service_options';
-      }
-
-      // custom post meta
-      if(is_singular('quomodo-case')){
-         $post_key = 'insut_case_options';
-      }
-      
-      if(is_singular('quomodo-contacts')){
-         $post_key = 'insut_contacts_options';
-      }
       
       if( $parent_key !='' ){
         $post_key = $parent_key;
@@ -118,8 +106,8 @@ if(!function_exists('insut_meta_option')){
 
 // return the specific value from term/ taxomony metabox
 // ----------------------------------------------------------------------------------------
-if( !function_exists('insut_term_option')):
-function insut_term_option( $termid, $key, $default_value = '', $taxomony = 'category') {
+if( !function_exists('quomodo_market_term_option')):
+function quomodo_market_term_option( $termid, $key, $default_value = '', $taxomony = 'category') {
    
    if ( defined( 'FW' ) ) {
 		$value = fw_get_db_term_option($termid, $taxomony, $key);
@@ -131,8 +119,8 @@ endif;
 
 // get theme setting option
 
-if( !function_exists('insut_user_meta_option')):
-   function insut_carbon_option( $key, $default_value = '', $method = 'option' ) {
+if( !function_exists('quomodo_market_user_meta_option')):
+   function quomodo_market_carbon_option( $key, $default_value = '', $method = 'option' ) {
        
        if ( defined( 'QTRP' ) ) {
            switch ( $method ) {
@@ -153,8 +141,8 @@ if( !function_exists('insut_user_meta_option')):
 endif;
 
 // get theme post ,page meta option
-if( !function_exists('insut_user_meta_option')): 
-   function insut_carbon_meta_option( $postid, $key, $default_value = '' ) {
+if( !function_exists('quomodo_market_user_meta_option')): 
+   function quomodo_market_carbon_meta_option( $postid, $key, $default_value = '' ) {
        if ( defined( 'QTRP' ) ) {
            $value = carbon_get_post_meta($postid, $key);
        }
@@ -163,8 +151,8 @@ if( !function_exists('insut_user_meta_option')):
 endif;
 
 // get user meta option
-if( !function_exists('insut_user_meta_option')): 
-   function insut_user_meta_option( $user_id, $key, $default_value = '' ) {
+if( !function_exists('quomodo_market_user_meta_option')): 
+   function quomodo_market_user_meta_option( $user_id, $key, $default_value = '' ) {
        if ( defined( 'QTRP' ) ) {
            $value = carbon_get_user_meta($user_id, $key);
        }
@@ -173,8 +161,8 @@ if( !function_exists('insut_user_meta_option')):
 endif;
 
 // get comment meta option
-if( !function_exists('insut_comment_meta_option')): 
-   function insut_comment_meta_option( $comment_id, $key, $default_value = '' ) {
+if( !function_exists('quomodo_market_comment_meta_option')): 
+   function quomodo_market_comment_meta_option( $comment_id, $key, $default_value = '' ) {
 
        if ( defined( 'QTRP' ) ) {
            $value = carbon_get_comment_meta($comment_id, $key);
@@ -185,7 +173,7 @@ if( !function_exists('insut_comment_meta_option')):
 endif;
 
 // get nav meta option
-function insut_nav_menu_item_meta_option( $menu_id, $key, $default_value = '' ) {
+function quomodo_market_nav_menu_item_meta_option( $menu_id, $key, $default_value = '' ) {
 	if ( defined( 'QTRP' ) ) {
 		$value = carbon_get_nav_menu_item_meta($menu_id, $key);
 	}
@@ -193,7 +181,7 @@ function insut_nav_menu_item_meta_option( $menu_id, $key, $default_value = '' ) 
 }
 
 // get category ,taxonomy meta option
-function insut_carbon_term_meta_option( $term_id,  $option_id, $default_value = null ) {
+function quomodo_market_carbon_term_meta_option( $term_id,  $option_id, $default_value = null ) {
 	if ( defined( 'QTRP' ) ) {
 		$value = carbon_get_term_meta($term_id, $option_id );
 	}
@@ -202,7 +190,7 @@ function insut_carbon_term_meta_option( $term_id,  $option_id, $default_value = 
 
 // WP kses allowed tags
 // ----------------------------------------------------------------------------------------
-function insut_kses( $raw ) {
+function quomodo_market_kses( $raw ) {
 
 	$allowed_tags = array(
 		'a'								 => array(
@@ -304,11 +292,11 @@ function insut_kses( $raw ) {
 }
 
 
-function insut_get_excerpt($count = 100 ) {
+function quomodo_market_get_excerpt($count = 100 ) {
  
-   $count = insut_desc_limit($count);
+   $count = quomodo_market_desc_limit($count);
   
-   $insut_blog_read_more_text = esc_html__('Readmore','insut');
+   $quomodo_market_blog_read_more_text = esc_html__('Readmore','quomodo-market');
   
    $excerpt = get_the_excerpt();
    $excerpt = esc_html($excerpt);
@@ -325,12 +313,12 @@ function insut_get_excerpt($count = 100 ) {
 
 }
 
- function insut_desc_limit($default){
+ function quomodo_market_desc_limit($default){
 
       if(!is_single() && !is_page()) {
         
-         if(insut_option('insut_categry_post_desc_lenght') ){
-            return insut_option('insut_categry_post_desc_lenght');
+         if(quomodo_market_option('quomodo_market_categry_post_desc_lenght') ){
+            return quomodo_market_option('quomodo_market_categry_post_desc_lenght');
          }else{
             return $default;
          }
@@ -342,7 +330,7 @@ function insut_get_excerpt($count = 100 ) {
 
    // related post by tags
    
-function insut_related_posts_by_tags( $post_id = '', $feature_image = false ) {
+function quomodo_market_related_posts_by_tags( $post_id = '', $feature_image = false ) {
     
    try{
        
@@ -350,7 +338,7 @@ function insut_related_posts_by_tags( $post_id = '', $feature_image = false ) {
             $post_id = get_the_ID();
          }
         
-         $related_count = insut_option('blog_related_post_number',3);
+         $related_count = quomodo_market_option('blog_related_post_number',3);
     
          $tags      = wp_get_post_tags($post_id);
          $term_tags = wp_list_pluck($tags,'term_id');
@@ -382,7 +370,7 @@ function insut_related_posts_by_tags( $post_id = '', $feature_image = false ) {
  
  }
   
- function insut_related_posts_by_service_cat( $post_id = '', $feature_image = false ) {
+ function quomodo_market_related_posts_by_service_cat( $post_id = '', $feature_image = false ) {
     
    try{
        
@@ -390,7 +378,7 @@ function insut_related_posts_by_tags( $post_id = '', $feature_image = false ) {
             $post_id = get_the_ID();
          }
         
-         $related_count = insut_option('service_related_post_number',5);
+         $related_count = quomodo_market_option('service_related_post_number',5);
     
          $terms = get_the_terms($post_id, 'service-cat' );
          $tslugs_arr = [];
@@ -430,7 +418,7 @@ function insut_related_posts_by_tags( $post_id = '', $feature_image = false ) {
    }
  
  }
- function insut_related_posts_by_case_cat( $post_id = '', $feature_image = false ) {
+ function quomodo_market_related_posts_by_case_cat( $post_id = '', $feature_image = false ) {
     
    try{
        
@@ -438,7 +426,7 @@ function insut_related_posts_by_tags( $post_id = '', $feature_image = false ) {
             $post_id = get_the_ID();
          }
         
-         $related_count = insut_option('case_related_post_number',5);
+         $related_count = quomodo_market_option('case_related_post_number',5);
     
          $terms = get_the_terms($post_id, 'case-cat' );
          $tslugs_arr = [];
@@ -479,7 +467,7 @@ function insut_related_posts_by_tags( $post_id = '', $feature_image = false ) {
  
  }
 
-function insut_related_posts_by_sticky(  ) {
+function quomodo_market_related_posts_by_sticky(  ) {
 	
     if(!is_category()){
       return new WP_Query( [] ); 
@@ -515,13 +503,13 @@ function insut_related_posts_by_sticky(  ) {
  
  }
 
- function insut_src( $key, $default_value = '', $input_as_attachment = false ) { // for src
+ function quomodo_market_src( $key, $default_value = '', $input_as_attachment = false ) { // for src
    
    if ( $input_as_attachment == true ) {
 		$attachment = $key;
 	} else {
 
-      $attachment = insut_option( $key );
+      $attachment = quomodo_market_option( $key );
       
 	}
    
@@ -532,15 +520,15 @@ function insut_related_posts_by_sticky(  ) {
 	return $default_value;
 }
 
-if ( ! function_exists( 'insut_ad' ) ) :
+if ( ! function_exists( 'quomodo_market_ad' ) ) :
 
-function insut_ad($key, $default){
+function quomodo_market_ad($key, $default){
 	
-   $ad = insut_option($key, ['ad_link' => '', 'ad_html' => '']);
+   $ad = quomodo_market_option($key, ['ad_link' => '', 'ad_html' => '']);
    
 	if($ad['ad_link'] != '' || $ad['ad_link'] != '' || isset($ad['ad_image']) || $ad['ad_html'] != ''){
 		if($ad['ad_html'] != ''){
-			echo insut_return($ad['ad_html']);
+			echo quomodo_market_return($ad['ad_html']);
 		}else{
 			if(isset($ad['ad_image'])){
 				
@@ -551,7 +539,7 @@ function insut_ad($key, $default){
 			}
 			?>
 			<a href="<?php echo esc_url($ad['ad_link']); ?>" target="_blank">
-				<img src="<?php echo esc_url($ad['ad_image']['url']); ?>" alt="<?php echo esc_attr('Insut ads', 'insut'); ?>">
+				<img src="<?php echo esc_url($ad['ad_image']['url']); ?>" alt="<?php echo esc_attr('Insut ads', 'quomodo-market'); ?>">
 			</a>
 			<?php
 		}
@@ -562,40 +550,40 @@ endif;
 
 
 
-if(!function_exists('insut_social_share_list')):
-function insut_social_share_list(){
+if(!function_exists('quomodo_market_social_share_list')):
+function quomodo_market_social_share_list(){
 
    $data = array(
       ''              => '---',
-      'facebook'      => esc_html__('Facebook', 'insut'),
-      'twitter'       => esc_html__('twitter', 'insut'),
-      'linkedin'      => esc_html__('linkedin', 'insut'),
-      'pinterest'     => esc_html__('pinterest ', 'insut'),
-      'digg'          => esc_html__('digg', 'insut'),
-      'tumblr'        => esc_html__('tumblr', 'insut'),
-      'blogger'       => esc_html__('blogger', 'insut'),
-      'reddit'        => esc_html__('reddit', 'insut'),
-      'delicious'     => esc_html__('delicious', 'insut'),
-      'flipboard'     => esc_html__('flipboard', 'insut'),
-      'vkontakte'     => esc_html__('vkontakte', 'insut'),
-      'odnoklassniki' => esc_html__('odnoklassniki', 'insut'),
-      'moimir'        => esc_html__('moimir', 'insut'),
-      'livejournal'   => esc_html__('livejournal', 'insut'),
-      'blogger'       => esc_html__('blogger', 'insut'),
-      'evernote'      => esc_html__('evernote', 'insut'),
-      'flipboard'     => esc_html__('flipboard', 'insut'),
-      'mix'           => esc_html__('mix', 'insut'),
-      'meneame'       => esc_html__('meneame ', 'insut'),
-      'pocket'        => esc_html__('pocket ', 'insut'),
-      'surfingbird'   => esc_html__('surfingbird ', 'insut'),
-      'liveinternet'  => esc_html__('liveinternet ', 'insut'),
-      'buffer'        => esc_html__('buffer ', 'insut'),
-      'instapaper'    => esc_html__('instapaper ', 'insut'),
-      'xing'          => esc_html__('xing ', 'insut'),
-      'wordpres'      => esc_html__('wordpres ', 'insut'),
-      'baidu'         => esc_html__('baidu ', 'insut'),
-      'renren'        => esc_html__('renren ', 'insut'),
-      'weibo'         => esc_html__('weibo ', 'insut'),
+      'facebook'      => esc_html__('Facebook', 'quomodo-market'),
+      'twitter'       => esc_html__('twitter', 'quomodo-market'),
+      'linkedin'      => esc_html__('linkedin', 'quomodo-market'),
+      'pinterest'     => esc_html__('pinterest ', 'quomodo-market'),
+      'digg'          => esc_html__('digg', 'quomodo-market'),
+      'tumblr'        => esc_html__('tumblr', 'quomodo-market'),
+      'blogger'       => esc_html__('blogger', 'quomodo-market'),
+      'reddit'        => esc_html__('reddit', 'quomodo-market'),
+      'delicious'     => esc_html__('delicious', 'quomodo-market'),
+      'flipboard'     => esc_html__('flipboard', 'quomodo-market'),
+      'vkontakte'     => esc_html__('vkontakte', 'quomodo-market'),
+      'odnoklassniki' => esc_html__('odnoklassniki', 'quomodo-market'),
+      'moimir'        => esc_html__('moimir', 'quomodo-market'),
+      'livejournal'   => esc_html__('livejournal', 'quomodo-market'),
+      'blogger'       => esc_html__('blogger', 'quomodo-market'),
+      'evernote'      => esc_html__('evernote', 'quomodo-market'),
+      'flipboard'     => esc_html__('flipboard', 'quomodo-market'),
+      'mix'           => esc_html__('mix', 'quomodo-market'),
+      'meneame'       => esc_html__('meneame ', 'quomodo-market'),
+      'pocket'        => esc_html__('pocket ', 'quomodo-market'),
+      'surfingbird'   => esc_html__('surfingbird ', 'quomodo-market'),
+      'liveinternet'  => esc_html__('liveinternet ', 'quomodo-market'),
+      'buffer'        => esc_html__('buffer ', 'quomodo-market'),
+      'instapaper'    => esc_html__('instapaper ', 'quomodo-market'),
+      'xing'          => esc_html__('xing ', 'quomodo-market'),
+      'wordpres'      => esc_html__('wordpres ', 'quomodo-market'),
+      'baidu'         => esc_html__('baidu ', 'quomodo-market'),
+      'renren'        => esc_html__('renren ', 'quomodo-market'),
+      'weibo'         => esc_html__('weibo ', 'quomodo-market'),
     
      
    );
@@ -604,19 +592,19 @@ function insut_social_share_list(){
 }
 endif;
 
-if( !function_exists( 'insut_text_logo' ) ) :
+if( !function_exists( 'quomodo_market_text_logo' ) ) :
 
-	function insut_text_logo(){
+	function quomodo_market_text_logo(){
 
-		$general_text_logo = insut_option('general_text_logo','0');
+		$general_text_logo = quomodo_market_option('general_text_logo','0');
        
 		if($general_text_logo == '1' ){
         
          if ( ! class_exists( 'CSF' ) ) {
-             return esc_html__( 'Blog', 'insut' );
+             return esc_html__( 'Blog', 'quomodo-market' );
          }
           
-         $general_blog_title = insut_option('general_blog_title');
+         $general_blog_title = quomodo_market_option('general_blog_title');
 
          return $general_blog_title;
 
@@ -630,13 +618,13 @@ if( !function_exists( 'insut_text_logo' ) ) :
 endif;
 
 
-if( !function_exists('insut_get_fb_share_count') ):
+if( !function_exists('quomodo_market_get_fb_share_count') ):
 
-   function insut_get_fb_share_count($post_id = null){
+   function quomodo_market_get_fb_share_count($post_id = null){
       
-      $cache_key    = 'insut_fb_share_' . $post_id;
+      $cache_key    = 'quomodo_market_fb_share_' . $post_id;
       $url          = get_permalink( $post_id );
-      $access_token = insut_get_fb_secret_key();
+      $access_token = quomodo_market_get_fb_secret_key();
      
       $api_url      = 'https://graph.facebook.com/v3.0/?id=' . urlencode( $url ) . '&fields=engagement&access_token=' . $access_token;
       $json_return  = wp_remote_get( $api_url );
@@ -661,9 +649,9 @@ if( !function_exists('insut_get_fb_share_count') ):
 endif;
 
 // get facebook api key
-function insut_get_fb_secret_key(){
+function quomodo_market_get_fb_secret_key(){
 
-   $facebook_api  = insut_option('facebook_api');
+   $facebook_api  = quomodo_market_option('facebook_api');
   
    if( isset($facebook_api['app_id']) && isset($facebook_api['secret_code']) ){
      if($facebook_api['app_id'] !='' && $facebook_api['secret_code'] !=''){
@@ -675,15 +663,15 @@ function insut_get_fb_secret_key(){
 }
 
 
-function insut_lessThanfewMonth($date,$valid = 30) {
+function quomodo_market_lessThanfewMonth($date,$valid = 30) {
    $earlier = new DateTime($date);
    $later   = new DateTime();
-   return $later->diff($earlier)->format("%a") > 30?esc_html__('Old Writter','insut'):esc_html__('New Writter','insut');
+   return $later->diff($earlier)->format("%a") > 30?esc_html__('Old Writter','quomodo-market'):esc_html__('New Writter','quomodo-market');
   
 }
 
 
-function insut_is_footer_widget_active(){
+function quomodo_market_is_footer_widget_active(){
 
    $footer_widget = false;
 
@@ -705,8 +693,8 @@ function insut_is_footer_widget_active(){
 
 
 // ad allowed pages
-if(!function_exists('insut_footer_allowed_pages')){
-   function insut_footer_allowed_pages($option=null){
+if(!function_exists('quomodo_market_footer_allowed_pages')){
+   function quomodo_market_footer_allowed_pages($option=null){
       // show in all over blog
       if(is_null($option)){
          return true;
@@ -775,8 +763,8 @@ if(!function_exists('insut_footer_allowed_pages')){
 }
 
 // ad allowed pages
-if(!function_exists('insut_footer_cta_allowed_pages')){
-   function insut_footer_cta_allowed_pages($option=null){
+if(!function_exists('quomodo_market_footer_cta_allowed_pages')){
+   function quomodo_market_footer_cta_allowed_pages($option=null){
        
      
       // show in all over blog
@@ -803,12 +791,7 @@ if(!function_exists('insut_footer_cta_allowed_pages')){
       
        $current_option[]= 'page';  
      }
-
-     if(is_singular('quomodo-case')){
-      
-      $current_option[]= 'case';  
-    }
-    
+    //custom cpt  
     if(is_singular('quomodo-service')){
       
       $current_option[]= 'service';  
@@ -831,7 +814,7 @@ if(!function_exists('insut_footer_cta_allowed_pages')){
    } 
 }
 
-function insut_get_available_month(){
+function quomodo_market_get_available_month(){
    global $wpdb;
    $month_list = []; 
 
@@ -853,7 +836,7 @@ function insut_get_available_month(){
 
 }
 
-function insut_get_available_year(){
+function quomodo_market_get_available_year(){
    global $wpdb;
    $year_list = []; 
 

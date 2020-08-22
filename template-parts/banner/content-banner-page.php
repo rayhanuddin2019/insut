@@ -2,25 +2,25 @@
 
     $banner_image    = '';
     $banner_title    = get_the_title();
-    $show            = insut_option('page_banner_show',1);
-    $show_breadcrumb = insut_option('page_show_breadcrumb',1);
+    $show            = quomodo_market_option('page_banner_show',1);
+    $show_breadcrumb = quomodo_market_option('page_show_breadcrumb',1);
     $banner_class    = '';
     
      /* Title start */   
 
-    if(insut_meta_option( get_the_ID(), 'banner_page_title' ) != ''){
+    if(quomodo_market_meta_option( get_the_ID(), 'banner_page_title' ) != ''){
 
-        $banner_title = insut_meta_option( get_the_ID(), 'banner_page_title' );
+        $banner_title = quomodo_market_meta_option( get_the_ID(), 'banner_page_title' );
         
-     }elseif(insut_option( 'banner_page_title') !=''){
+     }elseif(quomodo_market_option( 'banner_page_title') !=''){
 
-        $banner_title = insut_option( 'banner_page_title');
+        $banner_title = quomodo_market_option( 'banner_page_title');
         
     }else{
 
         $banner_title = get_the_title(); 
     } 
-
+    $banner_title      = str_replace(['{', '}'], ['<span>', '</span>'], $banner_title);
     /* Title end */
   
 
@@ -28,26 +28,22 @@
 
 <?php if($show): ?>
 
-    <section class="page-banner banner-page bg-overlay">
-         <div class="container">
-             <div class="row">
-                 <div class="col-lg-12">
-                     <div class="banner-content">
-                         <h3 class="banner-title">
-                            <?php echo esc_html($banner_title); ?>
-                         </h3>
-                         <div class="bread-crumbs">
-
-                           <?php if($show_breadcrumb): ?>
-                              <?php insut_get_breadcrumbs(' <i class="icofont-arrow-right"></i> '); ?>
-                           <?php endif; ?> 
-
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </section>  
+    <div class="page-title-area page-banner banner-page bg-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-title-content text-center">
+                        <h3 class="title"> <?php echo quomodo_market_kses($banner_title); ?> </h3>
+                        <nav aria-label="breadcrumb">
+                            <?php if($show_breadcrumb): ?>
+                                <?php quomodo_market_get_breadcrumbs(); ?>
+                            <?php endif; ?>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
    
 <?php endif; ?>
 

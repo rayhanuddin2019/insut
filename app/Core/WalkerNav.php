@@ -1,5 +1,5 @@
 <?php
-namespace Insut\Core;
+namespace QuomodoMarket\Core;
 use Walker_Nav_Menu;
 
 
@@ -18,7 +18,7 @@ class WalkerNav extends Walker_Nav_Menu
      */
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
-        $output .= "\n$indent<ul class=\" dropdown-menu\">\n";
+        $output .= "\n$indent<ul class=\" sub-menu \">\n";
     }
     /**
      * Ends the list of after the elements are added.
@@ -240,7 +240,7 @@ class WalkerNav extends Walker_Nav_Menu
 			if ( $container ) {
 				$fb_output .= '</' . $container . '>';
 			}
-			echo insut_return( $fb_output );
+			echo quomodo_market_return( $fb_output );
 		}
 	}
 

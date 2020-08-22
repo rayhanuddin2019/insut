@@ -2,82 +2,63 @@
  
 
  // Post Page
-CSF::createSection( INSUT_OPTION_KEY, array(
+CSF::createSection( quomodo_market_option_KEY, array(
     'icon'   => 'fa fa-book',
-    'title' => esc_html__( 'Post & Page', 'insut' ),
+    'title' => esc_html__( 'Post & Page', 'quomodo-market' ),
     'fields' => array(
 
         array(
           'type'    => 'subheading',
-          'content' => esc_html__( 'Post Setting', 'insut' ),
+          'content' => esc_html__( 'Post Setting', 'quomodo-market' ),
         ),
 
         array(
             'id'      => 'single_post_tags',
             'type'    => 'switcher',
-            'title'   => esc_html__( 'Enable Post tags', 'insut' ),
-            'desc'    => esc_html__( 'If you want to enable or disable post tags you can set ( YES / NO )', 'insut' ),
+            'title'   => esc_html__( 'Enable Post tags', 'quomodo-market' ),
+            'desc'    => esc_html__( 'If you want to enable or disable post tags you can set ( YES / NO )', 'quomodo-market' ),
             'default' => true,
         ),
 
         array(
             'id'      => 'blog_single_author_box',
             'type'    => 'switcher',
-            'title'   => esc_html__( 'Blog Author About', 'insut' ),
+            'title'   => esc_html__( 'Blog Author About', 'quomodo-market' ),
             'default' => false
         ),
 
-        array(
-          'type'    => 'subheading',
-          'content' => esc_html__( '404 Error Page Setting', 'insut' ),
-        ),
+        
        
-
-        array(
-            'id'      => 'enable_404_header',
-            'type'    => 'switcher',
-            'title'   => esc_html__( 'Override 404 header', 'insut' ),
-            'desc'    => esc_html__( 'If you want to Override  404 page header ( YES / NO )', 'insut' ),
-            'default' => true,
-        ),
-
-        array(
-            'id'      => 'enable_404_footer',
-            'type'    => 'switcher',
-            'title'   => esc_html__( 'Enable 404 footer', 'insut' ),
-            'desc'    => esc_html__( 'If you want to enable or disable 404 page footer you can set ( YES / NO )', 'insut' ),
-            'default' => false,
-        ),
         array(
             'id'      => 'error_enable_main_container',
             'type'    => 'switcher',
-            'title'   => esc_html__( 'Blog Container', 'insut' ),
-            'desc'    => esc_html__( 'If you want to enable or disable 404 page footer you can set ( YES / NO )', 'insut' ),
+            'title'   => esc_html__( 'Blog Container', 'quomodo-market' ),
+            'desc'    => esc_html__( 'If you want to enable or disable 404 page footer you can set ( YES / NO )', 'quomodo-market' ),
             'default' => false,
         ),
 
         array(
             'id'     => 'header_contact_info',
             'type'   => 'repeater',
-            'title'   => esc_html__( 'Header Contact Info', 'insut' ),
+            'title'   => esc_html__( 'Header Contact Info', 'quomodo-market' ),
             'fields' => array(
           
               array(
                 'id'    => 'label',
                 'type'  => 'text',
-                'title'   => esc_html__( 'Label', 'insut' ),
+                'title'   => esc_html__( 'Label', 'quomodo-market' ),
               ),
 
               array(
                 'id'    => 'content',
                 'type'  => 'text',
-                'title'   => esc_html__( 'Content', 'insut' ),
+                'title'   => esc_html__( 'Content', 'quomodo-market' ),
               ),
 
               array(
                 'id'      => 'icon',
                 'type'    => 'icon',
-                'title'   => esc_html__( 'Icon', 'insut' ),
+                'title'   => esc_html__( 'Icon', 'quomodo-market' ),
                 'default' => 'fa fa-volume-control-phone'
               ),
           

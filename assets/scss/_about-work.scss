@@ -1,0 +1,96 @@
+/*===========================
+    10.ABOUT WORK css 
+===========================*/
+
+
+
+.about-work-area{
+    background-image: linear-gradient(to bottom, #e6f1ff, #ffffff);
+    padding-bottom: 87px;
+    position: relative;
+    z-index: 10;
+    &::after{
+        position: absolute;
+        content: '';
+        left: 50%;
+        top: 120px;
+        transform: translateX(-50%);
+        background-image: url(../images/footer-shape.png);
+        height: 370px;
+        width: 85%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        z-index: -2;
+        @media #{$lg} {
+            background-size: cover;
+            width: 100%;
+        }
+        @media #{$md} {
+            background-size: cover;
+            width: 100%;
+        }
+        @media #{$xs} {
+            background-size: cover;
+            width: 100%;
+        }
+    }
+    & .about-work-title{
+        & .title{
+            font-size: 40px;
+            @media #{$md} {
+                font-size: 32px;
+            }
+            @media #{$xs} {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+
+.about-work-item{
+    background: $white;
+    padding: 55px 0;
+    border-radius: 30px 0 30px 30px;
+    box-shadow: 0 20px 50px 20px rgba(85, 92, 121, 0.04);  
+    & .icon{
+        display: inline-block;
+    }
+    & span{
+        font-size: 28px;
+        font-weight: 500;
+        display: block;
+        color: $black;
+        padding-top: 40px;
+    }
+}
+
+
+.about-team-area{
+    padding-top: 85px;
+    & .about-team-title{
+        & .title{
+            font-size: 40px;
+            @media #{$xs} {
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+
+.team-item{
+    margin-bottom: 13px;
+    & .title{
+        font-size: 28px;
+        padding-top: 26px;
+        margin-bottom: 8px;
+    }
+    & span{
+        font-size: 20px;
+        color: $theme-color;
+    }
+    & img{
+        border-radius: 30px 0 30px 30px;
+    }
+}

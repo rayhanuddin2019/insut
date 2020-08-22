@@ -9,24 +9,24 @@
                 </div>
                 <div class="case-meta-area">
                     <div class="single-case-meta">
-                        <h5><?php echo esc_html__('CLIENTS:','insut') ?></h5>
-                        <p> <?php echo insut_meta_option(get_the_id(),'case_client_name','','insut_case_options') ?></p>
+                        <h5><?php echo esc_html__('CLIENTS:','quomodo-market') ?></h5>
+                        <p> <?php echo quomodo_market_meta_option(get_the_id(),'case_client_name','','quomodo_market_case_options') ?></p>
                     </div>
                     <div class="single-case-meta">
-                        <h5><?php echo esc_html__('Date:','insut') ?> </h5>
+                        <h5><?php echo esc_html__('Date:','quomodo-market') ?> </h5>
                         <p><?php echo get_the_date(get_option( 'date_format' )); ?></p>
                     </div>
                     <div class="single-case-meta">
-                        <h5><?php echo esc_html__('Duration:','insut') ?></h5>
-                        <p><?php echo insut_meta_option(get_the_id(),'case_duration','','insut_case_options') ?></p>
+                        <h5><?php echo esc_html__('Duration:','quomodo-market') ?></h5>
+                        <p><?php echo quomodo_market_meta_option(get_the_id(),'case_duration','','quomodo_market_case_options') ?></p>
                     </div>
                     <div class="single-case-meta">
-                        <h5><?php echo esc_html__('Share:','insut'); ?></h5>
-                        <?php insut_social_share('case-socail-share'); ?>
+                        <h5><?php echo esc_html__('Share:','quomodo-market'); ?></h5>
+                        <?php quomodo_market_social_share('case-socail-share'); ?>
                     </div>
                 </div>
                 <div class="case-content">
-                  <?php the_content( esc_html__( 'Continue reading &rarr;', 'insut' ) ); ?>
+                  <?php the_content( esc_html__( 'Continue reading &rarr;', 'quomodo-market' ) ); ?>
                 </div>
                 <?php get_template_part( 'template-parts/blog/blog-parts/part', 'case-related' ); ?>
             </div>

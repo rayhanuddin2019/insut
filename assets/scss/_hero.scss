@@ -1,0 +1,291 @@
+
+
+
+/*===========================
+    3.HERO css 
+===========================*/
+
+
+
+
+
+
+
+.hero-area{
+	height: 750px;
+	position: relative;
+	background: linear-gradient(180deg, rgba(230,241,255,1) 0%, rgba(255,255,255,1) 100%);
+    z-index: 10;
+    overflow: hidden;
+    @media #{$md} {
+        height: auto;
+    }
+    @media #{$xs} {
+        height: auto;
+    }
+	&::before{
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 730px;
+		background-image: url(../images/hero-shape.png);
+		background-size: 100% 100%;
+        z-index: -3;
+	}    
+    &::after{
+        position: absolute;
+        content: '';
+        left: 50%;
+        top: 120px;
+        transform: translateX(-50%);
+        background-image: url(../images/footer-shape.png);
+        height: 370px;
+        width: 85%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        z-index: -2;
+        @media #{$lg} {
+            background-size: cover;
+            width: 100%;
+        }
+        @media #{$md} {
+            background-size: cover;
+            width: 100%;
+        }
+        @media #{$xs} {
+            background-size: cover;
+            width: 100%;
+        }
+    }
+	& .hero-thumb{
+		position: absolute;
+		right: 90px;
+		top: 50%;
+		transform: translateY(-50%);
+        z-index: -1;
+        animation: up-down infinite 5s;
+        @media #{$laptop} {
+            right: 30px;
+        }
+        @media #{$lg} {
+            right: 0px;
+            width: 50%;
+        }
+        @media #{$md} {
+            position: static;
+            transform: translateX(0);
+            text-align: center;
+            z-index: 1;
+        }
+        @media #{$xs} {
+            position: static;
+            transform: translateX(0);
+            text-align: center;
+            z-index: 1;
+        }
+        
+	}
+
+}
+
+
+.hero-content{
+	padding-top: 223px;
+	padding-bottom: 145px;
+	font-size: 20px;
+	color: $black;
+    @media #{$md} {
+        padding-bottom: 0px;
+    }
+    @media #{$xs} {
+        padding-bottom: 0px;
+    }
+	& .title{
+		font-size: 60px;
+		line-height: 60px;
+		margin-bottom: 30px;
+        @media #{$lg} {
+            font-size: 50px;
+        }
+        @media #{$xs} {
+            font-size: 32px;
+            line-height: 42px;
+        }
+        @media #{$sm} {
+            font-size: 46px;
+            line-height: 56px;
+        }
+		& span{
+			color: $theme-color;
+		}
+	}
+	& a{
+		line-height: 65px;
+		padding: 0 45px;
+		margin-top: 15px;
+	}
+}
+
+
+
+
+
+
+
+
+/*===========================
+    BRAND CSS 
+===========================*/
+
+
+
+
+
+
+
+.brand-area{
+	& .brand-item{
+		& a{
+			opacity: .3;
+			& svg{
+				& path{
+					fill: #000;
+				}
+			}
+			&:hover{
+				opacity: .8;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+/*===========================
+    PAGE TITLE CSS 
+===========================*/
+
+
+
+.page-title-area{
+    background-image: linear-gradient(to bottom, #e6f1ff, #ffffff);
+    height: 440px;
+    padding-top: 155px;  
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    &::before{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 715px;
+        height: 100%;
+        z-index: -3;
+        background-image: url(../images/hero-shape.png);
+        background-size: cover;
+    }
+    &::after{
+        position: absolute;
+        content: '';
+        left: 50%;
+        top: 120px;
+        transform: translateX(-50%);
+        background-image: url(../images/footer-shape.png);
+        height: 370px;
+        width: 85%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        z-index: -2;
+        @media #{$lg} {
+            background-size: cover;
+            width: 100%;
+        }
+        @media #{$md} {
+            background-size: cover;
+            width: 100%;
+        }
+        @media #{$xs} {
+            background-size: cover;
+            width: 100%;
+        }
+    }
+    & .page-title-content{
+        & .title{
+            font-size: 60px;
+            margin-bottom: 0;
+            @media #{$xs} {
+                font-size: 32px;
+            }
+            & span{
+                text-transform: capitalize;
+                color: $theme-color;
+            }
+        }
+        & nav{
+            display: inline-block;
+            & ol{
+                background-color: transparent;
+                padding: 0;
+                margin: 0;
+                & li{
+                    font-size: 20px;
+                    color: $black;
+                    @media #{$xs} {
+                        font-size: 14px;
+                    }
+                    & a{
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+	color: $black;
+	content: "\f105";
+    font-family: 'Font Awesome 5 Pro';
+    font-size: 20px;
+}
+
+
+
+
+
+@-webkit-keyframes up-down {
+    0% {
+        top: 48%;
+    }
+
+    50% {
+        top: 52%;
+    }
+
+    100% {
+        top: 48%;
+    }
+}
+
+@keyframes up-down {
+    0% {
+        top: 48%;
+    }
+
+    50% {
+        top: 52%;
+    }
+
+    100% {
+        top: 48%;
+    }
+}
+

@@ -1,5 +1,5 @@
 <?php
-namespace Insut;
+namespace QuomodoMarket;
 /**
  *
  * This theme uses PSR-4 and OOP logic instead of procedural coding

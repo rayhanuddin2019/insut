@@ -1,12 +1,12 @@
 
 <?php
    // related post 
-   if( !insut_option( 'service_related_post',0 ) ){
+   if( !quomodo_market_option( 'service_related_post',0 ) ){
      return;
    }
 
-   $related_service = insut_related_posts_by_service_cat(get_the_id());
-   $service_icon    = insut_option('service_related_post_icon',0);
+   $related_service = quomodo_market_related_posts_by_service_cat(get_the_id());
+   $service_icon    = quomodo_market_option('service_related_post_icon',0);
   
 
 ?>
@@ -16,7 +16,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h3 class="relative-title"> <?php echo esc_html__('Related Services:','insut'); ?> </h3>
+                        <h3 class="relative-title"> <?php echo esc_html__('Related Services:','quomodo-market'); ?> </h3>
                         <!-- Service Relative Slider Start -->
                         <div class="relative-slider owl-carousel">
                             <!-- Service Item Start -->
@@ -30,7 +30,7 @@
 
                                         <?php
    
-                                          $title_icon  = insut_meta_option( $service->ID ,'title_icon','','insut_service_options'); 
+                                          $title_icon  = quomodo_market_meta_option( $service->ID ,'title_icon','','quomodo_market_service_options'); 
                                           
                                         ?>
                                       
@@ -45,7 +45,7 @@
                                     
                                 </div>
                                 <h4><a href="<?php echo esc_url(get_the_permalink($service)); ?>"> <?php echo esc_html(get_the_title($service)); ?> </a></h4>
-                                <a class="read-more" href="<?php echo esc_url(get_the_permalink($service)); ?>"> <?php echo esc_html__('Details','insut'); ?> <i class="icofont-arrow-right"></i> </a>
+                                <a class="read-more" href="<?php echo esc_url(get_the_permalink($service)); ?>"> <?php echo esc_html__('Details','quomodo-market'); ?> <i class="icofont-arrow-right"></i> </a>
                             </div>
                             <?php endforeach; ?>
                             <!-- Service Item End -->

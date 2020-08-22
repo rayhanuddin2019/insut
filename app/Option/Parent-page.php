@@ -4,14 +4,14 @@
 if( class_exists( 'CSF' ) ) {
 
  
-    CSF::createOptions( INSUT_OPTION_KEY , array(
+    CSF::createOptions( quomodo_market_option_KEY , array(
 
         // framework title
-        'framework_title'         => esc_html__('Insut Theme','insut'),
-        'framework_class'         => 'insut',
+        'framework_title'         => esc_html__('QuomodoMarket Theme','quomodo-market'),
+        'framework_class'         => 'quomodo-market',
     
         // menu settings
-        'menu_title'              => esc_html__( 'Insut Theme','insut'),
+        'menu_title'              => esc_html__( 'QuomodoMarket Theme','quomodo-market'),
         'menu_slug'               => 'insut-theme',
         'menu_type'               => 'menu',
         'menu_capability'         => 'manage_options',
@@ -37,7 +37,7 @@ if( class_exists( 'CSF' ) ) {
 
       
         // footer
-        'footer_credit'           => esc_html__('Credited by Quomodosoft','insut'),
+        'footer_credit'           => esc_html__('Credited by Quomodosoft','quomodo-market'),
         'transient_time'          => 0,
     
         // typography options

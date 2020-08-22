@@ -1,7 +1,7 @@
 <?php
 
-namespace Insut\Setup;
-use Insut\Core\Hook\Insut_Unyson_Google_Fonts;
+namespace QuomodoMarket\Setup;
+
 
 /**
 * Enqueue.
@@ -21,8 +21,8 @@ class InlineStyle  {
     public function dynamic_style() {
        
         $unit                                = 'px';
-        $preloader_bg                        = insut_option('preloader_bg');
-        $body_text_color                     = insut_option('main_text_color');
+        $preloader_bg                        = quomodo_market_option('preloader_bg');
+        $body_text_color                     = quomodo_market_option('main_text_color');
    
         $custom_css = '';
 
@@ -33,16 +33,16 @@ class InlineStyle  {
             $banner_page_image_overlay  = '';
             $banner_page_image_opacity  = '';
 
-            if(insut_meta_option( get_the_ID(), 'banner_page_image_overlay' ) != ''){
-                $banner_page_image_overlay =  insut_meta_option( get_the_ID(), 'banner_page_image_overlay' );
-            }elseif(insut_option( 'banner_page_image_overlay' ) !=''){
-              $banner_page_image_overlay =  insut_option( 'banner_page_image_overlay' );
+            if(quomodo_market_meta_option( get_the_ID(), 'banner_page_image_overlay' ) != ''){
+                $banner_page_image_overlay =  quomodo_market_meta_option( get_the_ID(), 'banner_page_image_overlay' );
+            }elseif(quomodo_market_option( 'banner_page_image_overlay' ) !=''){
+              $banner_page_image_overlay =  quomodo_market_option( 'banner_page_image_overlay' );
             }
 
-            if(insut_meta_option( get_the_ID(), 'banner_page_image_opacity' ) != ''){
-                $banner_page_image_opacity =  insut_meta_option( get_the_ID(), 'banner_page_image_opacity' );
-            }elseif(insut_option( 'banner_page_image_opacity' ) !=''){
-              $banner_page_image_opacity =  insut_option( 'banner_page_image_opacity' );
+            if(quomodo_market_meta_option( get_the_ID(), 'banner_page_image_opacity' ) != ''){
+                $banner_page_image_opacity =  quomodo_market_meta_option( get_the_ID(), 'banner_page_image_opacity' );
+            }elseif(quomodo_market_option( 'banner_page_image_opacity' ) !=''){
+              $banner_page_image_opacity =  quomodo_market_option( 'banner_page_image_opacity' );
             }
 
             // color
@@ -68,12 +68,12 @@ class InlineStyle  {
         $banner_blog_image_overlay  = '';
         $banner_blog_image_opacity  = '';
 
-        if(insut_option( 'banner_blog_image_overlay' ) !=''){
-          $banner_blog_image_overlay =  insut_option( 'banner_blog_image_overlay' );
+        if(quomodo_market_option( 'banner_blog_image_overlay' ) !=''){
+          $banner_blog_image_overlay =  quomodo_market_option( 'banner_blog_image_overlay' );
         }
 
-        if(insut_option( 'banner_blog_image_opacity' ) !=''){
-          $banner_blog_image_opacity =  insut_option( 'banner_blog_image_opacity' );
+        if(quomodo_market_option( 'banner_blog_image_opacity' ) !=''){
+          $banner_blog_image_opacity =  quomodo_market_option( 'banner_blog_image_opacity' );
         }
 
         // color
@@ -101,12 +101,12 @@ class InlineStyle  {
         $banner_page_image_overlay  = '';
         $banner_page_image_opacity  = '';
 
-        if( insut_meta_option( get_the_ID(), 'banner_case_image_overlay' ) != '' ){
-            $banner_page_image_overlay =  insut_meta_option( get_the_ID(), 'banner_case_image_overlay' );
+        if( quomodo_market_meta_option( get_the_ID(), 'banner_case_image_overlay' ) != '' ){
+            $banner_page_image_overlay =  quomodo_market_meta_option( get_the_ID(), 'banner_case_image_overlay' );
         }
 
-        if( insut_meta_option( get_the_ID(), 'banner_case_image_opacity' ) != '' ){
-            $banner_page_image_opacity =  insut_meta_option( get_the_ID(), 'banner_case_image_opacity' );
+        if( quomodo_market_meta_option( get_the_ID(), 'banner_case_image_opacity' ) != '' ){
+            $banner_page_image_opacity =  quomodo_market_meta_option( get_the_ID(), 'banner_case_image_opacity' );
         }
 
         // color
@@ -135,12 +135,12 @@ class InlineStyle  {
           $banner_page_image_overlay  = '';
           $banner_page_image_opacity  = '';
   
-          if( insut_meta_option( get_the_ID(), 'banner_service_image_overlay' ) != '' ){
-              $banner_page_image_overlay =  insut_meta_option( get_the_ID(), 'banner_service_image_overlay' );
+          if( quomodo_market_meta_option( get_the_ID(), 'banner_service_image_overlay' ) != '' ){
+              $banner_page_image_overlay =  quomodo_market_meta_option( get_the_ID(), 'banner_service_image_overlay' );
           }
   
-          if( insut_meta_option( get_the_ID(), 'banner_service_image_opacity' ) != '' ){
-              $banner_page_image_opacity =  insut_meta_option( get_the_ID(), 'banner_service_image_opacity' );
+          if( quomodo_market_meta_option( get_the_ID(), 'banner_service_image_opacity' ) != '' ){
+              $banner_page_image_opacity =  quomodo_market_meta_option( get_the_ID(), 'banner_service_image_opacity' );
           }
   
           // color
@@ -166,41 +166,41 @@ class InlineStyle  {
           /*----------------------------------
             CSS ALL DEVICE
         -----------------------------------*/
-        if( insut_option( 'custom_css' ) ){
-            $custom_css .= insut_option( 'custom_css' );
+        if( quomodo_market_option( 'custom_css' ) ){
+            $custom_css .= quomodo_market_option( 'custom_css' );
         }
         /*----------------------------------
             CSS IPAD DEVICE
         -----------------------------------*/
-        if( insut_option( 'custom_css_ipad' ) ){
+        if( quomodo_market_option( 'custom_css_ipad' ) ){
             $custom_css.="
                 @media (min-width: 1024px) and (max-width: 1400px) {
-                    ".insut_option( 'custom_css_ipad' )."
+                    ".quomodo_market_option( 'custom_css_ipad' )."
                 }
             ";
         }
         /*----------------------------------
             CSS TABLET DEVICE
         -----------------------------------*/
-        if( insut_option( 'custom_css_tablet' ) ){
+        if( quomodo_market_option( 'custom_css_tablet' ) ){
             $custom_css.="
                 @media (min-width: 768px) and (max-width: 991px) {
-                    ".insut_option( 'custom_css_tablet' )."
+                    ".quomodo_market_option( 'custom_css_tablet' )."
                 }
             ";
         }
         /*----------------------------------
             CSS MOBILE DEVICE
         -----------------------------------*/
-        if( insut_option( 'custom_css_mobile' ) ){
+        if( quomodo_market_option( 'custom_css_mobile' ) ){
             $custom_css.="
                 @media only screen and (max-width: 767px) {
-                    ".insut_option( 'custom_css_mobile' )."
+                    ".quomodo_market_option( 'custom_css_mobile' )."
                 }
             ";
         }
 
-        wp_add_inline_style( 'insut-theme', $custom_css );
+        wp_add_inline_style( 'quomodo-market-theme', $custom_css );
     }
 
 }

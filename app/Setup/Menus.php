@@ -1,5 +1,5 @@
 <?php
-namespace Insut\Setup;
+namespace QuomodoMarket\Setup;
 
 /**
  * Menus
@@ -21,8 +21,8 @@ class Menus
         Register all your menus here
         */
         register_nav_menus( array(
-            'primary'     => esc_html__( 'Primary', 'insut' ),
-            'footer'      => esc_html__( 'Footer Menu', 'insut' ),
+            'primary'     => esc_html__( 'Primary', 'quomodo-market' ),
+            'footer'      => esc_html__( 'Footer Menu', 'quomodo-market' ),
           
         ) );
     }

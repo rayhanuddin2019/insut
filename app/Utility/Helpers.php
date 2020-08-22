@@ -1,12 +1,11 @@
-<?php
-use Insut\Core\Hook\Insut_Unyson_Google_Fonts;
+<?php 
 /**
  * Helpers methods
  * List all your static functions you wish to use globally on your theme
  */
 
-if ( ! function_exists( 'insut_header_style' ) ) :
-	function insut_header_style() {
+if ( ! function_exists( 'quomodo_market_header_style' ) ) :
+	function quomodo_market_header_style() {
 		$header_text_color = get_header_textcolor();
 	
 		if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
@@ -15,7 +14,7 @@ if ( ! function_exists( 'insut_header_style' ) ) :
    }
 endif;
 
-if ( ! function_exists( 'insut_starts_with' ) ) {
+if ( ! function_exists( 'quomodo_market_starts_with' ) ) {
 	/**
 	 * Determine if a given string starts with a given substring.
 	 *
@@ -23,7 +22,7 @@ if ( ! function_exists( 'insut_starts_with' ) ) {
 	 * @param  string|array  $needles
 	 * @return bool
 	 */
-	function insut_starts_with($haystack, $needles)
+	function quomodo_market_starts_with($haystack, $needles)
 	{
 		foreach ((array) $needles as $needle) {
 			if ($needle != '' && substr($haystack, 0, strlen($needle)) === (string) $needle) {
@@ -37,12 +36,12 @@ if ( ! function_exists( 'insut_starts_with' ) ) {
 /*-------------------------------
     DAY LINK TO ARCHIVE PAGE
 ---------------------------------*/
-if ( !function_exists('insut_day_link') ) {
+if ( !function_exists('quomodo_market_day_link') ) {
    /**
-    * insut_day_link() archive link
+    * quomodo_market_day_link() archive link
     * @return string return sting url for post.
     */
-    function insut_day_link() {
+    function quomodo_market_day_link() {
         $archive_year   = get_the_time('Y');
         $archive_month  = get_the_time('m');
         $archive_day    = get_the_time('d');
@@ -50,13 +49,13 @@ if ( !function_exists('insut_day_link') ) {
     }
 }
 
-if ( ! function_exists('insut_assets') ) {
+if ( ! function_exists('quomodo_market_assets') ) {
 	/**
 	 * Easily point to the assets dist folder.
 	 *
 	 * @param  string  $path
 	 */
-	function insut_assets($path)
+	function quomodo_market_assets($path)
 	{
 		if (! $path) {
 			return;
@@ -66,13 +65,13 @@ if ( ! function_exists('insut_assets') ) {
 	}
 }
 
-if ( ! function_exists('insut_svg') ) {
+if ( ! function_exists('quomodo_market_svg') ) {
 	/**
 	 * Easily point to the assets dist folder.
 	 *
 	 * @param  string  $path
 	 */
-	function insut_svg($path)
+	function quomodo_market_svg($path)
 	{
 		if (! $path) {
 			return;
@@ -82,8 +81,8 @@ if ( ! function_exists('insut_svg') ) {
 	}
 }
 
-if(!function_exists('insut_get_post_category')){
-   function insut_get_post_category($tax = 'category') {
+if(!function_exists('quomodo_market_get_post_category')){
+   function quomodo_market_get_post_category($tax = 'category') {
    
       static $list = [];
       if( !count( $list ) ) {
@@ -103,9 +102,9 @@ if(!function_exists('insut_get_post_category')){
    }
 }
 
-if(!function_exists('insut_get_post_tags')){
+if(!function_exists('quomodo_market_get_post_tags')){
 
-   function insut_get_post_tags($tax = 'post_tag') {
+   function quomodo_market_get_post_tags($tax = 'post_tag') {
       
       static $list = [];
       if( !count( $list ) ) {
@@ -127,29 +126,29 @@ if(!function_exists('insut_get_post_tags')){
 }
 
 
-function insut_child_category_meta(){ 
-   $post_child_cat = insut_option('blog_child_cat_show',1);
+function quomodo_market_child_category_meta(){ 
+   $post_child_cat = quomodo_market_option('blog_child_cat_show',1);
    if( $post_child_cat ){
       return;
    }
 
-   $insut_cat_term     = get_queried_object();
-   $insut_cat_children = get_terms( $insut_cat_term->taxonomy, array(
-       'parent'     => $insut_cat_term->term_id,
+   $quomodo_market_cat_term     = get_queried_object();
+   $quomodo_market_cat_children = get_terms( $quomodo_market_cat_term->taxonomy, array(
+       'parent'     => $quomodo_market_cat_term->term_id,
        'hide_empty' => false
    ) );
 
-   if(!$insut_cat_children){
+   if(!$quomodo_market_cat_children){
      return;
    }
 
-   if ( $insut_cat_children ) { 
+   if ( $quomodo_market_cat_children ) { 
 
          echo '<div class="sub-category-list">';
-            foreach( $insut_cat_children as $insut_subcat )
+            foreach( $quomodo_market_cat_children as $quomodo_market_subcat )
             {
-               echo '<a class="post-cat" href="'. esc_url(get_term_link($insut_subcat, esc_html($insut_subcat->taxonomy))) .'" >'.
-               esc_html($insut_subcat->name). 
+               echo '<a class="post-cat" href="'. esc_url(get_term_link($quomodo_market_subcat, esc_html($quomodo_market_subcat->taxonomy))) .'" >'.
+               esc_html($quomodo_market_subcat->name). 
                   '</a>';
             }
          echo '</div>';
@@ -158,10 +157,10 @@ function insut_child_category_meta(){
 
 }
 
-function insut_category_meta(){
+function quomodo_market_category_meta(){
        
-   $blog_cat_show   = insut_option('blog_category','yes');
-   $blog_cat_single = insut_option('blog_category_single','no');
+   $blog_cat_show   = quomodo_market_option('blog_category','yes');
+   $blog_cat_single = quomodo_market_option('blog_category_single','no');
   
     
     if( $blog_cat_show != 'yes' ){
@@ -210,10 +209,10 @@ function insut_category_meta(){
    
 }
 
-function insut_single_category_meta(){
+function quomodo_market_single_category_meta(){
        
-   $blog_cat_show   = insut_option('blog_single_category','yes');
-   $blog_cat_single = insut_option('blog_category_single','no');
+   $blog_cat_show   = quomodo_market_option('blog_single_category','yes');
+   $blog_cat_single = quomodo_market_option('blog_category_single','no');
   
     
     if( $blog_cat_show != 'yes' ){
@@ -267,24 +266,25 @@ function insut_single_category_meta(){
 /*------------------------------------------------------
    DISPLAY META INFORMATION FOR A SPECIFIC POST
 -------------------------------------------------------*/
-if ( ! function_exists( 'insut_post_meta' ) ) :
+if ( ! function_exists( 'quomodo_market_post_meta' ) ) :
    // post and post meta
-  function insut_post_meta() {
+  function quomodo_market_post_meta() {
    ?>
-      <div class="sbp-meta">
+      <div class="blog-meta-item">
+           <ul>
 
          <?php 
       
             // for other blog ,category ,tags, arcgive page
           
               
-               if( insut_option('blog_author',1) ):
+               if( quomodo_market_option('blog_author',1) ):
                  
 
-                        if( insut_option('blog_author_image',0) ):
+                        if( quomodo_market_option('blog_author_image',0) ):
                         
                            printf(
-                              '<a href="%2$s">%1$s %3$s</a>',
+                              '<li class="author"><a href="%2$s">%1$s %3$s</a> </li>',
                               get_avatar( get_the_author_meta( 'ID' ), 55 ), 
                               esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), 
                               get_the_author()
@@ -293,9 +293,10 @@ if ( ! function_exists( 'insut_post_meta' ) ) :
                         else:
 
                            printf(
-                              '<a href="%1$s"><i class="fal fa-user"></i> %2$s</a>',
+                              '<li class="author"><a href="%1$s"> %3$s <span> %2$s</span></a></li>',
                               esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), 
-                              get_the_author()
+                              get_the_author(),
+                              esc_html__( 'Posted By', 'quomodo-market' )
                            );
 
                         endif;
@@ -303,37 +304,34 @@ if ( ! function_exists( 'insut_post_meta' ) ) :
                  
                endif;
               
-               if ( get_post_type() === 'post' && insut_option('blog_date','1') ) {
-                     echo sprintf('<a class="calendar" href="%s">','#');    
-                     echo '<i class="icofont-ui-calendar"></i>';
-                     echo get_the_date(get_option( 'date_format' ));
-                     echo '</a>';
+               if ( get_post_type() === 'post' && quomodo_market_option('blog_date','1') ) {
+                         
+                     echo '<li class="date">'. quomodo_market_post_time_ago_function() .'</li>';
+                    
+                   
                }
-              
+               $comment =  esc_html__( 'comment', 'quomodo-markets' );
+               if(get_comments_number(get_the_ID()) > 0){
+                $comment = esc_html__( 'comments', 'quomodo-markets' );
+               }
                
-               if( insut_option('blog_comment',1) ):  
-                  printf('<span class="comments"><i class="icofont-speech-comments"></i> %1$s</span>',
-                  esc_html(get_comments_number(get_the_ID())) 
+               if( quomodo_market_option('blog_comment',1) ):  
+                  printf('<li class="comments"> %1$s %2$s</li>',
+                  esc_html(get_comments_number(get_the_ID())),
+                  $comment 
                   ); 
                endif;
 
-               if( insut_option('blog_views',0) ):  
-                  printf('<span class="like"><i class="icofont-heart-alt"></i> %1$s</span>',
-                  esc_html(insut_get_postview(get_the_ID())) 
-                  ); 
-               endif;
-
-               insut_random_category_retrip();
-              
-           
+               
          ?>
+          </ul>
       </div>
    <?php }
  endif;  
 
-if ( !function_exists( 'insut_content_estimated_reading_time' ) ) {
+if ( !function_exists( 'quomodo_market_content_estimated_reading_time' ) ) {
   
-   function insut_content_estimated_reading_time( $content = '', $wpm = 200 ) {
+   function quomodo_market_content_estimated_reading_time( $content = '', $wpm = 200 ) {
      
       if($content == ''){
          $content = get_the_content();
@@ -344,28 +342,28 @@ if ( !function_exists( 'insut_content_estimated_reading_time' ) ) {
       $time          = ceil( $word_count / $wpm );
 
       if($time<=1){
-         $time .= esc_html__(' minute read','insut');
+         $time .= esc_html__(' minute read','quomodo-market');
       }else{
-         $time .= esc_html__(' minutes read','insut'); 
+         $time .= esc_html__(' minutes read','quomodo-market'); 
       }
 
       return $time;
      }
 
 }
-if ( !function_exists('insut_link_pages') ):
+if ( !function_exists('quomodo_market_link_pages') ):
 
-   function insut_link_pages() {
+   function quomodo_market_link_pages() {
 
       $args = array(
-         'before'			    => '<div class="page-links"><span class="page-link-text">' . esc_html__( 'More pages: ', 'insut' ) . '</span>',
+         'before'			    => '<div class="page-links"><span class="page-link-text">' . esc_html__( 'More pages: ', 'quomodo-market' ) . '</span>',
          'after'				 => '</div>',
          'link_before'		 => '<span class="page-link">',
          'link_after'		 => '</span>',
          'next_or_number'	 => 'number',
          'separator'			 => '  ',
-         'nextpagelink'		 => esc_html__( 'Next ', 'insut' ) . '<i class="fas fa-angle-right"></i>',
-         'previouspagelink' => '<i class="fas fa-angle-left"></i>' . esc_html__( ' Previous', 'insut' ),
+         'nextpagelink'		 => esc_html__( 'Next ', 'quomodo-market' ) . '<i class="fas fa-angle-right"></i>',
+         'previouspagelink' => '<i class="fas fa-angle-left"></i>' . esc_html__( ' Previous', 'quomodo-market' ),
       );
       
       wp_link_pages( $args );
@@ -373,7 +371,7 @@ if ( !function_exists('insut_link_pages') ):
 
 endif;
 
-function insut_title_limit($title, $limit=20){
+function quomodo_market_title_limit($title, $limit=20){
 
       $title  =  wp_trim_words($title,$limit,'');
       echo esc_html($title);
@@ -383,9 +381,9 @@ function insut_title_limit($title, $limit=20){
 /*----------------------------------------
    CUSTOM COMMENNS WALKER
 -------------------------------------------*/
-if ( !function_exists('insut_comment_style') ):
+if ( !function_exists('quomodo_market_comment_style') ):
 
-   function insut_comment_style( $comment, $args, $depth ) {
+   function quomodo_market_comment_style( $comment, $args, $depth ) {
       if ( 'div' === $args[ 'style' ] ) {
          $tag		 = 'div';
          $add_below	 = 'comment';
@@ -400,7 +398,7 @@ if ( !function_exists('insut_comment_style') ):
       }
       ?>
       <<?php
-      echo insut_kses( $tag );
+      echo quomodo_market_kses( $tag );
       comment_class( empty( $args[ 'has_children' ] ) ? '' : 'parent'  );
       ?> id="comment-<?php comment_ID() ?>"><?php if ( 'div' != $args[ 'style' ] ) { ?>
          <div id="div-comment-<?php comment_ID() ?>" class="comment-body"><?php }
@@ -420,21 +418,21 @@ if ( !function_exists('insut_comment_style') ):
    
    
             <span class="comment-author vcard"><?php
-               printf( insut_kses( '<cite class="fn">%s</cite> <span class="says">%s</span>', 'insut' ), get_comment_author_link(), esc_html__( 'says:', 'insut' ) );
+               printf( quomodo_market_kses( '<cite class="fn">%s</cite> <span class="says">%s</span>', 'quomodo-market' ), get_comment_author_link(), esc_html__( 'says:', 'quomodo-market' ) );
                ?>
             </span>
             <?php if ( $comment->comment_approved == '0' ) { ?>
-               <em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'insut' ); ?></em><br/><?php }
+               <em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'quomodo-market' ); ?></em><br/><?php }
             ?>
    
             <div class="comment-meta commentmetadata comment-date">
                <?php
                // translators: 1: date, 2: time
                printf(
-               esc_html__( '%1$s at %2$s', 'insut' ), get_comment_date(), get_comment_time()
+               esc_html__( '%1$s at %2$s', 'quomodo-market' ), get_comment_date(), get_comment_time()
                );
                ?>
-               <?php edit_comment_link( esc_html__( '(Edit)', 'insut' ), '  ', '' ); ?>
+               <?php edit_comment_link( esc_html__( '(Edit)', 'quomodo-market' ), '  ', '' ); ?>
             </div>
          </div>	
          <div class="comment-content">
@@ -449,10 +447,10 @@ endif;
 /*---------------------------------------
    EXCERPT CUSTOM WORD COUNT
 -----------------------------------------*/
-function insut_excerpt( $words = 40, $more = '' ) {
+function quomodo_market_excerpt( $words = 40, $more = '' ) {
 
    if( $more == 'button' ){
-      $more = '<a class="btn btn-primary">'.esc_html__('read more', 'insut').'</a>';
+      $more = '<a class="btn btn-primary">'.esc_html__('read more', 'quomodo-market').'</a>';
    }
 
    $excerpt         = get_the_excerpt();
@@ -464,14 +462,14 @@ function insut_excerpt( $words = 40, $more = '' ) {
 /*--------------------------------------
    SINGLE POST NAVIGATION
 ---------------------------------------*/
-if ( !function_exists('insut_post_nav') ):
+if ( !function_exists('quomodo_market_post_nav') ):
 
 // display navigation to the next/previous set of posts
 // ----------------------------------------------------------------------------------------
-function insut_post_nav() {
+function quomodo_market_post_nav() {
    // Don't print empty markup if there's nowhere to navigate.
   
-      if( !insut_option('blog_post_nav','1') ){
+      if( !quomodo_market_option('blog_post_nav','1') ){
          return;
       }
 
@@ -486,7 +484,7 @@ function insut_post_nav() {
             <?php if ( !empty( $pre_post ) ): ?>
                <a href="<?php echo get_the_permalink( $pre_post->ID ); ?>">
                   <h3><?php echo get_the_title( $pre_post->ID ) ?></h3>
-                  <span><i class="far fa-angle-left"></i><?php esc_html_e( 'Previous post', 'insut' ) ?></span>
+                  <span><i class="far fa-angle-left"></i><?php esc_html_e( 'Previous post', 'quomodo-market' ) ?></span>
                </a>
             <?php endif; ?>
          </div>
@@ -495,21 +493,21 @@ function insut_post_nav() {
                <a href="<?php echo get_the_permalink( $next_post->ID ); ?>">
                   <h3><?php echo get_the_title( $next_post->ID ) ?></h3>
    
-                  <span><?php esc_html_e( 'Next post', 'insut' ) ?> <i class="far fa-angle-right"></i></span>
+                  <span><?php esc_html_e( 'Next post', 'quomodo-market' ) ?> <i class="far fa-angle-right"></i></span>
                </a>
             <?php endif; ?>
          </div>
       </nav>
    <?php }
  endif;
-function insut_get_top_post(){
-   $blog_top_post = insut_option('blog_top_post');
+function quomodo_market_get_top_post(){
+   $blog_top_post = quomodo_market_option('blog_top_post');
 
    if($blog_top_post == 'no'){
        return new \WP_Query(); 
    }
 
-   $blog_top_post_settings = insut_option('blog_top_post_settings');
+   $blog_top_post_settings = quomodo_market_option('blog_top_post_settings');
 
    if(!isset($blog_top_post_settings['yes'])){
       return new \WP_Query(); 
@@ -534,13 +532,13 @@ function insut_get_top_post(){
 }
 
 //date 
-function insut_post_time_ago_function() {
+function quomodo_market_post_time_ago_function() {
    
-   return sprintf( esc_html__( '%s ago', 'insut' ), human_time_diff(get_the_time ( 'U' ), current_time( 'timestamp' ) ) );
+   return sprintf( esc_html__( '%s ago', 'quomodo-market' ), human_time_diff(get_the_time ( 'U' ), current_time( 'timestamp' ) ) );
 }
 
 
-function insut_get_current_date(){
+function quomodo_market_get_current_date(){
    
     return date_i18n( get_option( 'date_format' ) );
 }
@@ -549,8 +547,8 @@ function insut_get_current_date(){
 * get default header footer id
 * @return bool
 */
-if( !function_exists( 'insut_header_footer_templates') ){
-   function insut_header_footer_templates( $type= 'header' ){
+if( !function_exists( 'quomodo_market_header_footer_templates') ){
+   function quomodo_market_header_footer_templates( $type= 'header' ){
       $list = [];
       $args = array(
          'post_type'           => 'qheader-footer',
@@ -569,7 +567,7 @@ if( !function_exists( 'insut_header_footer_templates') ){
       );
 
       $data = get_posts($args);
-      $list['--'] = esc_html__( 'None', 'insut' );
+      $list['--'] = esc_html__( 'None', 'quomodo-market' );
       foreach($data as $item){
          $list[$item->ID] = $item->post_title;
       }
@@ -582,7 +580,7 @@ if( !function_exists( 'insut_header_footer_templates') ){
 * get images sizes
 * @return bool
 */
-function insut_get_all_image_sizes() {
+function quomodo_market_get_all_image_sizes() {
 	global $_wp_additional_image_sizes;
 
 	$default_image_sizes = array( 'thumbnail', 'medium', 'large' );
@@ -598,10 +596,10 @@ function insut_get_all_image_sizes() {
 		
 	return $image_sizes;
 }
-function insut_blog_first_article(){
+function quomodo_market_blog_first_article(){
 
    global $step;
-   if(insut_option('blog_two_column')){
+   if(quomodo_market_option('blog_two_column')){
       return 'mt-40';
    }  
    if( $step ){
@@ -613,7 +611,7 @@ function insut_blog_first_article(){
 
 }
 
-function insut_str_snake_case($str, array $noStrip = [])
+function quomodo_market_str_snake_case($str, array $noStrip = [])
 {
         // non-alpha and non-numeric characters become spaces
         $str = preg_replace('/[^a-z0-9' . implode("", $noStrip) . ']+/i', ' ', $str);
@@ -624,7 +622,7 @@ function insut_str_snake_case($str, array $noStrip = [])
         return $str;
 }
 
-function insut_get_contact_forms_seven_list(){
+function quomodo_market_get_contact_forms_seven_list(){
    $forms_list = array();
    $forms_args = array( 'posts_per_page' => -1, 'post_type'=> 'wpcf7_contact_form' );
    $forms      = get_posts( $forms_args );
@@ -634,20 +632,20 @@ function insut_get_contact_forms_seven_list(){
            $forms_list[$form->ID] = $form->post_title;
        }
    }else{
-       $forms_list[ esc_html__( 'No contact form found', 'insut' ) ] = 0;
+       $forms_list[ esc_html__( 'No contact form found', 'quomodo-market' ) ] = 0;
    }
    return $forms_list;
 }
 
-function insut_social_share($attr_cls = 'sbp-social'){
+function quomodo_market_social_share($attr_cls = 'sbp-social'){
    // option social.php 
-   $post_social_share_show = insut_option('post_social_share_show',0);
+   $post_social_share_show = quomodo_market_option('post_social_share_show',0);
   
    if(!$post_social_share_show){
       return;
    }
 
-   $general_social_share = insut_option('social_share',[]);
+   $general_social_share = quomodo_market_option('social_share',[]);
   
    if( !is_array($general_social_share) ){
       return;  
@@ -674,8 +672,8 @@ function insut_social_share($attr_cls = 'sbp-social'){
 
 }
 
-if( !function_exists('insut_footer_menu')){
-   function insut_footer_menu(){
+if( !function_exists('quomodo_market_footer_menu')){
+   function quomodo_market_footer_menu(){
 
       $footer_menu = get_nav_menu_locations(); 
       if(isset($footer_menu['footer'])){
