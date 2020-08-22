@@ -41,13 +41,8 @@
                 //      $header_style = $page_header_layout_style;
                 //   endif;  
                
-               
-              
                 get_template_part( 'template-parts/headers/header', $header_style );
-                    
-              
-               
-                
+                 
             ?>
            
             <div class="qomodo-body-innner-content">

@@ -7,16 +7,6 @@
            
                 <div class="single-blog-thumb">
                     <img src="<?php echo get_the_post_thumbnail_url(null,'full'); ?>" alt=" <?php the_title_attribute(); ?>">
-<<<<<<< HEAD
-=======
-                    <div class="sbp-icon">
-                        <?php if( $image_icon == '' ):  ?> 
-                            <i class="insut-Icon11"> <span class="path3"></span> </i>
-                        <?php else: ?>
-                            <i class="<?php echo esc_attr($image_icon); ?>"> <span class="path3"></span> </i>
-                        <?php endif; ?>
-                    </div>
->>>>>>> e263985ac7f7eb9b1ed4fe6c7687141874a33a91
                 </div>
             <?php endif; ?>
 

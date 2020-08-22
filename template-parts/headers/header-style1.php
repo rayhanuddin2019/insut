@@ -19,76 +19,11 @@
  
 ?>
 
-<<<<<<< HEAD
  <!--====== HEADER PART START ======-->
     
  <header class="header-area">
         <?php get_template_part( 'template-parts/headers/header', 'top' ); ?>
         <div class="header-nav">
-=======
-        <!-- Header Topbar Start -->
-        <section class="topbar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9 col-md-9">
-                        <?php if($header_contact_phone || $header_contact_email || $header_contact_address): ?>
-                                <!-- inof Start -->
-                                <div class="info-area">
-                                    <?php if($header_contact_phone): ?>
-                                        <div class="single-info">
-                                            <i class="insut-Icon10"></i>
-                                            <h5>
-                                                <span> 
-                                                  <?php echo esc_html($header_contact_phone_label); ?>
-                                                </span>
-                                                <?php echo esc_html($header_contact_phone_value); ?>
-                                            </h5>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if($header_contact_email): ?>
-                                        <div class="single-info">
-                                            <i class="insut-Icon12"></i>
-                                               <h5><span> <?php echo esc_html($header_contact_email_label); ?></span>
-                                                <a href="mailto:<?php echo esc_attr( $header_contact_email_value ); ?>">
-                                                    <?php echo esc_html($header_contact_email_value); ?>
-                                                </a>
-                                            </h5>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if($header_contact_address): ?>
-                                    <div class="single-info">
-                                        <i class="insut-Icon13"></i>
-                                        <h5>
-                                            <span><?php echo esc_html($header_contact_address_label); ?></span>
-                                            <?php echo esc_html($header_contact_address_value); ?>
-                                        </h5>
-                                    </div>
-                                    <?php endif; ?>
-                                </div>
-                                <!-- inof End -->
-                        <?php endif; ?>
-                    </div>
-                    <?php if($enable_header_social && is_array($social_link)): ?>
-                        <div class="col-lg-3 col-md-3">
-                            <!-- Socail Start -->
-                            <ul class="topbar-socail">
-
-                                <?php foreach($social_link as $social_item): ?> 
-                                   <li><a href="<?php echo esc_url($social_item['bookmark_url']); ?>"><i class="<?php echo esc_attr($social_item['bookmark_icon']); ?>"></i></a>
-                                <?php endforeach; ?> 
-                             
-                            </ul>
-                            <!-- Social End -->
-                        </div>
-                    <?php endif; ?>
-                </div>
-            </div>
-        </section>
-        <!-- Header Topbar End -->
-
-           <!-- Main Header Start -->
-        <header class="header-01">
->>>>>>> e263985ac7f7eb9b1ed4fe6c7687141874a33a91
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -103,42 +38,7 @@
                                             <img src="<?php echo esc_url($quomodo_market_logo_url); ?>" alt="<?php echo get_bloginfo('name') ?>">
                                         <?php endif; ?>
                                     </a>
-<<<<<<< HEAD
                                    <?php echo quomodo_market_text_logo()?'</h1>':''; ?>
-=======
-                            <?php echo insut_text_logo()?'</h1>':''; ?>
-
-                            <!-- Moblie Btn Start -->
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                                <span class="navbar-toggler-icon"></span>
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <!-- Moblie Btn End -->
-
-                            <!-- Nav Menu Start -->
-                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                               <?php get_template_part( 'template-parts/navigations/nav', 'primary' ); ?>
-                            </div>
-                            <!-- Nav Menu End -->
-                            <?php if($button_enable): ?>  
-                                <!-- Contact Btn -->
-                                   <a href="<?php echo esc_url($button_link); ?>" class="contact-btn">
-                                        <i class="insut-Icon10"></i>
-                                        <?php echo esc_html($button_text); ?>
-                                   </a>
-                                <!-- Contact Btn End -->
-                            <?php endif; ?>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- Main Header End -->
-
-   
->>>>>>> e263985ac7f7eb9b1ed4fe6c7687141874a33a91
 
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="toggler-icon"></span>
