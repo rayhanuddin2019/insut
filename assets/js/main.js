@@ -48,9 +48,6 @@
 
         }
 
-
-        
-
         /*===============================  
              Select Active 
         ================================*/
@@ -171,15 +168,14 @@
 
 
     /*===============================  
-         
+           Rating
     ================================*/
-
-
-
-
-
-
-
-
+    var product_rating = null;
+    $( ".stars-inner" ).each(function( index ) {
+        product_rating = $(this).attr('data-rating');
+        $(this).css({width:product_rating});
+    });
+       
+     
 
 })(jQuery);

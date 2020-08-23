@@ -10,10 +10,11 @@
 ?>
 
 <?php if ( have_comments() || comments_open()) : ?>
-	<div id="comments" class="qomodo-comment qomodo-blog-post-comment">
+	<div id="comments" class="qomodo-comment qomodo-blog-post-comment <?php echo esc_attr(is_singular( 'envato-portfolio' )?'product-comments-item':''); ?>">
 		<?php if ( have_comments()) : ?>
 
 			<h3 class="comment-title">
+				
 				<?php
 
 					if(get_comments_number()==1){
@@ -21,7 +22,7 @@
 					}else{
 						printf( '%1$s ' . esc_html__( 'Comments', 'quomodo-market' ), get_comments_number() );
 					}
-				
+								
 				?>
 			</h3>
 
@@ -132,7 +133,7 @@
 					</p>',
 				'id_form'			 => 'commentform',
 				'id_submit'			 => 'submit',
-				'class_submit'		 => 'btn-comments btn btn-primary',
+				'class_submit'		 => 'main-btn btn',
 				'title_reply'		 => esc_html__( 'Leave a Reply', 'quomodo-market' ),
 				'title_reply_to'	 => esc_html__( 'Leave a Reply to %s', 'quomodo-market' ),
 				'cancel_reply_link'	 => esc_html__( 'Cancel reply', 'quomodo-market' ),

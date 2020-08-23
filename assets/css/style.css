@@ -1719,87 +1719,46 @@ p {
   background: #fff;
 }
 
-.product-comments-item .product-comments-title {
-  padding-top: 22px;
-  padding-bottom: 17px;
-}
-.product-comments-item .product-comments-title .title {
-  font-size: 24px;
-  color: #202030;
-}
-.product-comments-item .product-comments-box {
-  padding: 30px 30px 30px 155px;
-  background: #fff;
+.product-comments-item .comments-list .comment-body {
+  border-bottom: none;
+  padding-bottom: 15px;
+  padding-top: 25px;
   margin-bottom: 25px;
-  position: relative;
-  font-size: 18px;
-  line-height: 26px;
+  background: #fff;
 }
-@media (max-width: 767px) {
-  .product-comments-item .product-comments-box {
-    padding: 30px;
-    font-size: 16px;
-  }
+.product-comments-item .comments-list img.comment-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  margin-top: 39px;
+  margin-left: 30px;
 }
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .product-comments-item .product-comments-box {
-    padding: 30px 30px 30px 155px;
-  }
+.product-comments-item .comments-list .meta-data {
+  margin-right: 25px;
 }
-@media (max-width: 767px) {
-  .product-comments-item .product-comments-box.ml-90 {
-    margin-left: 30px;
-  }
+.product-comments-item .comment-respond .comment-form input.form-control {
+  width: 100%;
+  border-radius: 5px;
+  line-height: 60px;
+  background: #fff;
+  border: solid 1px #e7e7e7;
+  padding-left: 24px;
+  border-radius: 5px;
 }
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .product-comments-item .product-comments-box.ml-90 {
-    margin-left: 45px;
-  }
+.product-comments-item .comment-respond .comment-form textarea.form-control {
+  width: 100%;
+  border-radius: 5px;
+  height: 132px;
+  background: #fff;
+  border: solid 1px #e7e7e7;
+  padding-left: 24px;
+  border-radius: 5px;
+  resize: none;
+  padding-top: 10px;
 }
-.product-comments-item .product-comments-box img {
-  position: absolute;
-  left: 32px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-@media (max-width: 767px) {
-  .product-comments-item .product-comments-box img {
-    position: static;
-    transform: translateY(0);
-    margin-bottom: 20px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .product-comments-item .product-comments-box img {
-    position: absolute;
-    transform: translateY(-50%);
-    margin-bottom: 0;
-  }
-}
-.product-comments-item .product-comments-box .title {
-  font-size: 18px;
-  margin-bottom: 12px;
-}
-.product-comments-item .product-comments-box .title span {
-  font-size: 14px;
-  padding-left: 27px;
-  color: #6f6f76;
-}
-@media (max-width: 767px) {
-  .product-comments-item .product-comments-box .title span {
-    padding-left: 15px;
-  }
-}
-.product-comments-item .product-comments-box p {
-  margin-bottom: 10px;
-}
-.product-comments-item .product-comments-box a {
-  font-size: 18px;
-  color: #3467ff;
+.product-comments-item .reply {
   font-weight: 500;
-}
-.product-comments-item .product-comments-box a i {
-  padding-left: 6px;
+  font-size: 16px;
 }
 
 .product-comments-form {
@@ -2203,6 +2162,15 @@ p {
   color: #202030;
   padding-bottom: 10px;
   white-space: nowrap;
+}
+.product-details-sidebar .product-information .product-information-list ul li ul .product-label {
+  margin-right: 25px;
+  min-width: 136px;
+}
+@media (max-width: 767px) {
+  .product-details-sidebar .product-information .product-information-list ul li ul .product-label {
+    min-width: 100px;
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .product-details-sidebar .product-information .product-information-list ul li {
@@ -3633,7 +3601,7 @@ span.cart-count {
   color: transparent;
 }
 
-.testimonial-content .inactive {
+.testimonial-content .inactive, .featured-product-content .inactive {
   color: #e1e1e1;
 }
 
@@ -3644,4 +3612,29 @@ span.cart-count {
 /* SignIp widget */
 .sign-in-title .errors {
   list-style: none;
+}
+
+/* Product Rating  */
+.stars-outer {
+  display: inline-block;
+  position: relative;
+  font-family: FontAwesome;
+}
+
+.stars-outer::before {
+  content: "";
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.stars-inner::before {
+  content: "";
+  color: #f8ce0b;
 }

@@ -236,93 +236,59 @@
 
 
 .product-comments-item {
-    & .product-comments-title {
-        padding-top: 22px;
-        padding-bottom: 17px;
 
-        & .title {
-            font-size: 24px;
-            color: $black;
-        }
-    }
-
-    & .product-comments-box {
-        padding: 30px 30px 30px 155px;
-        background: $white;
+     
+    .comments-list
+    {
+       .comment-body{
+        border-bottom:none;
+       
+        padding-bottom: 15px;
+        padding-top: 25px;
         margin-bottom: 25px;
-        position: relative;
-        font-size: 18px;
-        line-height: 26px;
-
-        @media #{$xs} {
-            padding: 30px;
-            font-size: 16px;
+        background: #fff;
         }
-
-        @media #{$sm} {
-            padding: 30px 30px 30px 155px;
+        img.comment-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 80px;
+            margin-top: 39px;
+            margin-left: 30px;
         }
-
-        &.ml-90 {
-            @media #{$xs} {
-                margin-left: 30px;
-            }
-
-            @media #{$sm} {
-                margin-left: 45px;
-            }
-        }
-
-        & img {
-            position: absolute;
-            left: 32px;
-            top: 50%;
-            transform: translateY(-50%);
-
-            @media #{$xs} {
-                position: static;
-                transform: translateY(0);
-                margin-bottom: 20px;
-            }
-
-            @media #{$sm} {
-                position: absolute;
-                transform: translateY(-50%);
-                margin-bottom: 0;
-
-            }
-
-        }
-
-        & .title {
-            font-size: 18px;
-            margin-bottom: 12px;
-
-            & span {
-                font-size: 14px;
-                padding-left: 27px;
-                color: $text-color;
-
-                @media #{$xs} {
-                    padding-left: 15px;
-                }
-            }
-        }
-
-        & p {
-            margin-bottom: 10px;
-        }
-
-        & a {
-            font-size: 18px;
-            color: $theme-color;
-            font-weight: 500;
-
-            & i {
-                padding-left: 6px;
-            }
+        .meta-data {
+            margin-right: 25px;
         }
     }
+
+    .comment-respond .comment-form input.form-control {
+        width: 100%;
+        border-radius: 5px;
+        line-height: 60px;
+        background: #fff;
+        border: solid 1px #e7e7e7;
+        padding-left: 24px;
+        border-radius: 5px;
+    }
+
+    .comment-respond .comment-form textarea.form-control {
+        width: 100%;
+        border-radius: 5px;
+        height: 132px;
+        background: #fff;
+        border: solid 1px #e7e7e7;
+        padding-left: 24px;
+        border-radius: 5px;
+        resize: none;
+        padding-top: 10px;
+    }
+
+    .reply{
+        font-weight: 500;
+        font-size: 16px;
+    }
+   
+
+  
 }
 
 
@@ -792,6 +758,16 @@
                     padding-bottom: 10px;
                     white-space: nowrap;
 
+                   & ul {
+                       .product-label{
+                         margin-right:25px;
+                         min-width: 136px;
+                         @media #{$xs} {
+                            min-width: 100px;
+                        }
+                      }
+                    }
+
                     @media #{$lg} {
                         font-size: 15px;
                     }
@@ -805,6 +781,7 @@
                         color: $text-color;
                         font-weight: 400;
                         white-space: normal;
+                        
 
                         @media #{$lg} {
                             font-size: 15px;
