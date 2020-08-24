@@ -86,58 +86,44 @@
 
             array(
                 'type'    => 'subheading',
-                'content' => esc_html__( 'Service Banner', 'quomodo-market' ),
+                'content' => esc_html__( 'Shop Banner', 'quomodo-market' ),
             ),
 
             array(
-                'id'      => 'service_banner_show',
+                'id'      => 'shop_banner_show',
                 'type'    => 'switcher',
-                'title'   => esc_html__( 'Service Banner', 'quomodo-market' ),
+                'title'   => esc_html__( 'Shop Banner', 'quomodo-market' ),
                 'default' => true
             ),
+            
             array(
-                'id'      => 'service_show_breadcrumb',
+                'id'      => 'banner_shop_title',
+                'type'    => 'text',
+                'title'   => esc_html__( 'Shop Title', 'quomodo-market' ),
+                'default' => esc_html__( 'Shop', 'quomodo-market' )
+            ),
+            
+            array(
+                'id'      => 'banner_product_title',
+                'type'    => 'text',
+                'title'   => esc_html__( 'Product Title', 'quomodo-market' ),
+                'default' => esc_html__( 'Products', 'quomodo-market' )
+            ),
+            array(
+                'id'      => 'shop_show_breadcrumb',
                 'type'    => 'switcher',
-                'title'   => esc_html__( 'Service Breadcrumb', 'quomodo-market' ),
+                'title'   => esc_html__( 'Shop Breadcrumb', 'quomodo-market' ),
                 'default' => true
             ),
             array(
 
-                'id'      => 'banner_service_image',
+                'id'      => 'banner_shop_image',
                 'type'    => 'background',
                 'title'   => esc_html__( 'Upload Background', 'quomodo-market' ),
                 'desc'    => esc_html__( 'Upload main Image width 1200px and height 400px.', 'quomodo-market' ),
-                'output' => '.single-quomodo-service .page-banner'
+                'output' => '.page .page-banner.shop'
             ),
 
-            array(
-                'type'    => 'subheading',
-                'content' => esc_html__( 'Case Study Banner', 'quomodo-market' ),
-            ),
-
-            array(
-                'id'      => 'case_banner_show',
-                'type'    => 'switcher',
-                'title'   => esc_html__( 'Case Banner', 'quomodo-market' ),
-                'default' => true
-            ),
-
-            array(
-                'id'      => 'case_show_breadcrumb',
-                'type'    => 'switcher',
-                'title'   => esc_html__( 'Case Breadcrumb', 'quomodo-market' ),
-                'default' => true
-            ),
-
-            array(
-
-                'id'      => 'banner_case_image',
-                'type'    => 'background',
-                'title'   => esc_html__( 'Upload Background', 'quomodo-market' ),
-                'desc'    => esc_html__( 'Upload main Image width 1200px and height 400px.', 'quomodo-market' ),
-                'output' => '.single-quomodo-case .page-banner'
-            ),
-   
        
         )
     ) ); 

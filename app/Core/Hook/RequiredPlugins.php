@@ -63,12 +63,12 @@ class RequiredPlugins
                 
             ),
             
-            array(
-                'name'		 => esc_html__( 'Dokan Pro', 'quomodo-market' ),
-                'slug'		 => 'dokan-pro',
-                'required'	 => true,
+            // array(
+            //     'name'		 => esc_html__( 'Dokan Pro', 'quomodo-market' ),
+            //     'slug'		 => 'dokan-pro',
+            //     'required'	 => true,
                 
-            ),
+            // ),
            
             array(
                 'name'		 => esc_html__( 'Quomodo Marketplace Essential ', 'quomodo-market' ),

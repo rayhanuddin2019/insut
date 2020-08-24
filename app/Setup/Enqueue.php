@@ -47,6 +47,7 @@ class Enqueue
 		
 			// theme css
 			wp_enqueue_style( 'quomodo-market-default', QUOMODO_MARKET_CSS . '/default.css', null, QUOMODO_MARKET_VERSION );
+			wp_enqueue_style( 'quomodo-market-woocommerce', QUOMODO_MARKET_CSS . '/woocommerce.css', null, QUOMODO_MARKET_VERSION );
 			wp_enqueue_style( 'quomodo-market-blog', QUOMODO_MARKET_CSS . '/blog.css', null, QUOMODO_MARKET_VERSION );
 			wp_enqueue_style( 'quomodo-market-theme', QUOMODO_MARKET_CSS . '/style.css', null, QUOMODO_MARKET_VERSION );
 			
